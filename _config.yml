@@ -18,9 +18,11 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Optional wordmark shown in the header and footer. Leave blank to show the
-# site title as text. Example: /images/hub-banner.png
-logo: ""
+# Logo files (see images/README.md)
+#   logo_mark  the wave symbol, shown beside the site title in the header
+#   logo       the full logo (waves + name), shown in the footer
+logo_mark: /images/hub-mark.png
+logo: /images/hub-logo.png
 
 # Pages shown in the top navigation, in this order.
 header_pages:

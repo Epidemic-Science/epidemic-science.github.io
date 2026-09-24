@@ -3,8 +3,7 @@
   All content comes from _data/labs.yml.
 {%- endcomment -%}
 {%- assign lab = include.lab -%}
-
-<div class="hub-card" id="{{ lab.id }}">
+<div class="hub-card" id="{{ lab.id }}" style="--lab-color: {{ lab.color }};">
   {%- if lab.logo and lab.logo != "" %}
   <img class="hub-card-logo" src="{{ lab.logo | relative_url }}" alt="{{ lab.short_name }} logo">
   {%- endif %}

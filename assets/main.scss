@@ -4,30 +4,39 @@
 
 /* ==============================================================================
    EPIDEMIC SCIENCE HUB — SHARED STYLES
-   Adapted from ceph-lab.github.io. Unlike the CEPH, colours live in one
+   Adapted from ceph-lab.github.io. Unlike the CEPH site, colours live in one
    place (the variables below) and the reusable components (banners, cards,
    buttons, tiles) live here instead of inside each page, so every page stays
    consistent. Page-specific tweaks can still go in a <style> block on a page.
    ============================================================================== */
 
 :root {
-  /* --- Brand palette (change these to re-theme the whole site) --- */
-  --hub-primary: #468b94;      /* main accent: links, underlines, active nav */
-  --hub-primary-soft: #508c96; /* buttons, card borders */
-  --hub-primary-dark: #36636a; /* button hover */
-  --hub-highlight: #42e8e0;    /* bright accent on dark backgrounds */
-  --hub-tile-1: #318287;       /* home tile / banner right */
-  --hub-tile-2: #1f5459;       /* home tile */
-  --hub-dark: #112226;         /* darkest tile */
-  --hub-banner: #212d31;       /* subpage banner left */
+  /* --- Hub palette: one colour per lab (from the logo) --- */
+  --hub-teal: #468a93;         /* CEPH Lab */
+  --hub-navy: #262757;         /* SEAL Lab (midnight blue) */
+  --hub-orange: #f58a06;       /* MCORE Lab */
+
+  /* --- Roles (change these to re-theme the whole site) ---
+     The pure teal and orange are too light for small text on white, so text
+     uses the deeper variants below (both pass WCAG AA contrast). */
+  --hub-primary: var(--hub-teal);   /* underlines, bars, decorative accents */
+  --hub-primary-soft: #3a7880;      /* teal for text, links, section headers */
+  --hub-primary-dark: #2f6970;      /* hover state */
+  --hub-highlight: var(--hub-orange); /* accent on dark backgrounds */
+  --hub-button: var(--hub-navy);    /* button background */
+  --hub-tile-1: #3a7880;            /* home "Mission" tile */
+  --hub-tile-2: var(--hub-navy);    /* home "What we do" tile */
+  --hub-dark: #1b1c40;              /* darkest tile */
+  --hub-banner: var(--hub-navy);    /* subpage banner left */
 
   /* --- Neutrals --- */
-  --hub-text: #2b2b2b;
-  --hub-text-muted: #555555;
+  --hub-text: #1b1f3a;              /* matches the logo wordmark */
+  --hub-text-muted: #4f5566;
   --hub-border: #e5e5e5;
-  --hub-surface: #f8f8f8;
-  --hub-card: rgba(80, 140, 150, 0.2);
+  --hub-surface: #f6f7fa;
+  --hub-card: #f1f5f6;
 }
+
 
 /* Prevents the sticky header from covering anchor links */
 html {
@@ -90,17 +99,21 @@ html {
   margin-right: 15px;
 }
 
-/* Text wordmark, used until a logo is added in _config.yml */
-.site-title-text {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: var(--hub-text);
-  line-height: 1.2;
+/* Wave mark + text wordmark (mark set with logo_mark in _config.yml) */
+.site-title img.site-title-mark {
+  height: 44px;
+  max-height: none;
+  width: auto;
+  margin-right: 12px;
 }
 
-.site-title-text span {
-  color: var(--hub-primary);
+.site-title-text {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--hub-text);
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* --- Desktop navigation: active page indicator --- */
@@ -128,7 +141,7 @@ html {
 @media screen and (min-width: 601px) {
   .site-nav .page-link:hover,
   .site-nav .page-link.active {
-    color: var(--hub-primary) !important;
+    color: var(--hub-primary-soft) !important;
   }
   .site-nav .page-link:hover::after,
   .site-nav .page-link.active::after {
@@ -189,13 +202,17 @@ html {
     max-width: calc(100% - 60px) !important;
     display: block !important;
   }
-  .site-title img {
-    width: 100% !important;
-    height: auto !important;
-    margin-right: 0 !important;
+  .site-title {
+    display: inline-flex !important;
+    align-items: center;
+  }
+  .site-title img.site-title-mark {
+    height: 30px !important;
+    width: auto !important;
+    margin-right: 8px !important;
   }
   .site-title-text {
-    font-size: 21px;
+    font-size: 17px;
   }
 
   /* Swap the hamburger for an X while the menu is open */
@@ -226,7 +243,7 @@ html {
    ------------------------------------------------------------------------------ */
 .site-footer {
   background-color: var(--hub-surface);
-  color: var(--hub-primary);
+  color: var(--hub-navy);
   padding: 50px 0;
   border-top: none;
 }
@@ -254,9 +271,21 @@ html {
   line-height: 1.8;
 }
 
-.footer-labs a {
-  color: var(--hub-primary);
+.footer-labs a,
+.footer-labs .footer-lab {
+  color: var(--hub-text);
   font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Coloured dot before each lab name, in that lab's colour */
+.footer-labs .lab-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background-color: var(--lab-color, var(--hub-primary));
 }
 
 .footer-labs .footer-hub-name {
@@ -267,8 +296,9 @@ html {
 }
 
 .footer-labs img {
-  max-height: 70px;
+  max-height: 80px;
   width: auto;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 768px) {
@@ -319,14 +349,18 @@ html {
   display: block;
   width: 80px;
   height: 5px;
-  background-color: var(--hub-primary);
+  background-color: var(--hub-highlight);
   margin-top: 15px;
 }
 
 .banner-right {
   width: 50%;
   flex: 0 0 50%;
-  background-color: var(--hub-tile-1);
+  background-color: #ffffff;
+  background-image: url('../images/hub-mark.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
   /* To use a pattern or photo instead, replace the colour above with:
      background-image: url('/images/your-pattern.png'); background-size: cover; */
 }
@@ -401,7 +435,7 @@ html {
 .apply-btn,
 .read-more-btn {
   display: inline-block;
-  background-color: var(--hub-primary-soft);
+  background-color: var(--hub-button);
   color: #ffffff !important;
   padding: 10px 22px;
   text-decoration: none;
@@ -414,7 +448,7 @@ html {
 .btn:hover,
 .apply-btn:hover,
 .read-more-btn:hover {
-  background-color: var(--hub-primary-dark);
+  background-color: var(--hub-primary-soft);
   text-decoration: none;
 }
 
@@ -426,12 +460,12 @@ html {
 
 .btn-light {
   background-color: #ffffff;
-  color: var(--hub-primary-dark) !important;
+  color: var(--hub-navy) !important;
 }
 
 .btn-light:hover {
   background-color: var(--hub-highlight);
-  color: #0f2027 !important;
+  color: var(--hub-navy) !important;
 }
 
 .btn-row {
@@ -467,12 +501,14 @@ html {
   }
 }
 
+/* Cards take their accent from --lab-color (set inline per lab), else teal */
 .hub-card {
   background-color: var(--hub-card);
+  background-color: color-mix(in srgb, var(--lab-color, var(--hub-primary)) 9%, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  border: 1px solid #f0f0f0;
-  border-left: 6px solid var(--hub-primary-soft);
+  border: 1px solid #eef0f3;
+  border-left: 6px solid var(--lab-color, var(--hub-primary));
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -499,7 +535,7 @@ html {
 .hub-card-subtitle {
   padding: 0 25px 10px 25px;
   margin: 0;
-  color: var(--hub-primary-dark);
+  color: var(--hub-text-muted);
   font-size: 15px;
   font-weight: 500;
 }
@@ -540,7 +576,8 @@ html {
 
 .tag-list li {
   background-color: #ffffff;
-  color: var(--hub-primary-soft);
+  color: var(--hub-navy);
+  border-left: 3px solid var(--tag-color, var(--lab-color, var(--hub-primary)));
   padding: 4px 10px;
   border-radius: 4px;
   font-size: 13px;
@@ -566,7 +603,4 @@ ul.req-list li {
   color: var(--hub-primary-soft);
 }
 
-/* Lab names in the footer that don't have a website yet */
-.footer-labs span:not(.footer-hub-name) {
-  color: var(--hub-text-muted);
-}
+

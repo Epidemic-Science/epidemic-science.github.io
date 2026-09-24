@@ -2,62 +2,61 @@
 layout: default
 title: Home
 permalink: /
-# Optional background photo for the hero, e.g. /images/banner.png
-# (the CEPH site uses one). Leave blank for a plain gradient.
-hero_image: ""
 ---
 <style>
   .page-content {
     padding-bottom: 0 !important;
   }
 
-  /* --- Hero banner --- */
+  /* --- Hero banner: light, so the wave logo keeps its colours --- */
   .hero {
     position: relative;
-    height: 80vh;
-    min-height: 480px;
+    min-height: 78vh;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: -30px;
     box-sizing: border-box;
-    background-color: var(--hub-dark);
-    background-image: linear-gradient(135deg, rgba(15, 32, 39, 0.92), rgba(49, 130, 135, 0.78)){% if page.hero_image != "" %}, url('{{ page.hero_image | relative_url }}'){% endif %};
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    padding: 0 10%;
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, var(--hub-surface) 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8% 110px 10%;
   }
 
-  .hero h1 {
-    font-size: 4rem;
+  .hero-text h1 {
+    font-size: 3.8rem;
     margin-bottom: 0;
-    letter-spacing: 1px;
-    color: #ffffff;
-    max-width: 60vw;
-    line-height: 1.15;
+    letter-spacing: 0.5px;
+    color: var(--hub-text);
+    line-height: 1.12;
   }
 
-  .hero h1::after {
+  /* Three-colour underline, one segment per lab */
+  .hero-text h1::after {
     content: "";
     display: block;
-    width: 300px;
-    height: 4px;
-    background-color: var(--hub-highlight);
+    width: 270px;
+    height: 5px;
+    background: linear-gradient(90deg,
+      var(--hub-teal) 0 33.3%, var(--hub-navy) 33.3% 66.6%, var(--hub-orange) 66.6% 100%);
     margin-top: 25px;
     margin-bottom: 25px;
   }
 
-  .hero p {
-    font-size: 1.6rem;
+  .hero-text p {
+    font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 40px;
-    color: #e0f2f1;
-    max-width: 50vw;
+    margin-bottom: 0;
+    color: var(--hub-text-muted);
     line-height: 1.5;
+  }
+
+  .hero-art img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   /* --- Bouncing scroll-down arrow --- */
@@ -87,8 +86,8 @@ hero_image: ""
     display: block;
     width: 15px;
     height: 15px;
-    border-bottom: 2px solid var(--hub-highlight);
-    border-right: 2px solid var(--hub-highlight);
+    border-bottom: 2px solid var(--hub-navy);
+    border-right: 2px solid var(--hub-navy);
     transform: rotate(45deg);
   }
 
@@ -117,7 +116,14 @@ hero_image: ""
 
   .tile-mission { background-color: var(--hub-tile-1); grid-column: 1; grid-row: 1; }
   .tile-what    { background-color: var(--hub-tile-2); grid-column: 1; grid-row: 2; }
-  .tile-about   { background-color: var(--hub-dark);   grid-column: 2; grid-row: 1 / span 2; }
+  .tile-about   { background-color: #eceef5; grid-column: 2; grid-row: 1 / span 2; }
+
+  /* Light tile so all three lab colours (incl. midnight blue) stay visible */
+  .tile.tile-about,
+  .tile.tile-about p,
+  .tile.tile-about ul {
+    color: var(--hub-text);
+  }
 
   .tile-title {
     font-size: 30px;
@@ -130,7 +136,7 @@ hero_image: ""
   }
 
   .tile-about .tile-title {
-    color: var(--hub-highlight);
+    color: var(--hub-navy);
   }
 
   .tile p,
@@ -157,7 +163,7 @@ hero_image: ""
   }
 
   .tile-lab-list li {
-    border-left: 4px solid var(--hub-highlight);
+    border-left: 5px solid var(--lab-color, var(--hub-highlight));
     padding: 6px 0 6px 16px;
     margin-bottom: 18px;
   }
@@ -193,22 +199,25 @@ hero_image: ""
 
   @media screen and (max-width: 768px) {
     .hero {
-      padding: 0 25px;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 30px 25px 90px 25px;
+      min-height: 0;
     }
-    .hero h1 {
-      font-size: 3rem;
-      max-width: 100%;
-      line-height: 1.2;
+    .hero-art {
+      order: -1;
     }
-    .hero h1::after {
-      width: 120px;
+    .hero-text h1 {
+      font-size: 2.6rem;
+      line-height: 1.15;
+    }
+    .hero-text h1::after {
+      width: 150px;
       margin-top: 20px;
       margin-bottom: 20px;
     }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 100%;
-      margin-bottom: 20px;
+    .hero-text p {
+      font-size: 1.25rem;
     }
     .scroll-down {
       height: 40px;
@@ -222,8 +231,13 @@ hero_image: ""
 
 <!-- TODO: review the headline and tagline below. -->
 <div class="hero">
-  <h1>Epidemic Science Hub</h1>
-  <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them.</p>
+  <div class="hero-text">
+    <h1>Epidemic Science Hub</h1>
+    <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them.</p>
+  </div>
+  <div class="hero-art">
+    <img src="{{ site.logo_mark | relative_url }}" alt="">
+  </div>
   <a href="#mission" class="scroll-down" aria-label="Scroll to Mission"></a>
 </div>
 
@@ -257,12 +271,12 @@ hero_image: ""
     <p>The Hub is home to {{ site.data.labs | size }} laboratories that share people, data, and ideas:</p>
     <ul class="tile-lab-list">
       {%- for lab in site.data.labs %}
-      <li><strong>{{ lab.short_name }}</strong><span>Led by {{ lab.pi }}</span></li>
+      <li style="--lab-color: {{ lab.color }};"><strong>{{ lab.short_name }}</strong><span>Led by {{ lab.pi }}</span></li>
       {%- endfor %}
     </ul>
     <div class="btn-row">
       <a href="{{ '/labs/' | relative_url }}" class="btn">Meet the Labs</a>
-      <a href="{{ '/join-us/' | relative_url }}" class="btn btn-light">Join Us</a>
+      <a href="{{ '/join-us/' | relative_url }}" class="btn">Join Us</a>
     </div>
   </div>
 

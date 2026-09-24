@@ -10,6 +10,7 @@
 #   pi          lab lead
 #   pi_email    optional; shows an "Email" button when filled in
 #   website     optional; shows a "Visit Lab Website" button when filled in
+#   color       the lab's colour (hex); used for card borders, tags, dots
 #   logo        optional; path to an image in /images/labs/
 #   summary     one short paragraph for the lab card
 #   themes      optional; a few keywords shown as tags on the card
@@ -21,6 +22,7 @@
   pi: Marco Ajelli
   pi_email: majelli@iu.edu
   website: https://ceph-lab.github.io
+  color: "#468a93"   # teal
   logo: ""
   summary: >-
     Develops mathematical, computational, and statistical models to advance the
@@ -38,6 +40,7 @@
   pi: Maria Litvinova
   pi_email: ""
   website: ""
+  color: "#262757"   # midnight blue
   logo: ""
   summary: >-
     TODO: one or two sentences describing the SEAL Lab's mission and research.
@@ -49,6 +52,7 @@
   pi: André Wilke
   pi_email: ""
   website: ""
+  color: "#f58a06"   # orange
   logo: ""
   summary: >-
     TODO: one or two sentences describing the MCORE Lab's mission and research.

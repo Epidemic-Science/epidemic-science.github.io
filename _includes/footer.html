@@ -15,11 +15,11 @@
         {%- endif -%}
         {%- for lab in site.data.labs -%}
           {%- if lab.website and lab.website != "" -%}
-            <a href="{{ lab.website }}" target="_blank" rel="noopener">{{ lab.short_name }}</a>
+            <a href="{{ lab.website }}" target="_blank" rel="noopener" style="--lab-color: {{ lab.color }};"><span class="lab-dot"></span>{{ lab.short_name }}</a>
           {%- else -%}
-            <span>{{ lab.short_name }}</span>
+            <span class="footer-lab" style="--lab-color: {{ lab.color }};"><span class="lab-dot"></span>{{ lab.short_name }}</span>
           {%- endif -%}
-          {%- unless forloop.last %} &middot; {% endunless -%}
+          {%- unless forloop.last %}&ensp; {% endunless -%}
         {%- endfor -%}
       </div>
 

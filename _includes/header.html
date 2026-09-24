@@ -2,11 +2,10 @@
   <div class="wrapper">
 
     <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
-      {%- if site.logo and site.logo != "" -%}
-        <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}">
-      {%- else -%}
-        <span class="site-title-text">Epidemic <span>Science</span> Hub</span>
+      {%- if site.logo_mark and site.logo_mark != "" -%}
+        <img class="site-title-mark" src="{{ site.logo_mark | relative_url }}" alt="">
       {%- endif -%}
+      <span class="site-title-text">{{ site.title | escape }}</span>
     </a>
 
     <nav class="site-nav">

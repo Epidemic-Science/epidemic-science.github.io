@@ -23,14 +23,15 @@ permalink: /research/
 
 <div class="card-grid">
   {%- for theme in site.data.research %}
-  <div class="hub-card">
+    {%- assign first_lab = site.data.labs | where: "id", theme.labs[0] | first %}
+  <div class="hub-card"{% if first_lab %} style="--lab-color: {{ first_lab.color }};"{% endif %}>
     <h3 class="hub-card-title">{{ theme.title }}</h3>
     <div class="hub-card-content">
       {%- if theme.labs and theme.labs.size > 0 %}
       <ul class="tag-list">
         {%- for lab_id in theme.labs %}
           {%- assign lab = site.data.labs | where: "id", lab_id | first %}
-        <li>{% if lab %}{{ lab.short_name }}{% else %}{{ lab_id }}{% endif %}</li>
+        <li{% if lab %} style="--tag-color: {{ lab.color }};"{% endif %}>{% if lab %}{{ lab.short_name }}{% else %}{{ lab_id }}{% endif %}</li>
         {%- endfor %}
       </ul>
       {%- endif %}
