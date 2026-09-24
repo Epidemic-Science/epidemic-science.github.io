@@ -1,0 +1,55 @@
+# ==============================================================================
+# RESEARCH THEMES SHOWN ON THE RESEARCH PAGE
+# Seeded with the CEPH Lab's five research lines (text copied from
+# ceph-lab.github.io/research). TODO: add SEAL and MCORE themes, merge themes
+# the labs share, and tag each theme with every lab that works on it.
+#
+# Fields
+#   title    theme name
+#   summary  one short paragraph
+#   labs     list of lab ids from _data/labs.yml (shown as tags)
+#   link     optional; "Learn More" button (e.g. a lab's research page)
+# ==============================================================================
+
+- title: Human Social Behavior
+  summary: >-
+    Social behavior drives pathogen transmission, leading to heterogeneous
+    exposure risks across different socio-demographic groups. The objective is
+    to understand the social behavior of individuals and its determinants to
+    better characterize transmission pathways.
+  labs: [ceph]
+  link: https://ceph-lab.github.io/research/human-social-behavior/
+
+- title: Mosquito Ecology and Behavior
+  summary: >-
+    The relative abundance and behavior of mosquito vector species are main
+    determinants of human risk for mosquito-borne diseases. The objective is to
+    investigate the drivers of seasonal and diel trends in mosquito population
+    dynamics and behavior across space and time.
+  labs: [ceph]
+  link: https://ceph-lab.github.io/research/mosquito-ecology-and-behavior/
+
+- title: Infectious Disease Dynamics
+  summary: >-
+    The transmission of infectious pathogens is driven by the interplay of
+    biological, behavioral, and socio-economic factors. The objective is to
+    characterize the fundamental mechanisms of pathogen spread, from individual
+    infections to population-level patterns.
+  labs: [ceph]
+  link: https://ceph-lab.github.io/research/infectious-disease-dynamics/
+
+- title: Situational Awareness
+  summary: >-
+    Nowcasting and forecasting of epidemic trajectories and mosquito
+    populations help public health and mosquito control authorities anticipate
+    surges in disease burden and trigger early warnings.
+  labs: [ceph]
+  link: https://ceph-lab.github.io/research/situational-awareness/
+
+- title: Public Health Planning
+  summary: >-
+    Scenario analysis and model-based evaluations of pharmaceutical and
+    non-pharmaceutical interventions support epidemic preparedness and
+    response for national and international public health partners.
+  labs: [ceph]
+  link: https://ceph-lab.github.io/research/public-health-planning/

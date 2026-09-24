@@ -1,0 +1,75 @@
+---
+layout: default
+title: Join Us
+permalink: /join-us/
+---
+
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>Join Us</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div class="intro-text">
+  <!-- TODO: review this introduction. -->
+  <p>The Epidemic Science Hub welcomes researchers at every career stage who are passionate about understanding
+    and controlling infectious diseases. Openings are managed by the individual labs, so please reach out to the
+    lab whose work interests you most.</p>
+</div>
+
+<h2 class="section-header">Opportunities by Lab</h2>
+
+<div class="card-grid three-up">
+  {%- for lab in site.data.labs %}
+  <div class="hub-card">
+    <h3 class="hub-card-title">{{ lab.short_name }}</h3>
+    <p class="hub-card-subtitle">Led by {{ lab.pi }}</p>
+    <div class="hub-card-content">
+      <p class="hub-card-text">For inquiries about postdoctoral, graduate, or undergraduate positions in the
+        {{ lab.short_name }}, please get in touch with {{ lab.pi }} directly with your CV.</p>
+      <div class="spacer"></div>
+      <div class="btn-row">
+        {%- if lab.pi_email and lab.pi_email != "" %}
+        <a href="mailto:{{ lab.pi_email }}?subject=Position Inquiry - {{ lab.short_name }}" class="read-more-btn">Email {{ lab.pi | split: ' ' | first }}</a>
+        {%- endif %}
+        {%- if lab.website and lab.website != "" %}
+        <a href="{{ lab.website }}" class="read-more-btn" target="_blank" rel="noopener">Lab Website</a>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+
+<h2 class="section-header">Degree Programs</h2>
+
+<div class="hub-card">
+  <h3 class="hub-card-title">Graduate Programs</h3>
+  <div class="hub-card-content">
+    <p class="hub-card-text">Students can join the Hub's labs through degree programs offered by the Indiana
+      University School of Public Health - Bloomington, including:</p>
+    <ul class="req-list">
+      <li><a href="https://publichealth.indiana.edu/doctoral/majors/phd-epidemiology.html" target="_blank" rel="noopener">PhD in Epidemiology</a></li>
+      <li><a href="https://publichealth.indiana.edu/doctoral/majors/phd-biostatistics.html" target="_blank" rel="noopener">PhD in Biostatistics</a></li>
+      <li><a href="https://publichealth.indiana.edu/masters/degrees-majors/biostatistics.html" target="_blank" rel="noopener">MS in Biostatistics</a></li>
+      <!-- TODO: add other programs the SEAL and MCORE labs recruit from. -->
+    </ul>
+    <p class="hub-card-text">Admissions are handled centrally by the university. Please review the official degree
+      requirements and deadlines before applying.</p>
+    <div class="btn-row">
+      <a href="https://publichealth.indiana.edu/doctoral/apply/index.html" target="_blank" rel="noopener" class="apply-btn">How to Apply (PhD)</a>
+      <a href="https://publichealth.indiana.edu/masters/apply/index.html" target="_blank" rel="noopener" class="apply-btn">How to Apply (MS)</a>
+    </div>
+  </div>
+</div>
+
+<div class="hub-card">
+  <h3 class="hub-card-title">Undergraduate Research</h3>
+  <div class="hub-card-content">
+    <!-- TODO: confirm details (e.g. course credit options) apply across all three labs. -->
+    <p class="hub-card-text">IU undergraduates seeking research experience are encouraged to reach out to any of
+      the Hub's labs. Students assist with data analysis, literature reviews, and modeling projects that build
+      quantitative skills for careers in academia and public health.</p>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-grid">
+
+      <div class="footer-institution">
+        <strong>Indiana University</strong><br>
+        <span>School of Public Health - Bloomington</span>
+      </div>
+
+      <div class="footer-labs">
+        {%- if site.logo and site.logo != "" -%}
+          <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}"><br>
+        {%- else -%}
+          <span class="footer-hub-name">{{ site.title | escape }}</span>
+        {%- endif -%}
+        {%- for lab in site.data.labs -%}
+          {%- if lab.website and lab.website != "" -%}
+            <a href="{{ lab.website }}" target="_blank" rel="noopener">{{ lab.short_name }}</a>
+          {%- else -%}
+            <span>{{ lab.short_name }}</span>
+          {%- endif -%}
+          {%- unless forloop.last %} &middot; {% endunless -%}
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,28 @@
+---
+layout: default
+title: Labs
+permalink: /labs/
+---
+{%- comment -%}
+  Lab cards are generated from _data/labs.yml — edit that file, not this page.
+{%- endcomment -%}
+
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>Labs</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div class="intro-text">
+  <!-- TODO: review this introduction. -->
+  <p>The Epidemic Science Hub brings together {{ site.data.labs | size }} laboratories at the Indiana University
+    School of Public Health - Bloomington. Each lab leads its own research program, and together they share
+    expertise, data, and training across the science of epidemics.</p>
+</div>
+
+<div class="card-grid three-up">
+  {%- for lab in site.data.labs %}
+    {% include lab-card.html lab=lab people_link=true %}
+  {%- endfor %}
+</div>

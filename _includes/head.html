@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- comment -%}
+    Overrides minima 2.5.1's head.html (the version GitHub Pages runs), which
+    never loads custom-head.html on its own. Put favicons and other extra
+    <head> tags in _includes/custom-head.html.
+  {%- endcomment -%}
+  {%- include custom-head.html -%}
+</head>

@@ -1,0 +1,36 @@
+# ==============================================================================
+# PEOPLE IN THE EPIDEMIC SCIENCE HUB
+# The People page groups everyone by lab (in the order of _data/labs.yml),
+# then lists them in the order they appear here. Put each lab's PI first.
+#
+# Fields
+#   name     full name
+#   role     title shown under the name (e.g. Professor, PhD Student)
+#   lab      the lab `id` from _data/labs.yml (ceph, seal, mcore)
+#   image    optional; square photo in /images/people/ (see images/README.md).
+#            Leave blank to show a neutral placeholder.
+#   profile  optional; link to the person's profile page (e.g. on their lab's
+#            site). The photo becomes clickable when filled in.
+#   alumni   optional; set to true to list the person under "Alumni" instead
+# ==============================================================================
+
+# --- CEPH Lab -----------------------------------------------------------------
+- name: Marco Ajelli
+  role: Professor
+  lab: ceph
+  image: /images/people/marco-ajelli.png
+  profile: https://ceph-lab.github.io/people/marco-ajelli/
+
+# --- SEAL Lab -----------------------------------------------------------------
+- name: Maria Litvinova
+  role: "TODO: title"
+  lab: seal
+  image: ""
+  profile: ""
+
+# --- MCORE Lab ----------------------------------------------------------------
+- name: André Wilke
+  role: "TODO: title"
+  lab: mcore
+  image: ""
+  profile: ""

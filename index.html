@@ -1,0 +1,278 @@
+---
+layout: default
+title: Home
+permalink: /
+# Optional background photo for the hero, e.g. /images/banner.png
+# (the CEPH site uses one). Leave blank for a plain gradient.
+hero_image: ""
+---
+<style>
+  .page-content {
+    padding-bottom: 0 !important;
+  }
+
+  /* --- Hero banner --- */
+  .hero {
+    position: relative;
+    height: 80vh;
+    min-height: 480px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: -30px;
+    box-sizing: border-box;
+    background-color: var(--hub-dark);
+    background-image: linear-gradient(135deg, rgba(15, 32, 39, 0.92), rgba(49, 130, 135, 0.78)){% if page.hero_image != "" %}, url('{{ page.hero_image | relative_url }}'){% endif %};
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    padding: 0 10%;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    color: #ffffff;
+    max-width: 60vw;
+    line-height: 1.15;
+  }
+
+  .hero h1::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 4px;
+    background-color: var(--hub-highlight);
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .hero p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #e0f2f1;
+    max-width: 50vw;
+    line-height: 1.5;
+  }
+
+  /* --- Bouncing scroll-down arrow --- */
+  .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .scroll-down:hover {
+    opacity: 1;
+  }
+
+  .scroll-down::after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid var(--hub-highlight);
+    border-right: 2px solid var(--hub-highlight);
+    transform: rotate(45deg);
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+  }
+
+  /* --- Feature tiles --- */
+  .feature-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+  }
+
+  .tile {
+    padding: 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #ffffff;
+  }
+
+  .tile-mission { background-color: var(--hub-tile-1); grid-column: 1; grid-row: 1; }
+  .tile-what    { background-color: var(--hub-tile-2); grid-column: 1; grid-row: 2; }
+  .tile-about   { background-color: var(--hub-dark);   grid-column: 2; grid-row: 1 / span 2; }
+
+  .tile-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .tile-about .tile-title {
+    color: var(--hub-highlight);
+  }
+
+  .tile p,
+  .tile ul {
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .tile ul {
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+
+  .tile li {
+    margin-bottom: 12px;
+  }
+
+  .tile-lab-list {
+    list-style: none;
+    padding-left: 0 !important;
+    margin-top: 25px !important;
+  }
+
+  .tile-lab-list li {
+    border-left: 4px solid var(--hub-highlight);
+    padding: 6px 0 6px 16px;
+    margin-bottom: 18px;
+  }
+
+  .tile-lab-list strong {
+    display: block;
+    font-size: 22px;
+  }
+
+  .tile-lab-list span {
+    font-size: 16px;
+    opacity: 0.85;
+  }
+
+  .tile .btn-row {
+    margin-top: 25px;
+  }
+
+  /* --- Our Labs section --- */
+  .labs-section {
+    padding: 70px 0 60px 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    .feature-tiles {
+      grid-template-columns: 1fr;
+    }
+    .tile-mission, .tile-what, .tile-about {
+      grid-column: 1;
+      grid-row: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      padding: 0 25px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 100%;
+      line-height: 1.2;
+    }
+    .hero h1::after {
+      width: 120px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .scroll-down {
+      height: 40px;
+      width: 40px;
+    }
+    .tile {
+      padding: 40px 5%;
+    }
+  }
+</style>
+
+<!-- TODO: review the headline and tagline below. -->
+<div class="hero">
+  <h1>Epidemic Science Hub</h1>
+  <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them.</p>
+  <a href="#mission" class="scroll-down" aria-label="Scroll to Mission"></a>
+</div>
+
+<div class="feature-tiles">
+
+  <div class="tile tile-mission">
+    <div id="mission"></div>
+    <h3 class="tile-title">Mission</h3>
+    <!-- TODO: replace with the Hub's agreed mission statement. -->
+    <p>The Epidemic Science Hub brings together researchers at the Indiana University School of Public Health -
+      Bloomington to advance the science of infectious disease epidemiology and translate it into actionable
+      insights for public health.</p>
+  </div>
+
+  <div class="tile tile-what">
+    <h3 class="tile-title">What we do</h3>
+    <!-- TODO: edit this list to reflect the Hub's shared activities. -->
+    <ul>
+      <li>Build mathematical, computational, and statistical models of infectious disease transmission</li>
+      <li>Study the human, social, and ecological drivers of epidemics, including vectors such as mosquitoes</li>
+      <li>Forecast disease activity and evaluate interventions to support public health decision-making</li>
+      <li>Train the next generation of epidemic scientists</li>
+    </ul>
+    <div class="btn-row">
+      <a href="{{ '/research/' | relative_url }}" class="btn btn-light">Explore Our Research</a>
+    </div>
+  </div>
+
+  <div class="tile tile-about">
+    <h3 class="tile-title">About the Hub</h3>
+    <p>The Hub is home to {{ site.data.labs | size }} laboratories that share people, data, and ideas:</p>
+    <ul class="tile-lab-list">
+      {%- for lab in site.data.labs %}
+      <li><strong>{{ lab.short_name }}</strong><span>Led by {{ lab.pi }}</span></li>
+      {%- endfor %}
+    </ul>
+    <div class="btn-row">
+      <a href="{{ '/labs/' | relative_url }}" class="btn">Meet the Labs</a>
+      <a href="{{ '/join-us/' | relative_url }}" class="btn btn-light">Join Us</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="labs-section">
+  <h2 class="section-header">Our Labs</h2>
+  <div class="card-grid three-up">
+    {%- for lab in site.data.labs %}
+      {% include lab-card.html lab=lab %}
+    {%- endfor %}
+  </div>
+</div>

@@ -1,0 +1,149 @@
+---
+layout: default
+title: People
+permalink: /people/
+---
+{%- comment -%}
+  Everyone on this page comes from _data/people.yml, grouped by lab in the
+  order of _data/labs.yml. Add or edit people there, not here.
+{%- endcomment -%}
+<style>
+  .lab-group {
+    margin-bottom: 30px;
+  }
+
+  .lab-group .section-header a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .people-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media screen and (max-width: 600px) {
+    .people-grid { grid-template-columns: 1fr; }
+  }
+
+  .profile-card {
+    text-align: center;
+    width: 100%;
+  }
+
+  .profile-card a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: 100%;
+    text-decoration: none;
+  }
+
+  .profile-card a:hover {
+    transform: translateY(-5px);
+  }
+
+  .profile-card img {
+    border-radius: 4px;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  .profile-card h4 {
+    margin: 0 0 4px 0;
+    color: var(--hub-text);
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+
+  .profile-card p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.4;
+  }
+
+  .alumni-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    columns: 3;
+  }
+
+  @media screen and (max-width: 600px) {
+    .alumni-list { columns: 1; }
+  }
+</style>
+
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>People</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+{%- for lab in site.data.labs %}
+  {%- assign members = site.data.people | where: "lab", lab.id -%}
+  {%- assign current = "" | split: "" -%}
+  {%- assign alumni = "" | split: "" -%}
+  {%- for person in members -%}
+    {%- if person.alumni -%}
+      {%- assign alumni = alumni | push: person -%}
+    {%- else -%}
+      {%- assign current = current | push: person -%}
+    {%- endif -%}
+  {%- endfor %}
+
+<div class="lab-group" id="people-{{ lab.id }}">
+  <h2 class="section-header">
+    {%- if lab.website and lab.website != "" -%}
+      <a href="{{ lab.website }}" target="_blank" rel="noopener">{{ lab.short_name }}</a>
+    {%- else -%}
+      {{ lab.short_name }}
+    {%- endif -%}
+  </h2>
+
+  {%- if current.size > 0 %}
+  <div class="people-grid">
+    {%- for person in current %}
+      {%- if person.image and person.image != "" -%}
+        {%- assign photo = person.image -%}
+      {%- else -%}
+        {%- assign photo = "/images/people/placeholder.svg" -%}
+      {%- endif %}
+    <div class="profile-card">
+      {%- if person.profile and person.profile != "" %}
+      <a href="{{ person.profile }}"><img src="{{ photo | relative_url }}" alt="{{ person.name }}"></a>
+      {%- else %}
+      <img src="{{ photo | relative_url }}" alt="{{ person.name }}">
+      {%- endif %}
+      <h4>{{ person.name }}</h4>
+      <p>{{ person.role }}</p>
+    </div>
+    {%- endfor %}
+  </div>
+  {%- else %}
+  <p><span class="todo-note">No members listed yet — add them in _data/people.yml</span></p>
+  {%- endif %}
+
+  {%- if alumni.size > 0 %}
+  <h3>Alumni</h3>
+  <ul class="alumni-list">
+    {%- for person in alumni %}
+    <li>{% if person.profile and person.profile != "" %}<a href="{{ person.profile }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</div>
+{%- endfor %}

@@ -1,0 +1,36 @@
+{%- comment -%}
+  One lab card. Usage: {% include lab-card.html lab=lab %}
+  All content comes from _data/labs.yml.
+{%- endcomment -%}
+{%- assign lab = include.lab -%}
+
+<div class="hub-card" id="{{ lab.id }}">
+  {%- if lab.logo and lab.logo != "" %}
+  <img class="hub-card-logo" src="{{ lab.logo | relative_url }}" alt="{{ lab.short_name }} logo">
+  {%- endif %}
+  <h3 class="hub-card-title">{{ lab.short_name }}</h3>
+  <p class="hub-card-subtitle">{{ lab.full_name }}</p>
+  <div class="hub-card-content">
+    <p class="hub-card-text"><strong>Led by {{ lab.pi }}</strong></p>
+    <p class="hub-card-text">{{ lab.summary }}</p>
+    {%- if lab.themes and lab.themes.size > 0 %}
+    <ul class="tag-list">
+      {%- for theme in lab.themes %}
+      <li>{{ theme }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+    <div class="spacer"></div>
+    <div class="btn-row">
+      {%- if lab.website and lab.website != "" %}
+      <a href="{{ lab.website }}" class="read-more-btn" target="_blank" rel="noopener">Visit Lab Website</a>
+      {%- endif %}
+      {%- if lab.pi_email and lab.pi_email != "" %}
+      <a href="mailto:{{ lab.pi_email }}" class="read-more-btn">Email {{ lab.pi | split: ' ' | first }}</a>
+      {%- endif %}
+      {%- if include.people_link %}
+      <a href="{{ '/people/' | relative_url }}#people-{{ lab.id }}" class="read-more-btn">People</a>
+      {%- endif %}
+    </div>
+  </div>
+</div>

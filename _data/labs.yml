@@ -1,0 +1,55 @@
+# ==============================================================================
+# LABS IN THE EPIDEMIC SCIENCE HUB
+# Every page (Home, Labs, People, Join Us, footer) reads from this file, so a
+# change here updates the whole site. The order below is the display order.
+#
+# Fields
+#   id          short key, lowercase; people.yml uses it to assign people to a lab
+#   short_name  name shown on cards and headings
+#   full_name   full lab name
+#   pi          lab lead
+#   pi_email    optional; shows an "Email" button when filled in
+#   website     optional; shows a "Visit Lab Website" button when filled in
+#   logo        optional; path to an image in /images/labs/
+#   summary     one short paragraph for the lab card
+#   themes      optional; a few keywords shown as tags on the card
+# ==============================================================================
+
+- id: ceph
+  short_name: CEPH Lab
+  full_name: Laboratory for Computational Epidemiology and Public Health
+  pi: Marco Ajelli
+  pi_email: majelli@iu.edu
+  website: https://ceph-lab.github.io
+  logo: ""
+  summary: >-
+    Develops mathematical, computational, and statistical models to advance the
+    understanding of infectious disease epidemiology and provide actionable
+    insights to inform public health policy.
+  themes:
+    - Epidemic modeling
+    - Forecasting
+    - Mosquito ecology
+    - Public health planning
+
+- id: seal
+  short_name: SEAL Lab
+  full_name: "TODO: full name of the SEAL Lab"
+  pi: Maria Litvinova
+  pi_email: ""
+  website: ""
+  logo: ""
+  summary: >-
+    TODO: one or two sentences describing the SEAL Lab's mission and research.
+  themes: []
+
+- id: mcore
+  short_name: MCORE Lab
+  full_name: "TODO: full name of the MCORE Lab"
+  pi: André Wilke
+  pi_email: ""
+  website: ""
+  logo: ""
+  summary: >-
+    TODO: one or two sentences describing the MCORE Lab's mission and research.
+  themes: []

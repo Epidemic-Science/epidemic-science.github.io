@@ -1,0 +1,45 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+{%- comment -%}
+  Theme cards are generated from _data/research.yml — edit that file.
+{%- endcomment -%}
+
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>Research</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div class="intro-text">
+  <!-- TODO: review this introduction once the Hub's shared themes are agreed. -->
+  <p>Researchers across the Hub develop mathematical, computational, and statistical approaches to understand
+    how human behavior, ecology, and pathogen dynamics drive epidemic spread, and use that understanding to
+    support public health planning.</p>
+</div>
+
+<div class="card-grid">
+  {%- for theme in site.data.research %}
+  <div class="hub-card">
+    <h3 class="hub-card-title">{{ theme.title }}</h3>
+    <div class="hub-card-content">
+      {%- if theme.labs and theme.labs.size > 0 %}
+      <ul class="tag-list">
+        {%- for lab_id in theme.labs %}
+          {%- assign lab = site.data.labs | where: "id", lab_id | first %}
+        <li>{% if lab %}{{ lab.short_name }}{% else %}{{ lab_id }}{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      <p class="hub-card-text">{{ theme.summary }}</p>
+      <div class="spacer"></div>
+      {%- if theme.link and theme.link != "" %}
+      <a href="{{ theme.link }}" class="read-more-btn" target="_blank" rel="noopener">Learn More</a>
+      {%- endif %}
+    </div>
+  </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,41 @@
+# ==============================================================================
+# EPIDEMIC SCIENCE HUB — SITE CONFIGURATION
+# Built with Jekyll + the minima theme (same stack as ceph-lab.github.io).
+# GitHub Pages rebuilds the site automatically on every push to `main`.
+# Changes to this file are NOT picked up by `jekyll serve` — restart it.
+# ==============================================================================
+
+title: Epidemic Science Hub
+description: >-
+  A hub of three research laboratories at the Indiana University School of
+  Public Health - Bloomington advancing the science of infectious disease
+  epidemiology.
+url: "https://epidemic-science.github.io"
+baseurl: ""
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Optional wordmark shown in the header and footer. Leave blank to show the
+# site title as text. Example: /images/hub-banner.png
+logo: ""
+
+# Pages shown in the top navigation, in this order.
+header_pages:
+  - index.html
+  - labs.html
+  - people.html
+  - research.html
+  - join-us.html
+  - contact.html
+
+# Files that live in the repo but should not be published.
+exclude:
+  - README.md
+  - LICENSE
+  - images/README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

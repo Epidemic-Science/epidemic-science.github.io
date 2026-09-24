@@ -1,0 +1,47 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>Contact</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div style="margin-top: 30px; font-size: 16px; line-height: 1.6;">
+  <h3 style="margin-top: 0; color: var(--hub-primary-soft);">Epidemic Science Hub</h3>
+
+  <!-- TODO: confirm the Hub's mailing address. -->
+  <p>
+    <strong>Department of Epidemiology and Biostatistics</strong><br>
+    School of Public Health<br>
+    Indiana University Bloomington<br>
+    1025 E 7th St<br>
+    Bloomington, IN 47405
+  </p>
+
+  <p><em>For questions about a specific lab's research or open positions, please contact that lab directly.</em></p>
+</div>
+
+<h2 class="section-header">Lab Contacts</h2>
+
+<div class="card-grid three-up">
+{%- for lab in site.data.labs %}
+  <div class="hub-card">
+    <h3 class="hub-card-title">{{ lab.short_name }}</h3>
+    <div class="hub-card-content">
+      <p class="hub-card-text">
+        <strong>Lead:</strong> {{ lab.pi }}<br>
+        {%- if lab.pi_email and lab.pi_email != "" %}
+        <strong>Email:</strong> <a href="mailto:{{ lab.pi_email }}">{{ lab.pi_email }}</a><br>
+        {%- endif %}
+        {%- if lab.website and lab.website != "" %}
+        <strong>Website:</strong> <a href="{{ lab.website }}" target="_blank" rel="noopener">{{ lab.website | remove: "https://" }}</a>
+        {%- endif %}
+      </p>
+    </div>
+  </div>
+{%- endfor %}
+</div>
