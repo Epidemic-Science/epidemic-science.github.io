@@ -1,90 +1,78 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
+# ==============================================================================
+# EPIDEMIC SCIENCE HUB WEBSITE — .gitignore
+# Jekyll site deployed with GitHub Pages
+# ==============================================================================
 
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
+# ------------------------------------------------------------------------------
+# Jekyll build output and caches
+# ------------------------------------------------------------------------------
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Additional Ruby/bundler ignore for when you run: bundle install
-/vendor
-
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
+# ------------------------------------------------------------------------------
+# Ruby / Bundler (only created if you preview the site locally)
+# GitHub Pages uses its own pinned gems and ignores Gemfile.lock, so committing
+# it is counterproductive: https://github.com/github/pages-gem/issues/768
+# ------------------------------------------------------------------------------
+/vendor/
+.bundle/
 Gemfile.lock
 
-# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
-*.iml
-
-## Directory-based project format:
-.idea/
-# if you remove the above rule, at least ignore the following:
-
-# User-specific stuff:
-# .idea/workspace.xml
-# .idea/tasks.xml
-# .idea/dictionaries
-
-# Sensitive or high-churn files:
-# .idea/dataSources.ids
-# .idea/dataSources.xml
-# .idea/sqlDataSources.xml
-# .idea/dynamic.xml
-# .idea/uiDesigner.xml
-
-# Gradle:
-# .idea/gradle.xml
-# .idea/libraries
-
-# Mongo Explorer plugin:
-# .idea/mongoSettings.xml
-
-## File-based project format:
-*.ipr
-*.iws
-
-## Plugin-specific files:
-
-# IntelliJ
-out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-
-# python byte code
-*.pyc
-
-# sqlite
-*.sqlite3
-
-staticfiles
-.env
-
-# Ignore the entire VS Code folder
-.vscode/
-
-# OR: Keep shared settings but ignore personal/workspace specific files
+# ------------------------------------------------------------------------------
+# Editors and IDEs
+# ------------------------------------------------------------------------------
+# VS Code: ignore personal settings but keep shared project settings
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-!.vscode/code-actions-setter.json
+*.code-workspace
 
-# Always ignore history, workspace storage, and local user data
-.vscode/projectHistory.json
-.vscode/workbench.action.tasks.runTask.json
-.vscode/browse.vc.db
-.vscode/c_cpp_properties.json
+# JetBrains (PyCharm, RStudio-style IDEs, IntelliJ, RubyMine, WebStorm)
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+
+# Vim / Emacs temp files
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# Scripting leftovers (if helper scripts are ever added)
+# ------------------------------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+
+# ------------------------------------------------------------------------------
+# Secrets and local data (never publish these)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.sqlite3
+*.log
+
+# ------------------------------------------------------------------------------
+# OS-generated files (macOS and Windows)
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
