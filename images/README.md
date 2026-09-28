@@ -12,7 +12,7 @@ Use clear, lowercase filenames with hyphens between words and no spaces or speci
 
 * `people/` — portraits for the People page. `placeholder.svg` is shown for anyone without a photo.
 * `labs/` — lab logos, referenced from `_data/labs.yml`.
-* top level — the Hub logo (`hub-logo.png`), wave mark (`hub-mark.png`), and browser icons.
+* top level — the Hub logo (`hub-logo.png`, and `hub-logo-square.png` at 1:1) and the browser icons (`favicon.svg` and PNG sizes).
 
 ## People photos
 
@@ -22,6 +22,5 @@ Use clear, lowercase filenames with hyphens between words and no spaces or speci
 
 ## Logos
 
-Keep logos as PNG (or SVG) with a transparent background. The wave mark is semi-transparent, so it looks
-right on white or light backgrounds but muddy on the dark midnight-blue areas; keep it on light backgrounds.
-Set the files in `_config.yml` (`logo_mark` for the waves, `logo` for the full logo).
+Keep logos as PNG (or SVG) with a transparent background. The Hub logo has midnight-blue lines, so keep it
+on white or light backgrounds. Set it with `logo:` in `_config.yml`.

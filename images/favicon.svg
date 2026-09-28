@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="18" fill="#ffffff"/>
+  <!-- network loop joining the three labs, as in the logo -->
+  <circle cx="50" cy="56" r="27" fill="none" stroke="#268b92" stroke-width="3" opacity="0.45"/>
+  <circle cx="50" cy="83" r="3.6" fill="#ed861b"/>
+  <!-- virus (top) -->
+  <g transform="translate(50 26) scale(0.92)">
+    <g stroke="#1c264b" stroke-width="4.2" stroke-linecap="round">
+      <path d="M0 -13 L0 -19"/><path d="M11.3 -6.5 L16.5 -9.5"/><path d="M11.3 6.5 L16.5 9.5"/>
+      <path d="M0 13 L0 19"/><path d="M-11.3 6.5 L-16.5 9.5"/><path d="M-11.3 -6.5 L-16.5 -9.5"/>
+    </g>
+    <g fill="#1c264b">
+      <circle cx="0" cy="-20.5" r="3.2"/><circle cx="17.8" cy="-10.3" r="3.2"/><circle cx="17.8" cy="10.3" r="3.2"/>
+      <circle cx="0" cy="20.5" r="3.2"/><circle cx="-17.8" cy="10.3" r="3.2"/><circle cx="-17.8" cy="-10.3" r="3.2"/>
+    </g>
+    <circle r="11" fill="#ffffff" stroke="#1c264b" stroke-width="5"/>
+    <circle cx="-3" cy="-2.5" r="3.2" fill="#268b92"/>
+    <circle cx="3.8" cy="3.2" r="2.4" fill="#268b92"/>
+  </g>
+  <!-- mosquito (bottom left) -->
+  <g transform="translate(30 70) rotate(-28) scale(0.86)" stroke="#1c264b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-2 -4 C-8 -17 -17 -21 -21 -17 C-17 -10 -9 -6 -2 -4 Z" fill="#ffffff" stroke-width="3.2"/>
+    <path d="M2 -4 C0 -18 -5 -25 -10 -24 C-9 -16 -4 -8 2 -4 Z" fill="#ffffff" stroke-width="3.2"/>
+    <g fill="none" stroke-width="3.4">
+      <path d="M3 3 L-1 13 L-5 18"/>
+      <path d="M7 3 L8 13 L6 19"/>
+      <path d="M11 2 L17 10 L22 13"/>
+    </g>
+    <path d="M15 0 L27 2" stroke-width="3"/>
+    <g fill="#1c264b" stroke="none">
+      <path d="M0 -3 C-10 -4 -19 -1 -24 4 C-16 5 -8 3.5 0 3 Z"/>
+      <ellipse cx="5" cy="0" rx="6.5" ry="5"/>
+      <circle cx="13" cy="0" r="3.8"/>
+    </g>
+  </g>
+  <!-- people (bottom right): teal in front, orange behind -->
+  <g fill="none" stroke-linecap="round" stroke-width="4.5">
+    <g stroke="#ed861b" transform="translate(80 67)">
+      <circle cx="0" cy="-9" r="5.5"/>
+      <path d="M-9.5 12 C-9.5 3 -5 0 0 0 C5 0 9.5 3 9.5 12"/>
+    </g>
+    <g stroke="#268b92" transform="translate(67 72)">
+      <circle cx="0" cy="-9" r="5.5" fill="#ffffff"/>
+      <path d="M-9.5 12 C-9.5 3 -5 0 0 0 C5 0 9.5 3 9.5 12" fill="#ffffff"/>
+    </g>
+  </g>
+</svg>

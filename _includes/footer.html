@@ -9,10 +9,9 @@
 
       <div class="footer-labs">
         {%- if site.logo and site.logo != "" -%}
-          <img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}"><br>
-        {%- else -%}
-          <span class="footer-hub-name">{{ site.title | escape }}</span>
+          <img src="{{ site.logo | relative_url }}" alt=""><br>
         {%- endif -%}
+        <span class="footer-hub-name">{{ site.title | escape }}</span>
         {%- for lab in site.data.labs -%}
           {%- if lab.website and lab.website != "" -%}
             <a href="{{ lab.website }}" target="_blank" rel="noopener" style="--lab-color: {{ lab.color }};"><span class="lab-dot"></span>{{ lab.short_name }}</a>

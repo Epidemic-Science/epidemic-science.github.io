@@ -1,0 +1,150 @@
+# ==============================================================================
+# M.S. IN BIOSTATISTICS: program details shown on /programs/ms-biostatistics/
+# Source: IU Bulletin 2026-2027, School of Public Health - Bloomington.
+# When a new bulletin is published, update `bulletin_year`, `bulletin_url`
+# and any courses that changed. Everything on the page is driven by this file.
+# ==============================================================================
+
+name: M.S. in Biostatistics
+school: Indiana University School of Public Health - Bloomington
+bulletin_year: 2026-2027
+bulletin_url: https://bulletins.iu.edu/iub/phb/2026-2027/graduate/masters/ms-biostatistics.shtml
+program_url: https://publichealth.indiana.edu/masters/degrees-majors/biostatistics.html
+apply_url: https://publichealth.indiana.edu/masters/apply/index.html
+
+summary: >-
+  The M.S. in Biostatistics prepares students to become clinical scientists,
+  public health researchers and biostatisticians in industry. Training covers
+  probability, statistical theory, regression models and statistical packages,
+  along with modern topics such as statistical learning and clinical trials.
+
+facts:
+  - value: "36"
+    label: credit hours
+  - value: "2"
+    label: tracks
+  - value: "6 cr."
+    label: research thesis
+  - value: "3.0"
+    label: minimum GPA to graduate
+
+rules:
+  - A minimum of 36 credit hours is required.
+  - A cumulative GPA of at least 3.0 is required to graduate, with a grade of C or higher in every course.
+  - SPH-Q 63X courses do not count toward the M.S.
+  - "Before the first day of classes, all students must complete the online Public Health Foundations prerequisite (0 cr.)."
+
+prerequisite_url: https://iu.instructure.com/enroll/MNG3L6
+
+# Each track: `blocks` are the parts of the degree, in order. `credits` drives
+# the credit bar. `pick` (optional) says how many courses to choose from the
+# list; without it every course listed is required.
+tracks:
+  - id: idm
+    name: Infectious Disease Modeling Track
+    short: IDM track
+    color: "#268B92"
+    hub_pick: true
+    description: >-
+      Specialized training in applying advanced statistical, mathematical and
+      computational methods to public health challenges. This is the track
+      closest to the Hub's work on epidemic modelling and forecasting.
+    blocks:
+      - name: IDM core
+        credits: 21
+        courses:
+          - [SPH-E 651, Epidemiology, 3]
+          - [SPH-Q 651, Introduction to Statistical Distributions in Public Health, 3]
+          - [SPH-Q 604, Applied Linear Regression, 3]
+          - [SPH-Q 611, Statistical Packages in Research, 3]
+          - [SPH-Q 671, Applied Geospatial Analytics, 3]
+          - [SPH-Q 672, Advanced Analytics in Population-Level Studies, 3]
+          - [SPH-Q 673, Computational Epidemiology, 3]
+      - name: Multi-disciplinary course
+        credits: 3
+        courses:
+          - [SPH-E 655, Infectious Disease Epidemiology, 3]
+      - name: Biostatistics electives
+        credits: 6
+        pick: Choose two
+        courses:
+          - [SPH-Q 603, Categorical Data Analysis, 3]
+          - [SPH-Q 605, Analysis of Multi-level and Longitudinal Data, 3]
+          - [SPH-Q 612, Survival Analysis, 3]
+          - [SPH-Q 652, Biostatistical Inference, 3]
+          - [SPH-Q 654, Modern Regression Methods, 3]
+          - [SPH-Q 656, Introduction to Statistical Genetics, 3]
+          - [SPH-Q 657, Biostatistical Methods for Clinical Trials, 3]
+          - [SPH-Q 659, Biostatistical Methods in Epidemiology Research, 3]
+      - name: Thesis
+        credits: 6
+        courses:
+          - [SPH-Q 699, M.S. in Biostatistics Thesis, 6]
+
+  - id: standard
+    name: Standard Track
+    short: Standard track
+    color: "#262757"
+    description: >-
+      A broad foundation in biostatistical theory and methods, with electives
+      that let students build depth in an application area.
+    blocks:
+      - name: Biostatistics core
+        credits: 24
+        courses:
+          - [SPH-E 651, Epidemiology, 3]
+          - [SPH-Q 651, Introduction to Statistical Distributions in Public Health, 3]
+          - [SPH-Q 652, Biostatistical Inference, 3]
+          - [SPH-Q 603, Categorical Data Analysis, 3]
+          - [SPH-Q 604, Applied Linear Regression, 3]
+          - [SPH-Q 605, Analysis of Multi-level and Longitudinal Data, 3]
+          - [SPH-Q 611, Statistical Packages in Research, 3]
+          - [SPH-Q 612, Survival Analysis, 3]
+      - name: Biostatistics elective
+        credits: 3
+        pick: "Choose one SPH-Q or STAT-S course at the 600 level or above (not SPH-Q 63X). Recommended:"
+        courses:
+          - [SPH-Q 654, Modern Regression Methods, 3]
+          - [SPH-Q 656, Introduction to Statistical Genetics, 3]
+          - [SPH-Q 657, Biostatistical Methods for Clinical Trials, 3]
+          - [SPH-Q 659, Biostatistical Methods in Epidemiological Research, 3]
+          - [STAT-S 611, Applied Statistical Computing, 3]
+          - [STAT-S 626, Bayesian Theory and Data Analysis, 3]
+          - [STAT-S 650, Time Series Analysis, 3]
+          - [STAT-S 660, Sampling, 3]
+          - [STAT-S 670, Exploratory Data Analysis, 3]
+          - [STAT-S 675, "Statistical Learning: High-Dimensional Data Analysis", 3]
+          - [STAT-S 676, "Statistical Learning: Model Selection", 3]
+      - name: Multi-disciplinary or additional biostatistics elective
+        credits: 3
+        note: >-
+          A multi-disciplinary course is recommended, to give background in an
+          application area such as biology, genetics or psychology.
+      - name: Thesis
+        credits: 6
+        courses:
+          - [SPH-Q 699, M.S. in Biostatistics Thesis, 6]
+    footnote: >-
+      Students awarded the M.S. as an off-ramp from the Ph.D. in Biostatistics
+      may take a non-thesis option with the approval of the Director of
+      Graduate Studies. It requires a competency exam, plus an additional
+      elective if needed to reach 36 credits.
+
+careers:
+  intro: >-
+    The Bureau of Labor Statistics projected 30% job growth for biostatisticians
+    from 2018 to 2028, much faster than the average for all occupations.
+    Graduates work in:
+  sectors:
+    - State and local health departments
+    - Federal agencies (NIH, CDC, FDA, HHS)
+    - Pharmaceutical companies
+    - Technology companies
+    - Medical device and insurance companies
+    - Universities, medical centers and consulting firms
+    - International agencies (WHO, USAID)
+
+opportunities: >-
+  Students develop their skills through research supervised by faculty or done
+  with other graduate students, work with external industry partners, and are
+  encouraged to publish and present at national conferences.

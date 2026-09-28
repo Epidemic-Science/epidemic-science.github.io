@@ -18,11 +18,10 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Logo files (see images/README.md)
-#   logo_mark  the wave symbol, shown beside the site title in the header
-#   logo       the full logo (waves + name), shown in the footer
-logo_mark: /images/hub-mark.png
-logo: /images/hub-logo.png
+# Logo (see images/README.md). Shown in the header, home page, page banners
+# and footer. The browser-tab icon (images/favicon.svg) redraws its mosquito,
+# virus and people as one square icon.
+logo: /images/hub-logo.svg
 
 # Pages shown in the top navigation, in this order.
 header_pages:

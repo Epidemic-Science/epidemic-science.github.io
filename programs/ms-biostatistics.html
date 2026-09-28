@@ -1,0 +1,158 @@
+---
+layout: default
+title: M.S. in Biostatistics
+permalink: /programs/ms-biostatistics/
+description: >-
+  The M.S. in Biostatistics at the IU School of Public Health - Bloomington,
+  including the Infectious Disease Modeling track: courses, credits and how to apply.
+---
+{%- assign p = site.data.ms_biostatistics -%}
+
+<div class="subpage-banner program-banner">
+  <div class="banner-left">
+    <p class="banner-kicker">Degree program</p>
+    <h1>{{ p.name }}</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div class="intro-text">
+  <p>{{ p.summary }}</p>
+</div>
+
+<ul class="fact-row" aria-label="Program at a glance">
+  {%- for f in p.facts %}
+  <li><span class="fact-value">{{ f.value }}</span><span class="fact-label">{{ f.label }}</span></li>
+  {%- endfor %}
+</ul>
+
+<!-- TODO: confirm with the labs how M.S. students join them (thesis supervision,
+     RA positions) and name the Hub faculty involved in the IDM track. -->
+<div class="hub-callout">
+  <h2>Studying with the Hub</h2>
+  <p>M.S. students can carry out their thesis research in one of the Hub's labs. The
+    <strong>Infectious Disease Modeling track</strong> is the closest match to our work: it pairs
+    core biostatistics with geospatial analytics, population-level analytics and computational
+    epidemiology. To talk about a thesis project, see <a href="{{ '/join-us/' | relative_url }}">Join Us</a>.</p>
+</div>
+
+<h2 class="section-header">Choose a Track</h2>
+
+<nav class="track-jump" aria-label="Tracks">
+  {%- for t in p.tracks %}
+  <a href="#{{ t.id }}" style="--lab-color: {{ t.color }};">{{ t.name }}</a>
+  {%- endfor %}
+</nav>
+
+{%- for t in p.tracks %}
+<section class="track" id="{{ t.id }}" style="--lab-color: {{ t.color }};">
+  <header class="track-head">
+    <div>
+      <h3 class="track-title">{{ t.name }}</h3>
+      {%- if t.hub_pick %}<span class="track-badge">Closest to the Hub's work</span>{% endif %}
+    </div>
+    <p class="track-desc">{{ t.description }}</p>
+  </header>
+
+  {%- assign total = 0 -%}
+  {%- for b in t.blocks %}{% assign total = total | plus: b.credits %}{% endfor %}
+  <div class="credit-bar" role="img" aria-label="{{ t.short }}: {% for b in t.blocks %}{{ b.name }} {{ b.credits }} credits{% unless forloop.last %}, {% endunless %}{% endfor %}; {{ total }} credits in total">
+    {%- for b in t.blocks %}
+    {%- assign shade = forloop.index0 | times: 20 %}
+    <span class="credit-seg{% if forloop.index0 >= 2 %} light{% endif %}" style="flex-grow: {{ b.credits }}; --shade: {{ shade }}%;">
+      <span class="credit-num">{{ b.credits }}</span>
+    </span>
+    {%- endfor %}
+  </div>
+  <ul class="credit-legend">
+    {%- for b in t.blocks %}
+    {%- assign shade = forloop.index0 | times: 20 %}
+    <li><span class="swatch" style="--shade: {{ shade }}%;"></span>{{ b.name }} <strong>{{ b.credits }} cr.</strong></li>
+    {%- endfor %}
+    <li class="credit-total">Total <strong>{{ total }} cr.</strong></li>
+  </ul>
+
+  <div class="block-grid">
+    {%- for b in t.blocks %}
+    <div class="course-block{% if b.courses.size > 6 %} wide{% endif %}">
+      <h4>{{ b.name }} <span class="block-cr">{{ b.credits }} cr.</span></h4>
+      {%- if b.pick %}<p class="block-pick">{{ b.pick }}</p>{% endif %}
+      {%- if b.note %}<p class="block-pick">{{ b.note }}</p>{% endif %}
+      {%- if b.courses %}
+      <table class="course-table">
+        <tbody>
+          {%- for c in b.courses %}
+          <tr>
+            <th scope="row">{{ c[0] }}</th>
+            <td>{{ c[1] }}</td>
+            <td class="cr">{{ c[2] }} cr.</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+  </div>
+
+  {%- if t.footnote %}<p class="track-footnote">{{ t.footnote }}</p>{% endif %}
+</section>
+{%- endfor %}
+
+<h2 class="section-header">Degree Requirements</h2>
+
+<div class="hub-card">
+  <div class="hub-card-content" style="padding-top: 25px;">
+    <ul class="req-list">
+      {%- for r in p.rules %}
+      <li>{{ r }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="hub-card-text">Enroll in the Public Health Foundations prerequisite on
+      <a href="{{ p.prerequisite_url }}" target="_blank" rel="noopener">Canvas</a>.</p>
+  </div>
+</div>
+
+<h2 class="section-header">After the Degree</h2>
+
+<div class="card-grid">
+  <div class="hub-card" style="--lab-color: var(--hub-navy);">
+    <h3 class="hub-card-title">Careers</h3>
+    <div class="hub-card-content">
+      <p class="hub-card-text">{{ p.careers.intro }}</p>
+      <ul class="req-list">
+        {%- for s in p.careers.sectors %}
+        <li>{{ s }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="hub-card" style="--lab-color: var(--hub-orange);">
+    <h3 class="hub-card-title">Research Opportunities</h3>
+    <div class="hub-card-content">
+      <p class="hub-card-text">{{ p.opportunities }}</p>
+      <p class="hub-card-text">In the Hub, that research spans epidemic forecasting, human behaviour
+        and mosquito-borne disease across the CEPH, SEAL and MCORE labs.</p>
+      <div class="spacer"></div>
+      <div class="btn-row">
+        <a href="{{ '/research/' | relative_url }}" class="read-more-btn">Our Research</a>
+        <a href="{{ '/labs/' | relative_url }}" class="read-more-btn">Our Labs</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="apply-band">
+  <div>
+    <h2>Ready to apply?</h2>
+    <p>Admissions are handled by the IU School of Public Health - Bloomington.</p>
+  </div>
+  <div class="btn-row">
+    <a href="{{ p.apply_url }}" target="_blank" rel="noopener" class="btn btn-light">How to Apply</a>
+    <a href="{{ p.program_url }}" target="_blank" rel="noopener" class="btn btn-outline">Program Website</a>
+  </div>
+</div>
+
+<p class="source-note">Requirements are taken from the
+  <a href="{{ p.bulletin_url }}" target="_blank" rel="noopener">IU Bulletin {{ p.bulletin_year }}</a>, which is
+  the official record. If anything here differs from the bulletin, the bulletin applies.</p>

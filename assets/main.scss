@@ -99,9 +99,9 @@ html {
   margin-right: 15px;
 }
 
-/* Wave mark + text wordmark (mark set with logo_mark in _config.yml) */
+/* Logo + text wordmark (logo set with `logo` in _config.yml) */
 .site-title img.site-title-mark {
-  height: 44px;
+  height: 54px;
   max-height: none;
   width: auto;
   margin-right: 12px;
@@ -207,7 +207,7 @@ html {
     align-items: center;
   }
   .site-title img.site-title-mark {
-    height: 30px !important;
+    height: 38px !important;
     width: auto !important;
     margin-right: 8px !important;
   }
@@ -357,10 +357,10 @@ html {
   width: 50%;
   flex: 0 0 50%;
   background-color: #ffffff;
-  background-image: url('../images/hub-mark.png');
+  background-image: url('../images/hub-logo.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 80% auto;
+  background-size: auto 80%;
   /* To use a pattern or photo instead, replace the colour above with:
      background-image: url('/images/your-pattern.png'); background-size: cover; */
 }
@@ -604,3 +604,369 @@ ul.req-list li {
 }
 
 
+
+/* ------------------------------------------------------------------------------
+   Degree program pages (programs/*.html)
+   Tracks take their accent from --lab-color, like cards.
+   ------------------------------------------------------------------------------ */
+.banner-kicker {
+  color: var(--hub-highlight);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.program-banner .banner-left h1 {
+  font-size: 2.8rem;
+  line-height: 1.15;
+}
+
+@media screen and (max-width: 768px) {
+  .program-banner .banner-left h1 {
+    font-size: 2.1rem;
+  }
+}
+
+/* At-a-glance numbers */
+.fact-row {
+  list-style: none;
+  margin: -20px 0 40px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fact-row li {
+  margin: 0;
+  padding: 18px 20px;
+  background: var(--hub-surface);
+  border-radius: 8px;
+  border-top: 4px solid var(--hub-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fact-row li:nth-child(2) { border-top-color: var(--hub-navy); }
+.fact-row li:nth-child(3) { border-top-color: var(--hub-orange); }
+.fact-row li:nth-child(4) { border-top-color: var(--hub-navy); }
+
+.fact-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--hub-text);
+  line-height: 1.1;
+}
+
+.fact-label {
+  font-size: 14px;
+  color: var(--hub-text-muted);
+}
+
+@media screen and (max-width: 768px) {
+  .fact-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Hub call-out */
+.hub-callout {
+  background: var(--hub-navy);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+
+.hub-callout h2 {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.hub-callout p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #e3e6f0;
+}
+
+.hub-callout strong {
+  color: #ffffff;
+}
+
+.page-content .hub-callout a:not([class]) {
+  color: var(--hub-highlight);
+  font-weight: 600;
+}
+
+/* Track jump links */
+.track-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -5px 0 25px 0;
+}
+
+.track-jump a {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 2px solid var(--lab-color);
+  color: var(--hub-text) !important;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.track-jump a:hover {
+  background: color-mix(in srgb, var(--lab-color) 12%, #ffffff);
+  text-decoration: none;
+}
+
+/* A track */
+.track {
+  border: 1px solid #eef0f3;
+  border-top: 6px solid var(--lab-color);
+  border-radius: 10px;
+  padding: 28px 30px 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.track-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+
+.track-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--hub-text);
+  margin: 0 0 8px 0;
+}
+
+.track-badge {
+  display: inline-block;
+  background: color-mix(in srgb, var(--hub-orange) 16%, #ffffff);
+  color: #8a4a00;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.track-desc {
+  margin: 0;
+  color: var(--hub-text-muted);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .track {
+    padding: 22px 18px;
+  }
+  .track-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Credit bar: one segment per part of the degree, sized by credits */
+.credit-bar {
+  display: flex;
+  height: 34px;
+  border-radius: 6px;
+  overflow: hidden;
+  gap: 3px;
+}
+
+.credit-seg,
+.credit-legend .swatch {
+  background: color-mix(in srgb, var(--lab-color) calc(100% - var(--shade)), #ffffff);
+}
+
+.credit-seg {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  min-width: 34px;
+}
+
+.credit-num {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.credit-seg.light .credit-num {
+  color: var(--hub-text);
+}
+
+.credit-legend {
+  list-style: none;
+  margin: 10px 0 24px 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  font-size: 14px;
+  color: var(--hub-text-muted);
+}
+
+.credit-legend li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.credit-legend .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.credit-legend strong {
+  color: var(--hub-text);
+}
+
+.credit-legend .credit-total {
+  margin-left: auto;
+}
+
+/* Course blocks */
+.block-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.course-block {
+  background: color-mix(in srgb, var(--lab-color) 6%, #ffffff);
+  border-radius: 8px;
+  padding: 18px 20px;
+}
+
+.course-block h4 {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  color: var(--hub-text);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.block-cr {
+  color: var(--hub-text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.block-pick {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: var(--hub-text-muted);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 900px) {
+  .block-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.page-content table.course-table {
+  width: 100%;
+  border: none;
+  margin: 0;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+.page-content table.course-table tr,
+.page-content table.course-table tr:nth-child(even) {
+  background: transparent;
+}
+
+.page-content table.course-table th,
+.page-content table.course-table td {
+  border: none;
+  border-top: 1px solid color-mix(in srgb, var(--lab-color) 14%, #ffffff);
+  padding: 7px 8px 7px 0;
+  vertical-align: top;
+  background: transparent;
+  text-align: left;
+  color: var(--hub-text);
+}
+
+.page-content table.course-table th {
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--hub-text);
+  width: 1%;
+  padding-right: 14px;
+}
+
+.page-content table.course-table td.cr {
+  white-space: nowrap;
+  text-align: right;
+  color: var(--hub-text-muted);
+  padding-right: 0;
+}
+
+.track-footnote {
+  margin: 18px 0 0 0;
+  font-size: 14px;
+  color: var(--hub-text-muted);
+  line-height: 1.6;
+}
+
+/* Apply band + source note */
+.apply-band {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background: var(--hub-primary-soft);
+  border-radius: 10px;
+  padding: 28px 32px;
+  margin: 20px 0 16px 0;
+}
+
+.apply-band h2 {
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  font-size: 24px;
+}
+
+.apply-band p {
+  color: #e8f3f4;
+  margin: 0;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  padding: 8px 20px;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.source-note {
+  font-size: 14px;
+  color: var(--hub-text-muted);
+  margin-bottom: 40px;
+}
