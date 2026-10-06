@@ -1,0 +1,27 @@
+# ==============================================================================
+# SECTIONS OF THE PEOPLE PAGE
+# Everyone in _data/people.yml is listed under one of these sections, in this
+# order. A section with nobody in it is hidden automatically.
+#
+# Fields
+#   id       the value people.yml uses in `group:`
+#   heading  section heading shown on the page
+# ==============================================================================
+
+- id: faculty
+  heading: Faculty
+
+- id: postdoc
+  heading: Postdoctoral Fellows
+
+- id: phd
+  heading: Doctoral Students
+
+- id: masters
+  heading: Master Students
+
+- id: undergrad
+  heading: Undergraduate Students
+
+- id: staff
+  heading:

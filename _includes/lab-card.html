@@ -28,7 +28,7 @@
       <a href="mailto:{{ lab.pi_email }}" class="read-more-btn">Email {{ lab.pi | split: ' ' | first }}</a>
       {%- endif %}
       {%- if include.people_link %}
-      <a href="{{ '/people/' | relative_url }}#people-{{ lab.id }}" class="read-more-btn">People</a>
+      <a href="{{ '/people/' | relative_url }}" class="read-more-btn">People</a>
       {%- endif %}
     </div>
   </div>

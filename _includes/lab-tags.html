@@ -1,0 +1,14 @@
+{%- comment -%}
+  Lab tag(s) for a person: one tag per lab, plain labels (not links).
+  `lab` can be one lab id (ceph), several separated by commas (seal, mcore)
+  or a YAML list ([seal, mcore]).
+  Usage: {% include lab-tags.html lab=person.lab %}
+{%- endcomment -%}
+{%- assign tag_ids = include.lab | join: "," | split: "," -%}
+<span class="lab-tags">
+  {%- for raw_id in tag_ids -%}
+    {%- assign tag_id = raw_id | strip -%}
+    {%- assign tag_lab = site.data.labs | where: "id", tag_id | first -%}
+    {%- if tag_lab %}<span class="lab-tag" style="--lab-color: {{ tag_lab.color }};">{{ tag_lab.short_name }}</span>{% endif -%}
+  {%- endfor -%}
+</span>

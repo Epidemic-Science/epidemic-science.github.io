@@ -4,91 +4,129 @@ title: People
 permalink: /people/
 ---
 {%- comment -%}
-  Everyone on this page comes from _data/people.yml, grouped by lab in the
-  order of _data/labs.yml. Add or edit people there, not here.
+  Everyone on this page comes from _data/people.yml. People from all three labs
+  are listed together, in the sections set in _data/people_groups.yml, and each
+  card carries a tag for each of the person's labs. Add or edit people in the data files,
+  not here.
 {%- endcomment -%}
 <style>
-  .lab-group {
-    margin-bottom: 30px;
+  /* Sections */
+  .people-section .section-header {
+    margin-top: 40px;
   }
 
-  .lab-group .section-header {
-    color: var(--hub-text);
-    border-left: 6px solid var(--lab-color, var(--hub-primary));
-    padding-left: 12px;
-  }
-
-  .lab-group .section-header a {
-    color: inherit;
-    text-decoration: none;
-  }
-
+  /* Compact member cards: square photo, name, role, lab tag */
   .people-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 30px;
-    margin-top: 20px;
-  }
-
-  @media screen and (max-width: 900px) {
-    .people-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media screen and (max-width: 600px) {
-    .people-grid { grid-template-columns: 1fr; }
-  }
-
-  .profile-card {
-    text-align: center;
-    width: 100%;
-  }
-
-  .profile-card a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    width: 100%;
-    text-decoration: none;
-  }
-
-  .profile-card a:hover {
-    transform: translateY(-5px);
-  }
-
-  .profile-card img {
-    border-radius: 4px;
-    width: 100%;
-    aspect-ratio: 5 / 4;
-    object-fit: cover;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: block;
-  }
-
-  .profile-card h4 {
-    margin: 0 0 4px 0;
-    color: var(--hub-text);
-    font-size: 1.3em;
-    font-weight: 600;
-  }
-
-  .profile-card p {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 36px 24px;
     margin: 0;
-    font-size: 0.95em;
-    color: #666666;
-    line-height: 1.4;
+    padding: 0;
+    list-style: none;
   }
 
+  @media screen and (max-width: 1000px) {
+    .people-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+
+  @media screen and (max-width: 780px) {
+    .people-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 18px; }
+  }
+
+  @media screen and (max-width: 520px) {
+    .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 14px; }
+  }
+
+  .person {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .person-photo {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .person-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    background: var(--hub-surface);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .person-name {
+    margin: 0 0 2px 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--hub-text);
+  }
+
+  .person-role {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--hub-text-muted);
+  }
+
+  /* Lab tags: labels, not links. Someone in two labs gets two tags. */
+  .lab-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Lab tag: a label, not a link */
+  .lab-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--hub-text);
+    background: color-mix(in srgb, var(--lab-color) 13%, #ffffff);
+    border-radius: 4px;
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+
+  .lab-tag::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lab-color);
+  }
+
+  /* Alumni */
   .alumni-list {
     list-style: none;
-    padding-left: 0;
-    margin-left: 0;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 24px;
     font-size: 16px;
-    line-height: 1.8;
-    columns: 3;
   }
 
-  @media screen and (max-width: 600px) {
-    .alumni-list { columns: 1; }
+  .alumni-list li {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @media screen and (max-width: 780px) {
+    .alumni-list { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -99,57 +137,58 @@ permalink: /people/
   <div class="banner-right"></div>
 </div>
 
-{%- for lab in site.data.labs %}
-  {%- assign members = site.data.people | where: "lab", lab.id -%}
-  {%- assign current = "" | split: "" -%}
-  {%- assign alumni = "" | split: "" -%}
-  {%- for person in members -%}
-    {%- if person.alumni -%}
-      {%- assign alumni = alumni | push: person -%}
-    {%- else -%}
-      {%- assign current = current | push: person -%}
-    {%- endif -%}
-  {%- endfor %}
+{%- assign group_ids = site.data.people_groups | map: "id" -%}
+{%- assign current = "" | split: "" -%}
+{%- assign alumni = "" | split: "" -%}
+{%- assign ungrouped = "" | split: "" -%}
+{%- for person in site.data.people -%}
+  {%- if person.alumni -%}
+    {%- assign alumni = alumni | push: person -%}
+  {%- else -%}
+    {%- assign current = current | push: person -%}
+    {%- unless group_ids contains person.group -%}
+      {%- assign ungrouped = ungrouped | push: person -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor %}
 
-<div class="lab-group" id="people-{{ lab.id }}" style="--lab-color: {{ lab.color }};">
-  <h2 class="section-header">
-    {%- if lab.website and lab.website != "" -%}
-      <a href="{{ lab.website }}" target="_blank" rel="noopener">{{ lab.short_name }}</a>
-    {%- else -%}
-      {{ lab.short_name }}
-    {%- endif -%}
-  </h2>
 
-  {%- if current.size > 0 %}
-  <div class="people-grid">
-    {%- for person in current %}
-      {%- if person.image and person.image != "" -%}
-        {%- assign photo = person.image -%}
-      {%- else -%}
-        {%- assign photo = "/images/people/placeholder.svg" -%}
-      {%- endif %}
-    <div class="profile-card">
-      {%- if person.profile and person.profile != "" %}
-      <a href="{{ person.profile }}"><img src="{{ photo | relative_url }}" alt="{{ person.name }}"></a>
-      {%- else %}
-      <img src="{{ photo | relative_url }}" alt="{{ person.name }}">
-      {%- endif %}
-      <h4>{{ person.name }}</h4>
-      <p>{{ person.role }}</p>
-    </div>
-    {%- endfor %}
-  </div>
-  {%- else %}
-  <p><span class="todo-note">No members listed yet — add them in _data/people.yml</span></p>
-  {%- endif %}
-
-  {%- if alumni.size > 0 %}
-  <h3>Alumni</h3>
-  <ul class="alumni-list">
-    {%- for person in alumni %}
-    <li>{% if person.profile and person.profile != "" %}<a href="{{ person.profile }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}</li>
+{%- for g in site.data.people_groups %}
+  {%- assign members = current | where: "group", g.id -%}
+  {%- if members.size > 0 %}
+<section class="people-section" id="{{ g.id }}">
+  <h2 class="section-header">{{ g.heading }}</h2>
+  <ul class="people-grid">
+    {%- for person in members %}
+      {%- include person-card.html person=person %}
     {%- endfor %}
   </ul>
+</section>
   {%- endif %}
-</div>
 {%- endfor %}
+
+{%- if ungrouped.size > 0 %}
+<section class="people-section" id="members">
+  <!-- These people have no `group:` (or an unknown one) in _data/people.yml. -->
+  <h2 class="section-header">Members</h2>
+  <ul class="people-grid">
+    {%- for person in ungrouped %}
+      {%- include person-card.html person=person %}
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if alumni.size > 0 %}
+<section class="people-section" id="alumni">
+  <h2 class="section-header">Alumni</h2>
+  <ul class="alumni-list">
+    {%- for person in alumni %}
+    <li>
+      <span>{{ person.name }}</span>
+      {%- include lab-tags.html lab=person.lab %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}

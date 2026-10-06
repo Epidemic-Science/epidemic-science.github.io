@@ -1,36 +1,217 @@
 # ==============================================================================
 # PEOPLE IN THE EPIDEMIC SCIENCE HUB
-# The People page groups everyone by lab (in the order of _data/labs.yml),
-# then lists them in the order they appear here. Put each lab's PI first.
+# The People page lists everyone together, in the sections set in
+# _data/people_groups.yml (Faculty, Postdoctoral Fellows, Doctoral Students,
+# Master's Students, Undergraduate Students, Research Staff). Within a section,
+# people appear in the order they are listed here. Each card shows a tag for
+# each of the person's labs.
 #
 # Fields
 #   name     full name
-#   role     title shown under the name (e.g. Professor, PhD Student)
-#   lab      the lab `id` from _data/labs.yml (ceph, seal, mcore)
+#   group    section: faculty, postdoc, phd, masters, undergrad or staff
+#   role     line shown under the name (e.g. Professor, PhD Epidemiology)
+#   lab      the lab `id` from _data/labs.yml (ceph, seal, mcore). For someone
+#            in more than one lab, list them all: `lab: seal, mcore`
+#            (each gets its own tag)
 #   image    optional; square photo in /images/people/ (see images/README.md).
-#            Leave blank to show a neutral placeholder.
-#   profile  optional; link to the person's profile page (e.g. on their lab's
-#            site). The photo becomes clickable when filled in.
+#            Leave blank, or point to a missing file, to show a placeholder.
 #   alumni   optional; set to true to list the person under "Alumni" instead
 # ==============================================================================
 
-# --- CEPH Lab -----------------------------------------------------------------
+# --- Faculty ------------------------------------------------------------------
 - name: Marco Ajelli
+  group: faculty
   role: Professor
   lab: ceph
   image: /images/people/marco-ajelli.png
-  profile: https://ceph-lab.github.io/people/marco-ajelli/
 
-# --- SEAL Lab -----------------------------------------------------------------
 - name: Maria Litvinova
-  role: "TODO: title"
+  group: faculty
+  role: Assistant Professor
   lab: seal
-  image: ""
-  profile: ""
+  image: /images/people/maria-litvinova.png
 
-# --- MCORE Lab ----------------------------------------------------------------
 - name: André Wilke
-  role: "TODO: title"
+  group: faculty
+  role: Assistant Professor
+  lab: mcore
+  image: /images/people/andre-wilke.png
+
+# --- Postdoctoral Fellows -----------------------------------------------------
+- name: Pablo Valgañón
+  group: postdoc
+  role: Postdoctoral Researcher
+  lab: ceph
+  image: /images/people/pablo-valganon.png
+
+- name: Claudio Ascione
+  group: postdoc
+  role: Postdoctoral Researcher
+  lab: ceph
+  image: /images/people/claudio-ascione.png
+
+# --- Doctoral Students --------------------------------------------------------
+- name: Shreeya Mhade
+  group: phd
+  role: PhD Epidemiology (Year 4)
+  lab: ceph
+  image: /images/people/shreeya-mhade.png
+
+- name: Steve Garrison Carruth
+  group: phd
+  role: PhD Epidemiology (Year 2)
   lab: mcore
   image: ""
-  profile: ""
+
+- name: Cheng Cheng
+  group: phd
+  role: PhD Biostatistics (Year 1)
+  lab: ceph
+  image: /images/people/cheng-cheng.png
+
+- name: Jiwon Hur
+  group: phd
+  role: PhD Epidemiology (Year 1)
+  lab: seal
+  image: ""
+
+# --- Master's Students --------------------------------------------------------
+- name: Jessica Guerrini
+  group: masters
+  role: MS Biostatistics (Year 2)
+  lab: ceph
+  image: /images/people/jessica-guerrini.png
+
+- name: Katie Pletz
+  group: masters
+  role: MS Biostatistics (Year 2)
+  lab: ceph
+  image: /images/people/katie-pletz.png
+
+- name: Shengyang Wang
+  group: masters
+  role: MS Biostatistics (Year 2)
+  lab: mcore
+  image: ""
+
+- name: Zongman Cai
+  group: masters
+  role: MS Biostatistics (Year 1)
+  lab: ceph
+  image: /images/people/zongman-cai.png
+
+- name: Isabelle Simons
+  group: masters
+  role: MS Biostatistics (Year 1)
+  lab: mcore
+  image: ""
+
+- name: Dulani
+  group: masters
+  role: MPH Epidemiology (Year 1)
+  lab: seal
+  image: ""
+
+- name: Nazim Mustafa
+  group: masters
+  role: MPH Epidemiology (Year 1)
+  lab: seal
+  image: ""
+
+- name: Diana Reyes
+  group: masters
+  role: MPH Epidemiology (Year 1)
+  lab: mcore
+  image: ""
+
+# --- Undergraduate Students ---------------------------------------------------
+- name: Todd Darmabal
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: ceph
+  image: /images/people/todd-darmabal.png
+
+- name: Zeynep Amac
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: ceph
+  image: /images/people/zeynep-amac.png
+
+- name: Tanaz Bari
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: ceph
+  image: /images/people/tanaz-bari.png
+
+- name: Ryan
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+- name: Shay
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+- name: Fernanda
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+- name: Love
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+- name: Aman
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+- name: Abigail Sullivan
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: mcore
+  image: /images/people/abigail-sullivan.png
+
+- name: Rachel
+  group: undergrad
+  role: Undergraduate Research Assistant
+  lab: seal, mcore
+  image: ""
+
+# --- Research Staff -----------------------------------------------------------
+- name: Utkarsh Bhosekar
+  group: staff
+  role: Data Analyst
+  lab: ceph
+  image: /images/people/utkarsh-bhosekar.png
+
+- name: Paulo Ventura
+  group: staff
+  role: Consultant
+  lab: ceph
+  image: /images/people/paulo-ventura.png
+
+# --- Alumni -------------------------------------------------------------------
+# Shown as a name list with a lab tag.
+- { name: Mia Bellan, lab: ceph, alumni: true }
+- { name: Allisandra G. Kummer, lab: ceph, alumni: true }
+- { name: Snigdha Agrawal, lab: ceph, alumni: true }
+- { name: Shelly Sinclair, lab: seal, alumni: true }
+- { name: Luling Zou, lab: ceph, alumni: true }
+- { name: Megan Hill, lab: ceph, alumni: true }
+- { name: Anna Koebcke, lab: ceph, alumni: true }
+- { name: Claire Slotegraaf, lab: ceph, alumni: true }
+- { name: Jagadeesh Chitturi, lab: ceph, alumni: true }
+- { name: Juanjuan Zhang, lab: ceph, alumni: true }
+- { name: Ethan SeRine, lab: ceph, alumni: true }
+- { name: Adquate Mhlanga, lab: ceph, alumni: true }
+- { name: Victorya Valentine, lab: ceph, alumni: true }
+- { name: Shelby Stone, lab: ceph, alumni: true }
+- { name: Samantha O'Dell, lab: ceph, alumni: true }
