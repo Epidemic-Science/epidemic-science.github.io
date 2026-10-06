@@ -1,11 +1,11 @@
 {%- comment -%}
-  One member card on the People page: square photo, name, role and lab tag(s).
+  One member card on the People page: 5:4 photo, name, role and lab tag(s).
   Nothing on the card is a link. If the photo file is missing, the placeholder
   is shown instead.
 
   Loading: photos in the first section (eager=true) load straight away; the
   rest load just before they scroll into view. width/height reserve the
-  square so the page doesn't jump, and each photo fades in once it arrives.
+  photo's space so the page doesn't jump, and each photo fades in once it arrives.
   Usage: {% include person-card.html person=person eager=true %}
 {%- endcomment -%}
 {%- assign person = include.person -%}
@@ -16,7 +16,7 @@
   {%- assign photo = placeholder -%}
 {%- endif %}
 <li class="person">
-  <span class="person-photo"><img src="{{ photo }}" alt="" width="480" height="480" decoding="async"
+  <span class="person-photo"><img src="{{ photo }}" alt="" width="600" height="480" decoding="async"
     {%- if include.eager %} fetchpriority="high"{% else %} loading="lazy"{% endif %}
     onload="this.classList.add('is-loaded')"
     onerror="this.onerror=null;this.src='{{ placeholder }}'"></span>

@@ -9,11 +9,11 @@
 # Fields
 #   name     full name
 #   group    section: faculty, postdoc, phd, masters, undergrad or staff
-#   role     line shown under the name (e.g. Professor, PhD Epidemiology)
+#   role     line shown under the name (e.g. Professor, PhD Student)
 #   lab      the lab `id` from _data/labs.yml (ceph, seal, mcore). For someone
 #            in more than one lab, list them all: `lab: seal, mcore`
 #            (each gets its own tag)
-#   image    optional; square photo in /images/people/ (see images/README.md).
+#   image    optional; 5:4 photo (600 x 480 PNG) in /images/people/ (see images/README.md).
 #            Leave blank, or point to a missing file, to show a placeholder.
 #   alumni   optional; set to true to list the person under "Alumni" instead
 # ==============================================================================
@@ -57,7 +57,7 @@
   lab: ceph
   image: /images/people/shreeya-mhade.png
 
-- name: Steve Garrison Carruth
+- name: Steven Garrison Carruth
   group: phd
   role: PhD Epidemiology (Year 2)
   lab: mcore
@@ -92,7 +92,7 @@
   group: masters
   role: MS Biostatistics (Year 2)
   lab: mcore
-  image: ""
+  image: /images/people/shengyang-wang.png
 
 - name: Zongman Cai
   group: masters
@@ -104,9 +104,9 @@
   group: masters
   role: MS Biostatistics (Year 1)
   lab: mcore
-  image: ""
+  image: /images/people/isabelle-simons.png
 
-- name: Dulani
+- name: Dulani Deeshani Gangodagama Arachchige
   group: masters
   role: MPH Epidemiology (Year 1)
   lab: seal
@@ -143,31 +143,31 @@
   lab: ceph
   image: /images/people/tanaz-bari.png
 
-- name: Ryan
+- name: Ryan Landa
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
   image: ""
 
-- name: Shay
+- name: Shay Sargent
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
   image: ""
 
-- name: Fernanda
+- name: Maria Fernanda Santolalla Cruz
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
   image: ""
 
-- name: Love
+- name: Love Mali
   group: undergrad
   role: Undergraduate Research Assistant
-  lab: seal, mcore
+  lab: seal
   image: ""
 
-- name: Aman
+- name: Aman Mulchandani
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
@@ -179,7 +179,7 @@
   lab: mcore
   image: /images/people/abigail-sullivan.png
 
-- name: Rachel
+- name: Rachel Wan
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
