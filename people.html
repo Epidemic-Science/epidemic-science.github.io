@@ -15,7 +15,7 @@ permalink: /people/
     margin-top: 40px;
   }
 
-  /* Compact member cards: square photo, name, role, lab tag */
+  /* Compact member cards: 5:4 photo, name, role, lab tag */
   .people-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -44,20 +44,36 @@ permalink: /people/
     align-items: flex-start;
   }
 
+  /* Photos keep their own 5:4 shape (landscape rectangle, like the originals).
+     The tile shows a soft teal while the photo loads, then the photo fades in.
+     The shape is set on the image itself so every browser sizes it the same. */
   .person-photo {
     display: block;
     width: 100%;
     margin-bottom: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--hub-teal) 12%, #ffffff);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
   }
 
   .person-photo img {
     display: block;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: auto;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
-    border-radius: 6px;
-    background: var(--hub-surface);
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    object-position: center top;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .person-photo img.is-loaded {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .person-photo img { transition: none; }
   }
 
   .person-name {
@@ -130,6 +146,8 @@ permalink: /people/
   }
 </style>
 
+<noscript><style>.person-photo img { opacity: 1; }</style></noscript>
+
 <div class="subpage-banner">
   <div class="banner-left">
     <h1>People</h1>
@@ -153,6 +171,7 @@ permalink: /people/
 {%- endfor %}
 
 
+{%- assign first_section = true -%}
 {%- for g in site.data.people_groups %}
   {%- assign members = current | where: "group", g.id -%}
   {%- if members.size > 0 %}
@@ -160,10 +179,11 @@ permalink: /people/
   <h2 class="section-header">{{ g.heading }}</h2>
   <ul class="people-grid">
     {%- for person in members %}
-      {%- include person-card.html person=person %}
+      {%- include person-card.html person=person eager=first_section %}
     {%- endfor %}
   </ul>
 </section>
+  {%- assign first_section = false -%}
   {%- endif %}
 {%- endfor %}
 
