@@ -73,7 +73,7 @@
   group: phd
   role: PhD Epidemiology (Year 1)
   lab: seal
-  image: ""
+  image: /images/people/jiwon-hur.png
 
 # --- Master's Students --------------------------------------------------------
 - name: Jessica Guerrini
@@ -110,19 +110,19 @@
   group: masters
   role: MPH Epidemiology (Year 1)
   lab: seal
-  image: ""
+  image: /images/people/dulani-gangodagama.png
 
 - name: Nazim Mustafa
   group: masters
   role: MPH Epidemiology (Year 1)
   lab: seal
-  image: ""
+  image: /images/people/nazim-mustafa.png
 
 - name: Diana Reyes
   group: masters
   role: MPH Epidemiology (Year 1)
   lab: mcore
-  image: ""
+  image: /images/people/diana-reyes.png
 
 # --- Undergraduate Students ---------------------------------------------------
 - name: Todd Darmabal
@@ -153,13 +153,13 @@
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
-  image: ""
+  image: /images/people/shay-sargent.png
 
 - name: Maria Fernanda Santolalla Cruz
   group: undergrad
   role: Undergraduate Research Assistant
   lab: seal, mcore
-  image: ""
+  image: /images/people/fernanda-santolalla-cruz.png
 
 - name: Love Mali
   group: undergrad

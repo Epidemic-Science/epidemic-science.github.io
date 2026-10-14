@@ -22,7 +22,7 @@
   pi: Marco Ajelli
   pi_email: majelli@iu.edu
   website: https://ceph-lab.github.io
-  color: "#468a93"   # teal
+  color: "#458b93"   # teal
   logo: ""
   summary: >-
     Develops mathematical, computational, and statistical models to advance the
@@ -31,16 +31,15 @@
   themes:
     - Epidemic modeling
     - Forecasting
-    - Mosquito ecology
     - Public health planning
 
 - id: seal
   short_name: SEAL Lab
-  full_name: "TODO: full name of the SEAL Lab"
+  full_name: Social and Epidemic Analytics Lab
   pi: Maria Litvinova
   pi_email: ""
   website: ""
-  color: "#262757"   # midnight blue
+  color: "#11193D"   # midnight blue
   logo: ""
   summary: >-
     TODO: one or two sentences describing the SEAL Lab's mission and research.
@@ -48,7 +47,7 @@
 
 - id: mcore
   short_name: MCORE Lab
-  full_name: "TODO: full name of the MCORE Lab"
+  full_name: Mosquito Control and Outbreak Response
   pi: André Wilke
   pi_email: ""
   website: ""
