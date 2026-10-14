@@ -13,7 +13,7 @@
 :root {
   /* --- Hub palette: one colour per lab (from the logo) --- */
   --hub-teal: #468a93;         /* CEPH Lab */
-  --hub-navy: #262757;         /* SEAL Lab (midnight blue) */
+  --hub-navy: #11193D;         /* SEAL Lab (midnight blue) */
   --hub-orange: #f58a06;       /* MCORE Lab */
 
   /* --- Roles (change these to re-theme the whole site) ---
@@ -27,7 +27,7 @@
   --hub-tile-1: #3a7880;            /* home "Mission" tile */
   --hub-tile-2: var(--hub-navy);    /* home "What we do" tile */
   --hub-dark: #1b1c40;              /* darkest tile */
-  --hub-banner: var(--hub-navy);    /* subpage banner left */
+  --hub-banner: #C43728;    /* subpage banner left */
 
   /* --- Neutrals --- */
   --hub-text: #1b1f3a;              /* matches the logo wordmark */
