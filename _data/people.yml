@@ -127,61 +127,61 @@
 # --- Undergraduate Students ---------------------------------------------------
 - name: Todd Darmabal
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: ceph
   image: /images/people/todd-darmabal.png
 
 - name: Zeynep Amac
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: ceph
   image: /images/people/zeynep-amac.png
 
 - name: Tanaz Bari
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: ceph
   image: /images/people/tanaz-bari.png
 
 - name: Ryan Landa
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal, mcore
   image: ""
 
 - name: Shay Sargent
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal, mcore
   image: /images/people/shay-sargent.png
 
 - name: Maria Fernanda Santolalla Cruz
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal, mcore
   image: /images/people/fernanda-santolalla-cruz.png
 
 - name: Love Mali
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal
   image: ""
 
 - name: Aman Mulchandani
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal, mcore
   image: ""
 
 - name: Abigail Sullivan
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: mcore
   image: /images/people/abigail-sullivan.png
 
 - name: Rachel Wan
   group: undergrad
-  role: Undergraduate Research Assistant
+  role: Undergraduate Student
   lab: seal, mcore
   image: ""
 
