@@ -1,0 +1,100 @@
+# ==============================================================================
+# PUBLICATIONS FROM THE EPIDEMIC SCIENCE HUB
+# Publications are organized by lab, then by year.
+# 
+# Fields: 
+#   id            lab ID from labs.yml
+#   name          Lab name
+#   scholar_url   Google Cholar profile for the lab head
+#   years         publication years (2026-2020)
+#
+# Publication fields: 
+# title           publication title
+# url             DOI or publication URL
+# authors         author list
+# journal         journal, volumn, issue, pages, or publication status
+# ==============================================================================
+
+- id: ceph
+  name: CEPH Lab
+  scholar_url: "https://scholar.google.com/citations?user=igKX7EMAAAAJ&hl=en"
+  years:
+    - year: 2026
+      publications:
+        - title: "The impact of the distributions of the latent and infectious periods on epidemic dynamics"
+          url: "https://doi.org/10.21203/rs.3.rs-11154983/v1"
+          authors: "Ventura P. C., Kummer A. G., Jeong Y.-D., Mhade S., Iwami S., Merler S., Yu H., Ejima K., Litvinova M., Ajelli M."
+          journal: "Preprint available on <i>Research Square</i> (2026)"
+          
+        - title: "Multi-season evaluation and analysis of categorical trend forecasts of influenza hospital admissions in the United States"
+          url: "https://doi.org/10.64898/2026.08.31.26361843"
+          authors: "Davis J. T., Kaur G., Hines A., Ben-Nun M., Venkatramanan S., Brooks L., Mathis S., Ajelli M., Litvinova M., Kummer A. G., Ventura P. C., Mhade S., Weber D., Shemetov D., DeFries N., McDonald D. J., Yamana T., Zepeda-Tello R., Shaman J., Yaari R., Pei S., Webber A., Shandross L., Ray E., Wadsworth S., Niemi J., Redman W. T., Mullany L., Posner R., Mallela A., Lin Y. T., Hlavacek W. S., Smart A., Gill A. A., Drennan A., Fiebiger B. J., Miller E. F., Lee J., Mihaljevic J. R., Geist K. A., Baltz M., Bernik O., Truong Y. B., Chen Y., Grosvenor C. J., Santillana M., Djorno C., Lu J., Yang S., Lu F., Clemente L., Meyer A. G., Bay C., Urbinati A., Gozzi N., Chinazzi M., Ueda M., Moghaddas N., LeWinter R., Venturini S., Fiandrino S., Vespignani A., Fox S. J., Suez E., Salcedo M., Prabhakar R., Case B. K. M., Perofsky A., Viboud C., Turtle J., Nagraj V. P., Benefield A., Williams D., Gibson G. C., Meyers L., Thommes E., van Bommel C., Loster R., Longaou B. B., Cojocaru M., Yue P., Rodríguez A., Li R., Potnis S., Reich N. G., Robacker T., Lemaitre J., Adiga A., Lewis B., Marathe M., Mandal N. C., Turner S. D., Ramakrishnan N., Su Y., Johansson M., Biggerstaff M., Borchering R. K."
+          journal: "Preprint available on <i>medRxiv</i> (2026)"
+
+    - year: 2025
+      publications: []
+      
+    - year: 2024
+      publications: []
+
+    - year: 2023
+      publications: []
+
+    - year: 2022
+      publications: []
+
+    - year: 2021
+      publications: []
+
+    - year: 2020
+      publications: []
+
+- id: seal
+  name: SEAL Lab
+  scholar_url: "https://scholar.google.com/citations?user=582zt4cAAAAJ&hl=en"
+  years: 
+    - year: 2026
+      publications: []
+    
+    - year: 2025
+      publications: []
+      
+    - year: 2024
+      publications: []
+
+    - year: 2023
+      publications: []
+
+    - year: 2022
+      publications: []
+
+    - year: 2021
+      publications: []
+
+    - year: 2020
+      publications: []
+  
+- id: mcore
+  name: MCORE Lab
+  scholar_url: "https://scholar.google.com/citations?user=MCPgJ1kAAAAJ&hl=en"
+  years: 
+    - year: 2026
+      publications: []
+    
+    - year: 2025
+      publications: []
+      
+    - year: 2024
+      publications: []
+
+    - year: 2023
+      publications: []
+
+    - year: 2022
+      publications: []
+
+    - year: 2021
+      publications: []
+
+    - year: 2020
+      publications: []

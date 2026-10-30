@@ -1,0 +1,113 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>Publications</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<div class="publications-container">
+
+  <!-- Lab tabs -->
+  <div class="lab-tabs" role="tablist" aria-label="Research labs">
+    {% for lab in site.data.publications %}
+      <button
+        class="lab-tab {% if forloop.first %}active{% endif %}"
+        role="tab"
+        id="tab-{{ lab.id }}"
+        aria-controls="panel-{{ lab.id }}"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+        onclick="showLab('{{ lab.id }}')">
+        {{ lab.name }}
+      </button>
+    {% endfor %}
+  </div>
+
+  <!-- Lab publication panels -->
+  {% for lab in site.data.publications %}
+    <section
+      class="lab-panel"
+      id="panel-{{ lab.id }}"
+      role="tabpanel"
+      aria-labelledby="tab-{{ lab.id }}"
+      {% unless forloop.first %}hidden{% endunless %}>
+
+      <h2>{{ lab.name }} Publications</h2>
+
+      <!-- Year navigation -->
+      <nav class="year-nav">
+        {% for year in lab.years %}
+          <a class="btn" href="#{{ lab.id }}-{{ year.year}}">
+		    {{ year.year }}
+		  </a>
+		{% endfor %}
+		
+		<a class="btn" href="{{ lab.scholar_url }}"
+		   target="_blank" rel="noopener noreferrer">
+		  Earlier Work 
+		</a>
+	  </nav>
+
+      <!-- Publications by year -->
+      {% for year in lab.years %}
+        <div class="year-section" id="{{ lab.id }}-{{ year.year }}">
+          <h3>{{ year.year }}</h3>
+
+          {% if year.publications.size > 0 %}
+            {% for publication in year.publications %}
+              <div class="pub-entry">
+                <a class="pub-title"
+                   href="{{ publication.url }}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  {{ publication.title }}
+                </a>
+
+                <p class="pub-authors">{{ publication.authors }}</p>
+                <p class="pub-journal">{{ publication.journal }}</p>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p>No publications listed for this year.</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <p class="earlier-work">
+        <a href="{{ lab.scholar_url }}" target="_blank" rel="noopener noreferrer">
+          View Earlier Work on Google Scholar
+        </a>
+      </p>
+
+    </section>
+  {% endfor %}
+
+</div>
+
+<script>
+  function showLab(labId) {
+    // Hide all publication panels
+    document.querySelectorAll('.lab-panel').forEach(panel => {
+      panel.hidden = true;
+    });
+
+    // Deactivate all tabs
+    document.querySelectorAll('.lab-tab').forEach(tab => {
+      tab.classList.remove('active');
+      tab.setAttribute('aria-selected', 'false');
+    });
+
+    // Show selected lab
+    document.getElementById('panel-' + labId).hidden = false;
+
+    // Activate selected tab
+    const selectedTab = document.getElementById('tab-' + labId);
+    selectedTab.classList.add('active');
+    selectedTab.setAttribute('aria-selected', 'true');
+  }
+</script>
