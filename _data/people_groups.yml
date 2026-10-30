@@ -16,12 +16,12 @@
 
 - id: phd
   heading: Doctoral Students
+  
+- id: staff
+  heading: Research Staff
 
 - id: masters
   heading: Master Students
 
 - id: undergrad
   heading: Undergraduate Students
-
-- id: staff
-  heading: Research Staff

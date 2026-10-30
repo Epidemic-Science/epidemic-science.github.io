@@ -74,6 +74,19 @@
   role: PhD Epidemiology (Year 1)
   lab: seal
   image: /images/people/jiwon-hur.png
+  
+# --- Research Staff -----------------------------------------------------------
+- name: Utkarsh Bhosekar
+  group: staff
+  role: Data Analyst
+  lab: ceph
+  image: /images/people/utkarsh-bhosekar.png
+
+- name: Paulo Ventura
+  group: staff
+  role: Consultant
+  lab: ceph
+  image: /images/people/paulo-ventura.png
 
 # --- Master's Students --------------------------------------------------------
 - name: Jessica Guerrini
@@ -184,19 +197,6 @@
   role: Undergraduate Student
   lab: seal, mcore
   image: ""
-
-# --- Research Staff -----------------------------------------------------------
-- name: Utkarsh Bhosekar
-  group: staff
-  role: Data Analyst
-  lab: ceph
-  image: /images/people/utkarsh-bhosekar.png
-
-- name: Paulo Ventura
-  group: staff
-  role: Consultant
-  lab: ceph
-  image: /images/people/paulo-ventura.png
 
 # --- Alumni -------------------------------------------------------------------
 # Shown as a name list with a lab tag.
