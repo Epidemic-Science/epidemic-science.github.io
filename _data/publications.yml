@@ -30,25 +30,584 @@
           url: "https://doi.org/10.64898/2026.08.31.26361843"
           authors: "Davis J. T., Kaur G., Hines A., Ben-Nun M., Venkatramanan S., Brooks L., Mathis S., Ajelli M., Litvinova M., Kummer A. G., Ventura P. C., Mhade S., Weber D., Shemetov D., DeFries N., McDonald D. J., Yamana T., Zepeda-Tello R., Shaman J., Yaari R., Pei S., Webber A., Shandross L., Ray E., Wadsworth S., Niemi J., Redman W. T., Mullany L., Posner R., Mallela A., Lin Y. T., Hlavacek W. S., Smart A., Gill A. A., Drennan A., Fiebiger B. J., Miller E. F., Lee J., Mihaljevic J. R., Geist K. A., Baltz M., Bernik O., Truong Y. B., Chen Y., Grosvenor C. J., Santillana M., Djorno C., Lu J., Yang S., Lu F., Clemente L., Meyer A. G., Bay C., Urbinati A., Gozzi N., Chinazzi M., Ueda M., Moghaddas N., LeWinter R., Venturini S., Fiandrino S., Vespignani A., Fox S. J., Suez E., Salcedo M., Prabhakar R., Case B. K. M., Perofsky A., Viboud C., Turtle J., Nagraj V. P., Benefield A., Williams D., Gibson G. C., Meyers L., Thommes E., van Bommel C., Loster R., Longaou B. B., Cojocaru M., Yue P., Rodríguez A., Li R., Potnis S., Reich N. G., Robacker T., Lemaitre J., Adiga A., Lewis B., Marathe M., Mandal N. C., Turner S. D., Ramakrishnan N., Su Y., Johansson M., Biggerstaff M., Borchering R. K."
           journal: "Preprint available on <i>medRxiv</i> (2026)"
+          
+        - title: "Temporal Variation in Mosquito Vector Population Dynamics in Urban Areas" 
+          url: "https://doi.org/10.64898/2026.07.13.738234"
+          authors: "Wang S., Carruth S. G., Vasquez C., Townsend J., Raman V., Mutebi J., Ajelli M., Wilke A. B. B."
+          journal: "Preprint available on bioRxiv (2026)"
+          
+        - title: "Short-term forecasts of Aedes aegypti relative abundance to enhance mosquito control situational awareness"
+          url: "https://doi.org/10.64898/2026.07.03.736030"
+          authors: "Bhosekar U., Ventura P. C., Hill M. D., Kummer A. G., Mhade S., Chitturi J., Vasquez C., Mutebi J., Townsend J., Litvinova M., Wilke A. B. B., Ajelli M."
+          journal: "Preprint available on bioRxiv (2026)"
+          
+        - title: "Epistorm-Mix: Mapping Social Contact Patterns for Respiratory Pathogen Spread in the Post-Pandemic United States"
+          url: "https://doi.org/10.1101/2025.11.20.25340662"
+          authors: "Litvinova M., Sinclair S., Kummer A. G., Ventura P. C., Foster T., Shioda K., Halloran M. E., Vespignani A., Ajelli M."
+          journal: "Nature Health , In press (2026)"
+          
+        - title: "Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020-2024): A Systematic Review"
+          url: "https://www.sciencedirect.com/science/article/pii/S175543652600040X?via%3Dihub"
+          authors: "Mhade S., Bhosekar U., Hill M. D., Sinclair S., Agrawal S., Guerrini J., Pletz K., Zou L., Koebcke A., Kummer A. G., Ventura P. C., Del Valle S. Y., Chinazzi M., Litvinova M., Vespignani A., Ajelli M."
+          journal: "Epidemics 56, 100924 (2026)"
+          
+        - title: "Global source-sink dynamics of dengue viruses and epidemic establishment in areas on the fringe of endemic transmission"
+          url: "https://academic.oup.com/nsr/article/doi/10.1093/nsr/nwag372/8708460"
+          authors: "Chen Z., Giovanetti M., Madewell Z. J., Sun A. W., Li C., Yu H., Sun J., Jiang L., Qin P., Wu X., Ajelli M., Yu H."
+          journal: "National Science Review nwag372 (2026)"
+          
+        - title: "Host Factors Modulate Nirmatrelvir–Ritonavir Efficacy in COVID-19 Patients: A Viral Dynamics Modeling Study"
+          url: "https://doi.org/10.64898/2026.04.03.26350141"
+          authors: "Liao Y., Wang Y., Wang Y., Ai J., Law B. K., Lim D., Zhou J., Wang H., Wu Y., Chia P. Y., Chua H. K., Chan C. E. Z., Schiffer J. T., Owens K., Esmaeili S., Cowling B. J., Cove M. E., Saito H., Wee L. E., Young B. E., Ng T. M., Chan E. C. Y., Ajelli M., Zhang W., Yu H., Ejima K."
+          journal: "Preprint available on medRxiv (2026)"
+          
+        - title: "Spatiotemporal Dynamics of Aedes aegypti and Culex quinquefasciatus populations in Miami-Dade County, Florida"
+          url: "https://doi.org/10.1371/journal.pone.0334586"
+          authors: Vasquez C., Multini L. C., Mutebi J.-P., SeRine E., Hill M. D., Litvinova M., Ajelli M., Wilke A. B. B.
+          journal: PLoS One 21(4), e0334586 (2026)
+          
+        - title: "IRIS, a modeling tool for the in-silico evaluation of mosquito control trial designs based on inundative releases"
+          url: "https://doi.org/10.1101/2025.11.05.686816"
+          authors:  "Chitturi J., Ventura P. C., Kummer A. G., Vasquez C., SeRine E., Hill M. D., Manica M., Poletti P., Beier J. C., Ejima K., Johansson M., Merler S., Yu H., Mutebi J.-P., Litvinova M., Wilke A. B. B., Ajelli M."
+          journal: "Preprint available on bioRxiv (2026)"
+          
+        - title: "Comparing Wastewater-Based and Case-Based Rt Estimates of SARS-CoV-2 Transmission in Georgia Using Generalized Linear Mixed Models"
+          url: "https://doi.org/10.1101/2025.10.24.25338734"
+          authors: "Edmunds S. H., Landsittel D., Ajelli M., Litvinova M."
+          journal: "Epidemiology & Infection 154, e63 (2026)"
+
+        - title: "Mosquito‐Borne Disease among Individuals Experiencing Homelessness in the United States: A Literature Review"
+          url: "https://link.springer.com/article/10.1007/s10340-026-02042-0"
+          authors: "Wilke A. B. B., Hill M., Kummer A., Vasquez C., Mutebi J.-P., Huo X., Li H., Chen J., Ruan S., Beier J., Litvinova M., Byrne T., Ajelli M."
+          journal: "Journal of Pest Science 99, 69 (2026)"
+          
+        - title: "VIBES: A Multi-Scale Modeling Approach Integrating Within-Host and Between-Hosts Dynamics in Epidemics"
+          url: "https://doi.org/10.1073/pnas.2523055123"
+          authors: "Ventura P. C., Jeong Y. D., Litvinova M., Kummer A. G., Iwami S., Yu H., Merler S., Vespignani A., Ejima K., Ajelli M."
+          journal: "Proceedings of the National Academy of Sciences of the United States of America 123 (13), e2523055123 (2026)"
+          
+        - title: "Implications for distancing measures on in-person school and work attendance from Italian post-pandemic social contact data"
+          url: "https://www.nature.com/articles/s43856-026-01543-4"
+          authors: "Lucchini L., Marziano V., Trentini F., Chiavenna C., D’Agnese E., Offeddu V., Manica M., Poletti P., Balsamo D., Guzzetta G., Ajelli M., Melegaro A., Merler S."
+          journal: "Communications Medicine (2026)"
+          
+        - title: "Ecological and demographic profile of Oropouche fever between 2014-2025 in Brazil: an epidemiological study"
+          url: "https://www.nature.com/articles/s44360-026-00065-6"
+          authors: "Hua X., Alexander L. W., Claro I. M., Shao Y., de Jesus R., de Lima S. T. S., Ventura P. C., Kato R. B., Ajelli M., Wilke A. B. B., Suchard M. A., Faria N. R., Proenca-Modena J. L., Dickson L. B., Bento A. I., de Souza W. M."
+          journal: "Nature Health 1, 487–496 (2026)"
+          
+        - title: "Understanding human mobility patterns under a public health emergency"
+          url: "https://www.sciencedirect.com/science/article/pii/S2468042725001125?via%3Dihub"
+          authors: "Peng C., Chen N., Ming B.-W., Zhang A., Zuo Y., Ventura P. C., Yu H., Ajelli M., Zhang J."
+          journal: "Infectious Disease Modelling 11 (1), 241-255 (2026)"
 
     - year: 2025
-      publications: []
-      
+      publications: 
+        - title: "China's post-zero-COVID Omicron wave: A Bayesian analysis"
+          url: "https://doi.org/10.1073/pnas.2514157122"
+          authors: "Cai J., Wu Y., Liu H., Deng Z., Yi L., Lai L., Funk A., Ajelli M., Yu H."
+          journal: "Proceedings of the National Academy of Sciences of the United States of America 122 (48), e2514157122 (2025)"
+        
+        - title: "Epydemix: An open-source Python package for epidemic modeling with integrated approximate Bayesian calibration"
+          url: "https://doi.org/10.1371/journal.pcbi.1013735"
+          authors: "Gozzi N., Chinazzi M., Davis J. T., Gioannini C., Rossi L., Ajelli M., Perra N., Vespignani A."
+          journal: "PLoS Computational Biology 21 (11), e1013735 (2025)"
+        
+        - title: "Assessing the effectiveness of test-trace-isolate interventions using a multi-layered temporal network"
+          url: "https://www.sciencedirect.com/science/article/pii/S2468042725000168?via%3Dihub"
+          authors: "Cai Y., Wang W., Yu L., Wang R., Sun G.-Q., Kummer A. G., Ventura P. C., Lv J., Ajelli M., Liu Q.-H."
+          journal: "Infectious Disease Modelling 10 (3), 775-786 (2025)"
+        
+        - title: "Evaluating the effectiveness of international travel controls to identify MPXV-infected travelers: a simulation study"
+          url: "https://link.springer.com/article/10.1186/s12916-025-04286-6"
+          authors: "Ejima K., Wang Y., Endo A., Murayama H., Goh Y. S., Cook A. R., Jeong Y. D., Iwami S., Park H., Dickens B. S. L., Jin S., Lim J. T., Chan C. E. Z., Chia P. Y., Young B. E., Yang Y., Chio M., Lye D. C., Ajelli M."
+          journal: "BMC Medicine 23 (1), 473 (2025)"
+        
+        - title: "Leveraging mosquito surveillance data to assess ecosystem health"
+          url: "https://www.cell.com/trends/parasitology/abstract/S1471-4922(25)00105-9?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1471492225001059%3Fshowall%3Dtrue"
+          authors: "Scavo N. A., Vasquez C., Mutebi J.-P., Ajelli M., Wilke A. B. B."
+          journal: "Trends in Parasitology 41 (6), 424-427 (2025)"
+        
+        - title: "Social contact patterns and their impact on the transmission of respiratory pathogens in rural China"
+          url: "https://www.sciencedirect.com/science/article/pii/S2468042724001325?via%3Dihub"
+          authors: "Liang Y., You Q., Wang Q., Yang X., Zhong G., Dong K., Zhao Z., Liu N., Yan X., Lu W., Peng C., Zhou J., Lin J., Litvinova M., Jit M., Ajelli M., Yu H., Zhang J."
+          journal: "Infectious Disease Modelling 10 (2), 439-452 (2025)"
+        
+        - title: "Measles Population Immunity in Hunan, China: A Serological Assessment"
+          url: "https://doi.org/10.1093/ofid/ofaf216"
+          authors: "Wu Y., Wang Q., Wang W., Zhou X., Zhang J., Zhao S., Liang Y., Wang P., Trentini F., Ajelli M., Yu H."
+          journal: "Open Forum Infectious Diseases 12 (5), ofaf216 (2025)"
+        
+        - title: "Evaluation of the 2022 West Nile virus forecasting challenge, USA"
+          url: "https://link.springer.com/article/10.1186/s13071-025-06767-2"
+          authors: "Harp R. D., Holcomb K. M., Retkute R., Prusokiene A., Prusokas A., Ertem Z., Ajelli M., Kummer A. G., Litvinova M., Merler S., Pastore y Piontti A., Poletti P., Vespignani A., Wilke A. B. B., Zardini A., Smith K. H., Armstrong P., DeFelice N., Keyel A., Shepard J., Smith R., Tyre A., Humphreys J., Cohnstaedt L. W., Hosseini S., Scoglio C., Gorris M. E., Barnard M., Moser S. K., Spencer J. A., McCarter M. S. J., Lee C., Nolan M. S., Barker C. M., Staples J. E., Nett R. J., Johansson M. A."
+          journal: "Parasites & Vectors 18 (1), 152 (2025)"
+        
+        - title: "Vaccination strategies for Ebola in the democratic republic of Congo: the WHO-Ebola modeling collaboration"
+          url: "https://www.ijidonline.com/article/S1201-9712(25)00003-7/fulltext"
+          authors: "Ajelli M., Muyembe J.-J., Touré A., Diallo A., Litvinova M., Merler S., Mulangu S., Bagayoko A., Bah A., Bah I., Barry A., Barry Fatoumata, Chérif M., Condé D., Diallo A. A., Diallo F., Diakité M., Doré K., Mapan K. A., Koundouno T., Onivogui P. K., Lamah F., Maneno H., Nomou A., Sekouba K., Sani I., Soumah A., Sy M. M., Gsell P.-S., Halloran M. E., Henao-Restrepo A. M., Fall I. S., Ryan M. J., Salama P., Vespignani A., Longini Jr I. M."
+          journal: "International Journal of Infectious Diseases 153, 107779 (2025)"
+        
+        - title: "Age-and vaccination status-dependent isolation guidelines based on simulation of SARS-CoV-2 Delta cases in Singapore"
+          url: "https://www.nature.com/articles/s43856-025-00797-8"
+          authors: "Ejima K., Ajelli M., Singh A., Chua H. K., Ponce L., Wang Y., Jeong Y. D., Iwami S., Shibuya K., Taniguchi K., Ohmagari N., Chia P. Y., Ong S. W. X., Tan K. B., Lye D. C., Young B. E."
+          journal: "Communications Medicine 5 (1), 76 (2025)"
+        
+        - title: "Human migrations, anthropogenic changes, and insect-borne diseases in Latin America"
+          url: "https://link.springer.com/article/10.1186/s13071-024-06598-7"
+          authors: "Wilke A. B. B., Farina P., Ajelli M., Canale A., Dantas-Torres F., Otranto D., Benelli G."
+          journal: "Parasites & Vectors 18 (1), 4 (2025)"
+        
+        - title: "A modeling study to define guidelines for antigen screening in schools and workplaces to mitigate COVID-19 outbreaks"
+          url: "https://www.nature.com/articles/s43856-024-00716-3"
+          authors: "Jeong Y. D., Ejima K., Kim K. S., Iwanami S., Hart W. S., Thompson R. N., Jung I. H., Iwami S., Ajelli M., Aihara K."
+          journal: "Communications Medicine 5 (1), 2 (2025)"
+        
+        - title: "Defining the Critical Requisites for Accurate Simulation of SARS-CoV-2 Viral Dynamics: Patient Characteristics and Data Collection Protocol"
+          url: "https://doi.org/10.1002/jmv.70174"
+          authors: "Chua H. K., Singh A., Wang Y., Goh Y. S., Chan C. E. Z., Chavatte J.-M., Lin R. V. T. P., Su Y. C. F., Ajelli M., Chia P. Y., Ong S. W. X., Lye D. C., Young B. E., Ejima K."
+          journal: "Journal of Medical Virology 97 (1), e70174 (2025)"
+        
     - year: 2024
-      publications: []
+      publications: 
+        - title: "Real-time estimates of the emergence and dynamics of SARS-CoV-2 variants of concern: A modeling approach"
+          url: "https://www.sciencedirect.com/science/article/pii/S1755436524000665?via%3Dihub"
+          authors: "Gozzi N., Chinazzi M., Davis J. T., Mu K., Pastore y Piontti A., Ajelli M., Vespignani A., Perra N."
+          journal: "Epidemics 49, 100805 (2024)"
+          
+        - title: "Presence and abundance of malaria vector species in Miami-Dade County, Florida"
+          url: "https://link.springer.com/article/10.1186/s12936-024-04847-9"
+          authors: "Wilke A. B. B., Vasquez C., Medina J., Unlu I., Beier J. C., Ajelli M."
+          journal: "Malaria Journal 23, 24 (2024)"
+          
+        - title: "Forecasting the relative abundance of Aedes vector populations to enhance situational awareness for mosquito control operations"
+          url: "https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0012671"
+          authors: "Ventura P. C., Kummer A. G., Wilke A. B. B., Chitturi J., Hill M. D., Vasquez C., Unlu I., Mutebi J.-P., Kluh S., Vetrone S., Damian D., Townsend J., Litvinova M., Ajelli M."
+          journal: "PLoS Neglected Tropical Diseases 18(11), e0012671 (2024)"
+          
+        - title: "Increasing situational awareness through nowcasting of the reproduction number"
+          url: "https://doi.org/10.3389/fpubh.2024.1430920"
+          authors: "Bizzotto A., Guzzetta G., Marziano V., Del Manso M., Mateo Urdiales A., Petrone D., Cannone A., Sacco C., Poletti P., Manica M., Zardini A., Trentini F., Fabiani M., Bella A., Riccardo F., Pezzotti P., Ajelli M., Merler S."
+          journal: "Frontiers in Public Health 12, 1430920 (2024)"
+          
+        - title: "A multiscale modeling framework for Scenario Modeling: Characterizing the heterogeneity of the COVID-19 epidemic in the US"
+          url: "https://www.sciencedirect.com/science/article/pii/S1755436524000185?via%3Dihub"
+          authors: "Chinazzi M., Davis J. T., Pastore y Piontti A., Mu K., Gozzi N., Ajelli M., Perra N., Vespignani A."
+          journal: "Epidemics 47, 100757 (2024)"
+          
+        - title: "Assessing the impact of interventions on the major Omicron BA.2 outbreak in spring 2022 in Shanghai"
+          url: "https://www.sciencedirect.com/science/article/pii/S2468042724000332?via%3Dihub"
+          authors: "Liu H., Cai J., Zhou J., Xu X., Ajelli M., Yu H."
+          journal: "Infectious Disease Modelling 9(2), 519-526 (2024)"
+          
+        - title: "Comparing the effectiveness of adulticide application interventions on mitigating local transmission of dengue virus"
+          url: "https://link.springer.com/article/10.1007/s10340-024-01787-w"
+          authors: "Kummer A. G., Wilke A. B. B., Ventura P. C., Vasquez C., Medina J., Unlu I., Gonzalez Y., Mhlanga A., Benelli G., Ejima K., Mutebi J.-P., Ajelli M."
+          journal: "Journal of Pest Science 98, 463-475 (2024)"
+          
+        - title: "Evaluating Seasonal Variations in Human Contact Patterns and Their Impact on the Transmission of Respiratory Infectious Diseases"
+          url: "https://doi.org/10.1111/irv.13301"
+          authors: "Kummer A. G., Zhang J., Jiang C., Litvinova M., Ventura P. C., Garcia M. A., Vespignani A., Wu H., Yu H., Ajelli M."
+          journal: "Influenza and Other Respiratory Viruses 18(5), e13301 (2024)"
+          
+        - title: "Spatial spread of COVID-19 during the early pandemic phase in Italy"
+          url: "https://link.springer.com/article/10.1186/s12879-024-09343-8"
+          authors: "d’Andrea V., Trentini F., Marziano V., Zardini A., Manica M., Guzzetta G., Ajelli M., Petrone D., Del Manso M., Sacco C., Andrianou X., Bella A., Riccardo F., Pezzotti P., Poletti P., Merler S."
+          journal: "BMC Infectious Diseases 24, 450 (2024)"
+          
+        - title: "The decline of the 2022 Italian mpox epidemic: Role of behavior changes and control strategies"
+          url: "https://www.nature.com/articles/s41467-024-46590-4"
+          authors: "Guzzetta G., Marziano V., Mammone A., Siddu A., Ferraro F., Caraglia A., Maraglino F., Rezza G., Vespignani A., Longini I., Ajelli M., Merler S."
+          journal: "Nature Communications 15, 2283 (2024)"
+          
+        - title: "Counterfactual analysis of the 2023 Omicron XBB wave in China"
+          url: "https://www.sciencedirect.com/science/article/pii/S2468042723001124?via%3Dihub"
+          authors: "Liu H., Xu X., Deng X., Hu Z., Sun R., Zou J., Dong J., Wu Q., Chen X., Yi L., Cai J., Zhang J., Ajelli M., Yu H."
+          journal: "Infectious Disease Modelling 9(1), 195-203 (2024)"
+          
+        - title: "The unequal effects of the health-economy trade-off during the COVID-19 pandemic"
+          url: "https://www.nature.com/articles/s41562-023-01747-x"
+          authors: "Pangallo M., Aleta A., del Rio-Chanona R. M., Pichler A., Martín-Corral D., Chinazzi M., Lafond F., Ajelli M., Moro E., Moreno Y., Vespignani A., Farmer J. D."
+          journal: "Nature Human Behaviour 8, 264-275 (2024)"
+          
+        - title: "Evaluation of FluSight influenza forecasting in the 2021-22 and 2022-23 seasons with a new target laboratory-confirmed influenza hospitalizations"
+          url: "https://www.nature.com/articles/s41467-024-50601-9"
+          authors: "Mathis S. M., Webber A. E., León T. M., Murray E. L., Sun M., White L. A., Brooks L. C., Green A., Hu A. J., Rosenfeld R., Shemetov D., Tibshirani R. J., McDonald D. J., Kandula S., Pei S., Yaari R., Yamana T. K., Shaman J., Agarwal P., Balusu S., Gururajan G., Kamarthi H., Prakash B. A., Raman R., Zhao Z., Rodríguez A., Meiyappan A., Omar S., Baccam P., Gurung H. L., Suchoski B. T., Stage S. A., Ajelli M., Kummer A. G., Litvinova M., Ventura P. C., Wadsworth S., Niemi J., Carcelen E., Hill A. L., Loo S. L., McKee C. D., Sato K., Smith C., Truelove S., Jung S. M., Lemaitre J. C., Lessler J., McAndrew T., Ye W., Bosse N., Hlavacek W. S., Lin Y. T., Mallela A., Gibson G. C., Chen Y., Lamm S. M., Lee J., Posner R. G., Perofsky A. C., Viboud C., Clemente L., Lu F., Meyer A. G., Santillana M., Chinazzi M., Davis J. T., Mu K., Pastore Y Piontti A., Vespignani A., Xiong X., Ben-Nun M., Riley P., Turtle J., Hulme-Lowe C., Jessa S., Nagraj V. P., Turner S. D., Williams D., Basu A., Drake J. M., Fox S. J., Suez E., Cojocaru M. G., Thommes E. W., Cramer E. Y., Gerding A., Stark A., Ray E. L., Reich N. G., Shandross L., Wattanachit N., Wang Y., Zorn M. W., Aawar M. A., Srivastava A., Meyers L. A., Adiga A., Hurt B., Kaur G., Lewis B. L., Marathe M., Venkatramanan S., Butler P., Farabow A., Ramakrishnan N., Muralidhar N., Reed C., Biggerstaff M., Borchering R. K."
+          journal: "Nature Communications 15, 6289 (2024)"
+          
+        - title: "Unveiling the role of mosquito and human diel activity patterns in the risk of mosquito-borne disease infection"
+          url: "https://doi.org/10.1101/2024.05.29.24308139"
+          authors: "Ventura P. C., Wilke A. B. B., Chitturi J., Kummer A. G., Agrawal S., Vasquez C., Gonzalez Y., Litvinova M., Mutebi J.-P., Ajelli M."
+          journal: "Preprint available on medRxiv (2024)"
 
+        - title: "Estimating the potential risk of transmission of arboviruses in the Americas and Europe: a modelling study"
+          url: "https://pubmed.ncbi.nlm.nih.gov/38199719/"
+          authors: "Zardini A., Menegale F., Gobbi A., Manica M., Guzzetta G., d'Andrea V., Marziano V., Trentini F., Montarsi F., Caputo B., Solimini A., Marques-Toledo C., Wilke A. B. B., Rosà R., Marini G., Arnoldi D., Pastore y Piontti A., Pugliese A., Capelli G., della Torre A., Teixeira M. M., Beier J. C., Rizzoli A., Vespignani A., Ajelli M., Merler S., Poletti P."
+          journal: "The Lancet Planetary Health 8(1), E30-E40 (2024)"
+          
     - year: 2023
-      publications: []
-
+      publications: 
+        - title: "Heterogeneous changes in mobility in response to the SARS-CoV-2 Omicron BA.2 outbreak in Shanghai"
+          url: "https://doi.org/10.1073/pnas.2306710120"
+          authors: "Zhang J., Tan S., Peng C., Xu X., Wang M., Lu W., Wu Y., Sai B., Cai M., Kummer A. G., Chen Z., Zou J., Li W., Zheng W., Liang Y., Zhao Y., Vespignani A., Ajelli M., Lu X., Yu H."
+          journal: "Proceedings of the National Academy of Sciences 120(42), e2306710120 (2023)"
+          
+        - title: "Assessing changes in incubation period, serial interval, and generation time of SARS-CoV-2 variants of concern: a systematic review and meta-analysis"
+          url: "https://link.springer.com/article/10.1186/s12916-023-03070-8"
+          authors: "Xu X., Wu Y., Kummer A. G., Zhao Y., Hu Z., Wang Y., Liu H., Ajelli M., Yu H."
+          journal: "BMC Medicine 21, 374 (2023)"
+          
+        - title: "Unintended effects of urban policies on the risk of arbovirus transmission"
+          url: "https://www.cell.com/trends/parasitology/abstract/S1471-4922(23)00216-7?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1471492223002167%3Fshowall%3Dtrue"
+          authors: "Wilke A. B. B., Chang N.-B., Townsend J., Benelli G., Ajelli M."
+          journal: "Trends in Parasitology 39(12), 1001-1003 (2023)"
+          
+        - title: "Evaluating the impact of test-trace-isolate for COVID-19 management and alternative strategies"
+          url: "https://doi.org/10.1371/journal.pcbi.1011423"
+          authors: "Zhang K., Xia Z., Huang S., Sun G.-Q., Lv J., Ajelli M., Ejima K., Liu Q.-H."
+          journal: "PLoS Computational Biology 19(9), e1011423 (2023)"
+          
+        - title: "Estimating SARS-CoV-2 infections and associated changes in COVID-19 severity and fatality"
+          url: "https://doi.org/10.2807/1560-7917.ES.2023.28.19.2200650"
+          authors: "Marziano V., Guzzetta G., Menegale F., Sacco C., Petrone D., Mateo Urdiales A., Del Manso M., Bella A., Fabiani M., Vescio M. F., Riccardo F., Poletti P., Manica M., Zardini A., d'Andrea V., Trentini F., Stefanelli P., Rezza G., Palamara A. T., Brusaferro S., Ajelli M., Pezzotti P., Merler S."
+          journal: "Influenza and Other Respiratory Viruses 17(8), e13181 (2023)"
+          
+        - title: "Evaluating the effect of targeted strategies as control tools for hypervirulent meningococcal C outbreaks: a case study from Tuscany, Italy, 2015 to 2016"
+          url: "https://doi.org/10.2807/1560-7917.ES.2023.28.19.2200650"
+          authors: "Guzzetta G., Ajelli M., Miglietta A., Fazio C., Neri A., Merler S., Rezza G., Stefanelli P."
+          journal: "Eurosurveillance 28(19), 2200650 (2023)"
+          
+        - title: "Evaluation of Waning of SARS-CoV-2 Vaccine–Induced Immunity: A Systematic Review and Meta-analysis"
+          url: "https://doi.org/10.1001/jamanetworkopen.2023.10650"
+          authors: "Menegale F., Manica M., Zardini A., Guzzetta G., Marziano V., d'Andrea V., Trentini F., Ajelli M., Poletti P., Merler S."
+          journal: "JAMA Network Open 6(5), e2310650 (2023)"
+          
+        - title: "Priority age targets for COVID-19 vaccination in Ethiopia under limited vaccine supply"
+          url: "https://doi.org/10.1038/s41598-023-32501-y"
+          authors: "Galli M., Zardini A., Gamshie W. N., Santini S., Tsegaye A., Trentini F., Marziano V., Guzzetta G., Manica M., d’Andrea V., Putoto G., Manenti F., Ajelli M., Poletti P., Merler S."
+          journal: "Scientific Reports 13, 5586 (2023)"
+          
+        - title: "Long-term measles antibody profiles following different vaccine schedules in China, a longitudinal study"
+          url: "https://doi.org/10.1038/s41467-023-37407-x"
+          authors: "Wang Q., Wang W., Winter A. K., Zhan Z., Ajelli M., Trentini F., Wang L., Li F., Yang J., Xiang X., Liao Q., Zhou J., Guo J., Yan X., Liu N., Metcalf C. J. E., Grenfell B. T., Yu H."
+          journal: "Nature Communications 14, 1746 (2023)"
+          
+        - title: "Risk Factors Associated with the Spatiotemporal Spread of the SARS-CoV-2 Omicron BA.2 Variant — Shanghai Municipality, China, 2022"
+          url: "https://doi.org/10.46234/ccdcw2023.018"
+          authors: "Zheng W., Deng X., Peng C., Yan X., Zheng N., Chen Z., Yang J., Ajelli M., Zhang J., Yu H."
+          journal: "China CDC Weekly 5(5), 97-102 (2023)"
+          
+        - title: "Estimating Changes in Contact Patterns in China Over the First Year of the COVID-19 Pandemic: Implications for SARS-CoV-2 Spread — Four Cities, China, 2020"
+          url: "https://doi.org/10.46234/ccdcw2023.021"
+          authors: "Liang Y., Peng C., You Q., Litvinova M., Ajelli M., Zhang J., Yu H."
+          journal: "China CDC Weekly 5(5), 113-119 (2023)"
+          
+        - title: "Spatiotemporal distribution of vector mosquito species and areas at risk for arbovirus transmission in Maricopa County, Arizona"
+          url: "https://doi.org/10.1016/j.actatropica.2023.106833"
+          authors: "Wilke A. B. B., Damian D., Litvinova M., Byrne T., Zardini A., Poletti P., Merler S., Mutebi J.-P., Townsend J., Ajelli M."
+          journal: "Acta Tropica 240, 106833 (2023)"
+          
+        - title: "Diel activity patterns of vector mosquito species in the urban environment: Implications for vector control strategies"
+          url: "https://doi.org/10.1371/journal.pntd.0011074"
+          authors: "Wilke A. B. B., Mhlanga A., Kummer A. G., Vasquez C., Moreno M., Petrie W. D., Rodriguez A., Vitek C., Hamer G. L., Mutebi J.-P., Ajelli M."
+          journal: "PLoS Neglected Tropical Diseases 17(1), e0011074 (2023)"
+          
+        - title: "SARS-CoV-2 transmission patterns in educational settings during the Alpha wave in Reggio-Emilia, Italy"
+          url: "https://doi.org/10.1016/j.epidem.2023.100712"
+          authors: "Molina Grané C., Mancuso P., Vicentini M., Venturelli F., Djuric O., Manica M., Guzzetta G., Marziano V., Zardini A., d’Andrea V., Trentini F., Bisaccia E., Larosa E., Cilloni S., Cassinadri M. T., Pezzotti P., Ajelli M., Giorgi Rossi P., Merler S., Poletti P."
+          journal: "Epidemics 44, 100712 (2023)"
+          
+        - title: "Environmental and socio-economic determinants of mosquito vector species presence and abundance in Los Angeles County, California"
+          url: "https://doi.org/10.21203/rs.3.rs-3338430/v1"
+          authors: "Hill M., Wilke A. B. B., Fuller D. O., Kummer A. G., Ventura P. C., Beier J. C., Kluh S., Vetrone S., Litvinova M., Ajelli M."
+          journal: "Preprint available on Research Square (2023)"
+          
+        - title: "Transmission Dynamics and Epidemiological Characteristics of the SARS-CoV-2 Delta Variant ― Hunan Province, China, 2021"
+          url: "https://doi.org/10.46234/ccdcw2023.011"
+          authors: "Luo K., Wu Y., Wang Y., Liu Z., Yi L., Zhao S., Yan X., Yang H., Sun K., Ajelli M., Hu S., Yu H."
+          journal: "China CDC Weekly 5(3), 56-62 (2023)"
+          
+        - title: "Estimating SARS-CoV-2 transmission in educational settings: A retrospective cohort study"
+          url: "https://doi.org/10.1111/irv.13049"
+          authors: "Manica M., Poletti P., Deandrea S., Mosconi G., Ancarani C., Lodola S., Guzzetta G., d'Andrea V., Marziano V., Zardini A., Trentini F., Odone A., Tirani M., Ajelli M., Merler S."
+          journal: "Influenza and Other Respiratory Viruses 17(1), e13049 (2023)"
+          
+        - title: "Estimation of the incubation period and generation time of SARS-CoV-2 Alpha and Delta variants from contact tracing data"
+          url: "https://doi.org/10.1017/S0950268822001947"
+          authors: "Manica M., Litvinova M., De Bellis A., Guzzetta G., Mancuso P., Vicentini M., Venturelli F., Bisaccia E., Bento A. I., Poletti P., Marziano V., Zardini A., d'Andrea V., Trentini F., Bella A., Riccardo F., Pezzotti P., Ajelli M., Giorgi Rossi P., Merler S., Reggio Emilia COVID-19 Working Group."
+          journal: "Epidemiology & Infection 151, e5 (2023)"
+          
     - year: 2022
-      publications: []
-
+      publications: 
+        - title: "Assessing the transition of COVID-19 burden towards the young population while vaccines are rolled out in China"
+          url: "https://doi.org/10.1080/22221751.2022.2063073"
+          authors: "Cai J., Yang J., Deng X., Peng C., Chen X., Wu Q., Liu H., Zhang J., Zheng W., Zou J., Zhao Z., Ajelli M., Yu H."
+          journal: "Emerging Microbes & Infections 11 (1), 1205-1214 (2022)"
+          
+        - title: "Epidemiological characteristics and transmission dynamics of the outbreak caused by the SARS-CoV-2 Omicron variant in Shanghai, China: a descriptive study"
+          url: "https://pubmed.ncbi.nlm.nih.gov/35765564/"
+          authors: "Chen Z., Deng X., Fang L., Sun K., Wu Y., Che T., Zou J., Cai J., Liu H., Wang Y., Wang T., Tian Y., Zheng N., Yan X., Sun R., Xu X., Zhou X., Ge S., Liang Y., Yi L., Yang J., Zhang J., Ajelli M., Yu H."
+          journal: "The Lancet Regional Health-Western Pacific 29, (2022)"
+          
+        - title: "Characterizing the transmission patterns of seasonal influenza in Italy: lessons from the last decade"
+          url: "https://doi.org/10.1186/s12889-021-12426-9"
+          authors: "Trentini F., Pariani E., Bella A., Diurno G., Crottogini L., Rizzo C., Merler S., Ajelli M."
+          journal: "BMC Public Health 22 (1), 1-9 (2022)"
+          
+        - title: "Assessing the feasibility of sustaining SARS-CoV-2 local containment in China in the era of highly transmissible variants"
+          url: "https://doi.org/10.1186/s12916-022-02640-6"
+          authors: "Wang Y., Sun K., Feng Z., Yi L., Wu Y., Liu H., Wang Q., Ajelli M., Viboud C., Yu H."
+          journal: "BMC Medicine 20 (1), 442 (2022)"
+          
+        - title: "Tracking the progressive spread of the SARS-CoV-2 Omicron variant in Italy, December 2021 to January 2022"
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9650705/"
+          authors: "Stefanelli P., Trentini F., Petrone D., Mammone A., Ambrosio L., Manica M., Guzzetta G., d'Andrea V., Marziano V., Zardini A., Molina Grane C., Ajelli M., Di Martino A., Riccardo F., Bella A., Sane Schepisi M., Maraglino F., Poletti P., Palamara A. T., Brusaferro S., Rezza G., Pezzotti P., Merler S."
+          journal: "Eurosurveillance 27 (45), 2200125 (2022)"
+          
+        - title: "Investigating the relationship between interventions, contact patterns, and SARS-CoV-2 transmissibility"
+          url: "https://doi.org/10.1016/j.epidem.2022.100601"
+          authors: "Trentini F., Manna A., Balbo N., Marziano V., Guzzetta G., O’Dell S., Kummer A. G., Litvinova M., Merler S., Ajelli M., Poletti P., Melegaro A."
+          journal: "Epidemics 40, 100601 (2022)"
+          
+        - title: "Designing isolation guidelines for COVID-19 patients with rapid antigen tests"
+          url: "https://doi.org/10.1038/s41467-022-32663-9"
+          authors: "Jeong Y. D., Ejima K., Kim K. S., Joohyeon W., Iwanami S., Fujita Y., Jung I. H., Aihara K., Shibuya K., Iwami S., Bento A. I., Ajelli M."
+          journal: "Nature Communications 13 (1), 4910 (2022)"
+          
+        - title: "Intrinsic generation time of the SARS-CoV-2 Omicron variant: an observational study of household transmission"
+          url: "https://pubmed.ncbi.nlm.nih.gov/35791373/"
+          authors: "Manica M., De Bellis A., Guzzetta G., Mancuso P., Vicentini M., Venturelli F., Zerbini A., Bisaccia E., Litvinova M., Menegale F., Molina Grané C., Poletti P., Marziano V., Zardini A., d'Andrea V., Trentini F., Bella A., Riccardo F., Pezzotti P., Ajelli M., Giorgi Rossi P., Merler S., Reggio Emilia COVID-19 Working Group."
+          journal: "The Lancet Regional Health-Europe 19, 100446 (2022)"
+          
+        - title: "Modeling transmission of SARS-CoV-2 Omicron in China"
+          url: "https://doi.org/10.1038/s41591-022-01855-7"
+          authors: "Cai J., Deng X., Yang J., Sun K., Liu H., Chen Z., Peng C., Chen X., Wu Q., Zou J., Sun R., Zheng W., Zhao Z., Lu W., Liang Y., Zhou X., Ajelli M., Yu H."
+          journal: "Nature Medicine 28 (7), 1468-1475 (2022)"
+          
+        - title: "Quantifying the importance and location of SARS-CoV-2 transmission events in large metropolitan areas"
+          url: "https://doi.org/10.1073/pnas.2112182119"
+          authors: "Aleta A., Martín-Corral D., Bakker M. A., Pastore y Piontti A., Ajelli M., Litvinova M., Chinazzi M., Dean N. E., Halloran M. E., Longini Jr I. M., Pentland A., Vespignani A., Moreno Y., Moro E."
+          journal: "Proceedings of the National Academy of Science 119 (26), e2112182119 (2022)"
+          
+        - title: "Anatomy of the first six months of COVID-19 vaccination campaign in Italy"
+          url: "https://doi.org/10.1371/journal.pcbi.1010146"
+          authors: "Gozzi N., Chinazzi M., Davis J. T., Mu K., Pastore y Piontti A., Ajelli M., Perra N., Vespignani A."
+          journal: "PLoS Computational Biology 18 (5), e1010146 (2022)"
+          
+        - title: "Quantifying human mixing patterns in Chinese provinces outside Hubei after the 2020 lockdown was lifted"
+          url: "https://doi.org/10.1186/s12879-022-07455-7"
+          authors: "Zhao Y., O’Dell S., Yang X., Liao J., Yang K., Fumanelli L., Zhou T., Lv J., Ajelli M., Liu Q.-H."
+          journal: "BMC Infectious Diseases 22 (1), 483 (2022)"
+          
+        - title: "The New Quadrivalent Adjuvanted Influenza Vaccine for the Italian Elderly: A Health Technology Assessment"
+          url: "https://doi.org/10.3390/ijerph19074166"
+          authors: "Calabrò G. E., Boccalini S., Panatto D., Rizzo C., Di Pietro M. L., Abreha F. M., Ajelli M., Amicizia D., Bechini A., Giacchetta I., Lai P. L., Merler S., Primieri C., Trentini F., Violi S., Bonanni P., de Waure C."
+          journal: "International Journal of Environmental Research and Public Health 19 (7), 4166 (2022)"
+          
+        - title: "Co-circulation of SARS-CoV-2 Alpha and Gamma variants in Italy, February and March 2021"
+          url: "https://pubmed.ncbi.nlm.nih.gov/35115077/"
+          authors: "Stefanelli P., Trentini F., Guzzetta G., Marziano V., Mammone A., Sane Schepisi M., Poletti P., Molina Grané C., Manica M., del Manso M., Andrianou X., Ajelli M., Rezza G., Brusaferro S., Merler S., COVID-19 National Microbiology Surveillance Study Group."
+          journal: "Eurosurveillance 27 (5), 2100429 (2022)"
+          
+        - title: "Investigating vaccine-induced immunity and its effect in mitigating SARS-CoV-2 epidemics in China"
+          url: "https://doi.org/10.1186/s12916-022-02243-1"
+          authors: "Liu H., Zhang J., Cai J., Deng X., Peng C., Chen X., Yang J., Wu Q., Chen X., Chen Z., Zheng W., Viboud C., Zhang W., Ajelli M., Yu H."
+          journal: "BMC Medicine 20 (1), 37 (2022)"
+          
+        - title: "Model-based evaluation of alternative reactive class closure strategies against COVID-19"
+          url: "https://doi.org/10.1038/s41467-021-27939-5"
+          authors: "Trentini F., Marziano V., Guzzetta G., Tirani M., Cereda D., Poletti P., Piccarreta R., Barone A., Preziosi G., Arduini F., Della Valle P. G., Zanella A., Grosso F., del Castillo G., Castrofino A., Grasselli G., Melegaro A., Piatti A., Andreassi A., Gramegna M., Ajelli M., Merler S."
+          journal: "Nature Communications 13 (1), 322 (2022)"
+          
+        - title: "Pressure on the Health-Care System and Intensive Care Utilization During the COVID-19 Outbreak in the Lombardy Region of Italy: A Retrospective Observational Study in 43,538 Hospitalized Patients"
+          url: "https://doi.org/10.1093/aje/kwab252"
+          authors: "Liu Q.-H., Zhang J., Peng C., Litvinova M., Huang S., Poletti P., Trentini F., Guzzetta G., Marziano V., Zhou T., Viboud C., Bento A. I., Lv J., Vespignani A., Merler S., Yu H., Ajelli M."
+          journal: "American journal of epidemiology 191 (1), 137-146 (2022)"
+          
     - year: 2021
-      publications: []
+      publications: 
+        - title: "The effect of COVID-19 vaccination in Italy and perspectives for living with the virus"
+          url: "https://doi.org/10.1038/s41467-021-27532-w"
+          authors: "Marziano V., Guzzetta G., Mammone A., Riccardo F., Poletti P., Trentini F., Manica M., Siddu A., Bella A., Stefanelli P., Pezzotti P., Ajelli M., Brusaferro S., Rezza G., Merler S."
+          journal: "Nature Communications 12 (1), 1-8 (2021)"
+          
+        - title: "Cryptic transmission of SARS-CoV-2 and the first COVID-19 wave"
+          url: "https://doi.org/10.1038/s41586-021-04130-w"
+          authors: "Davis J. T., Chinazzi M., Perra N., Mu K., Pastore y Piontti A., Ajelli M., Dean N. E., Gioannini C., Litvinova M., Merler S., Rossi L., Sun K., Xiong X., Longini Jr I. M., Halloran M. E., Viboud C., Vespignani A."
+          journal: "Nature 600 (7887), 127-132 (2021)"
+          
+        - title: "The early phase of the COVID-19 epidemic in Lombardy, Italy"
+          url: "https://doi.org/10.1016/j.epidem.2021.100528"
+          authors: "Cereda D., Manica M., Tirani M., Rovida F., Demicheli V., Ajelli M., Poletti P., Trentini F., Guzzetta G., Marziano V., Piccarreta R., Barone A., Magoni M., Deandrea S., Diurno G., Lombardo M., Faccini M., Pan A., Bruno R., Pariani E., Grasselli G., Piatti A., Gramegna M., Baldanti F., Melegaro A., Merler S."
+          journal: "Epidemics 37, 100528 (2021)"
+          
+        - title: "A quantitative assessment of epidemiological parameters required to investigate COVID-19 burden"
+          url: "https://doi.org/10.1016/j.epidem.2021.100530"
+          authors: "Zardini A., Galli M., Tirani M., Cereda D., Manica M., Trentini F., Guzzetta G., Marziano V., Piccarreta R., Melegaro A., Ajelli M., Poletti P., Merler S."
+          journal: "Epidemics 37, 100530 (2021)"
+          
+        - title: "Who should be prioritized for COVID-19 vaccination in China? A descriptive study"
+          url: "https://doi.org/10.1186/s12916-021-01923-8"
+          authors: "Yang J., Zheng W., Shi H., Yan X., Dong K., You Q., Zhong G., Gong H., Chen Z., Jit M., Viboud C., Ajelli M., Yu H."
+          journal: "BMC Medicine 19 (1), 1-13 (2021)"
+          
+        - title: "Social contact patterns and implications for infectious disease transmission: a systematic review and meta-analysis of contact surveys"
+          url: "https://doi.org/10.7554/eLife.70294"
+          authors: "Mousa A., Winskill P., Watson O. J., Ratmann O., Monod M., Ajelli M., Diallo A., Dodd P. J., Grijalva C. G., Kiti M. C., Krishnan A., Kumar R., Kumar S., Kwok K. O., Lanata C. F., le Polain de Waroux O., Leung K., Mahikul W., Melegaro A., Morrow C. D., Mossong J., Neal E. F. G., Nokes D. J., Pan-ngum W., Potter G. E., Russell F. M., Saha S., Sugimoto J. D., Wei W. I., Wood R. R., Wu J., Zhang J., Walker P., Whittaker C."
+          journal: "eLife 10, e70294 (2021)"
+          
+        - title: "Time-varying optimization of COVID-19 vaccine prioritization in the context of limited vaccination capacity"
+          url: "https://doi.org/10.1038/s41467-021-24872-5"
+          authors: "Han S., Cai J., Yang J., Zhang J., Wu Q., Zheng W., Shi H., Ajelli M., Zhou X.-H., Yu H."
+          journal: "Nature Communications 12 (1), 1-10 (2021)"
+          
+        - title: "Despite vaccination, China needs non-pharmaceutical interventions to prevent widespread outbreaks of COVID-19 in 2021"
+          url: "https://doi.org/10.1038/s41562-021-01155-z"
+          authors: "Yang J., Marziano V., Deng X., Guzzetta G., Zhang J., Trentini F., Cai J., Poletti P., Zheng W., Wang W., Wu Q., Zhao Z., Dong K., Zhong G., Viboud C., Merler S., Ajelli M., Yu H."
+          journal: "Nature Human Behaviour 5 (8), 1009-1020 (2021)"
+          
+        - title: "Impact of tiered restrictions on human activities and the epidemiology of the second wave of COVID-19 in Italy"
+          url: "https://doi.org/10.1038/s41467-021-24832-z"
+          authors: "Manica M., Guzzetta G., Riccardo F., Valenti A., Poletti P., Marziano V., Trentini F., Andrianou X., Mateo Urdiales A., Del Manso M., Fabiani M., Vescio M. F., Spuri M., Petrone D., Bella A., Iavicoli S., Ajelli M., Brusaferro S., Pezzotti P., Merler S."
+          journal: "Nature Communications 12, 4570 (2021)"
+          
+        - title: "Revisiting the guidelines for ending isolation for COVID-19 patients"
+          url: "https://doi.org/10.7554/eLife.69340"
+          authors: "Jeong Y. D., Ejima K., Kim K. S., Iwanami S., Bento A. I., Fujita Y., Jung I. H., Aihara K., Watashi K., Miyazaki T., Wakita T., Iwami S., Ajelli M."
+          journal: "eLife 10, e69340 (2021)"
+          
+        - title: "Seroprevalence of and Risk Factors Associated With SARS-CoV-2 Infection in Health Care Workers During the Early COVID-19 Pandemic in Italy"
+          url: "https://doi.org/10.1001/jamanetworkopen.2021.15699"
+          authors: "Poletti P., Tirani M., Cereda D., Guzzetta G., Trentini F., Marziano V., Toso C., Piatti A., Piccarreta R., Melegaro A., Andreassi A., Gramegna M., Ajelli M., Merler S."
+          journal: "JAMA Network Open 4 (7), e2115699-e2115699 (2021)"
+          
+        - title: "Case Fatality Risk of the First Pandemic Wave of Coronavirus Disease 2019 (COVID-19) in China"
+          url: "https://doi.org/10.1093/cid/ciaa578"
+          authors: "Deng X., Yang J., Wang W., Wang X., Zhou J., Chen Z., Li J., Chen Y., Yan H., Zhang J., Zhang Y., Wang Y., Qiu Q., Gong H., Wei X., Wang L., Sun K., Wu P., Ajelli M., Cowling B. J., Viboud C., Yu H."
+          journal: "Clinical Infectious Diseases 73 (1), e79-e85 (2021)"
+          
+        - title: "The impact of relaxing interventions on human contact patterns and SARS-CoV-2 transmission in China"
+          url: "https://doi.org/10.1126/sciadv.abe2584"
+          authors: "Zhang J., Litvinova M., Liang Y., Zheng W., Shi H., Vespignani A., Viboud C., Ajelli M., Yu H."
+          journal: "Science Advances 7 (19), eabe2584 (2021)"
+          
+        - title: "Modeling the interplay between demography, social contact patterns, and SARS-CoV-2 transmission in the South West Shewa Zone of Oromia Region, Ethiopia"
+          url: "https://doi.org/10.1186/s12916-021-01967-w"
+          authors: "Trentini F., Guzzetta G., Galli M., Zardini A., Manenti F., Putoto G., Marziano V., Gamshie W. N., Tsegaye A., Greblo A., Melegaro A., Ajelli M., Merler S., Poletti P."
+          journal: "BMC medicine 19 (1), 89 (2021)"
+          
+        - title: "Data-driven estimate of SARS-CoV-2 herd immunity threshold in populations with individual contact pattern variations"
+          url: "https://doi.org/10.1101/2021.03.19.21253974"
+          authors: "Lu D., Aleta A., Ajelli M., Pastor-Satorras R., Vespignani A., Moreno Y."
+          journal: "Preprint available on medRxiv (2021)"
+          
+        - title: "Infectivity, susceptibility, and risk factors associated with SARS-CoV-2 transmission under intensive contact tracing in Hunan, China"
+          url: "https://doi.org/10.1038/s41467-021-21710-6"
+          authors: "Hu S., Wang W., Wang Y., Litvinova M., Luo K., Ren L., Sun Q., Chen X., Zeng G., Li J., Liang L., Deng Z., Zheng W., Li M., Yang H., Guo J., Wang K., Chen X., Liu Z., Yan H., Shi H., Chen Z., Zhou Y., Sun K., Vespignani A., Viboud C., Gao L., Ajelli M., Yu H."
+          journal: "Nature Communications 12 (1), 1-11 (2021)"
+          
+        - title: "Serological evidence of human infection with SARS-CoV-2: a systematic review and meta-analysis"
+          url: "https://doi.org/10.1016/S2214-109X(21)00026-7"
+          authors: "Chen X., Chen Z., Azman A. S., Deng X., Chen X., Lu W., Zhao Z., Yang J., Viboud C., Ajelli M., Leung D. T., Yu H."
+          journal: "The Lancet Global Health 9 (5), E598-E609 (2021)"
+          
+        - title: "Association of Age With Likelihood of Developing Symptoms and Critical Disease Among Close Contacts Exposed to Patients With Confirmed SARS-CoV-2 Infection in Italy"
+          url: "https://doi.org/10.1001/jamanetworkopen.2021.1085"
+          authors: "Poletti P., Tirani M., Cereda D., Trentini F., Guzzetta G., Sabatino G., Marziano V., Castrofino A., Grosso F., Del Castillo G., Piccarreta R., Andreassi A., Melegaro A., Gramegna M., Ajelli M., Merler S., ATS Lombardy COVID, Task Force."
+          journal: "JAMA Network Open 4 (3), e211085-e211085 (2021)"
+          
+        - title: "Health‐seeking behaviors of patients with acute respiratory infections during the outbreak of novel coronavirus disease 2019 in Wuhan, China"
+          url: "https://doi.org/10.1111/irv.12804"
+          authors: "Yang J., Gong H., Chen X., Chen Z., Deng X., Qian M., Hou Z., Ajelli M., Viboud C., Yu H."
+          journal: "Influenza and Other Respiratory Viruses 15 (2), 188-194 (2021)"
+          
+        - title: "Retrospective analysis of the Italian exit strategy from COVID-19 lockdown"
+          url: "https://doi.org/10.1073/pnas.2019617118"
+          authors: "Marziano V., Guzzetta G., Rondinone B. M., Boccuni F., Riccardo F., Bella A., Poletti P., Trentini F., Pezzotti P., Brusaferro S., Rezza G., Iavicoli S., Ajelli M., Merler S."
+          journal: "Proceedings of the National Academy of Sciences 118 (4), e2019617118 (2021)"
+          
+        - title: "Transmission heterogeneities, kinetics, and controllability of SARS-CoV-2"
+          url: "https://doi.org/10.1126/science.abe2424"
+          authors: "Sun K., Wang W., Gao L., Wang Y., Luo K., Ren L., Zhan Z., Chen X., Zhao S., Huang Y., Sun Q., Liu Z., Litvinova M., Vespignani A., Ajelli M., Viboud C., Yu H."
+          journal: "Science 371 (6526), eabe2424 (2021)"
+          
+        - title: "Inferring high-resolution human mixing patterns for disease modeling"
+          url: "https://doi.org/10.1038/s41467-020-20544-y"
+          authors: "Mistry D., Litvinova M., Pastore y Piontti A., Chinazzi M., Fumanelli L., Gomes M. F. C., Haque S. A., Liu Q.-H., Mu K., Xiong X., Halloran M. E., Longini I. M., Merler S., Ajelli M., Vespignani A."
+          journal: "Nature Communications 12, 323 (2021)"
+          
+        - title: "Risk of Symptomatic Infection During a Second Coronavirus Disease 2019 Wave in Severe Acute Respiratory Syndrome Coronavirus 2–Seropositive Individuals"
+          url: "https://doi.org/10.1093/cid/ciab556"
+          authors: "Manica M., Pancheri S., Poletti P., Giovanazzi G., Guzzetta G., Trentini F., Marziano V., Ajelli M., Zuccali M. G., Benetollo P. P., Merler S., Ferro A."
+          journal: "Clinical Infectious Diseases 74 (5), 893–896 (2021)"
+          
+        - title: "Impact of a Nationwide Lockdown on SARS-CoV-2 Transmissibility, Italy"
+          url: "https://doi.org/10.3201/eid2701.202114"
+          authors: "Guzzetta G., Riccardo F., Marziano V., Poletti P., Trentini F., Bella A., Andrianou X., Del Manso M., Fabiani M., Bellino S., Boros S., Mateo Urdiales A., Vescio M. F., Piccioli A., Brusaferro S., Rezza G., Pezzotti P., Ajelli M., Merler S."
+          journal: "Emerging Infectious Diseases 27 (1), 267-270 (2021)"
 
     - year: 2020
-      publications: []
-
+      publications: 
+        - title: "The COVID-19 outbreak Sichuan, China: Epidemiology and impact of interventions"
+          url: "https://doi.org/10.1371/journal.pcbi.1008467"
+          authors: "Liu Q.-H., Bento A. I., Yang K., Zhang H., Yang X., Merler S., Vespignani A., Lv J., Yu H., Zhang W., Zhou T., Ajelli M."
+          journal: "PLoS Computational Biology 16 (12), e1008467 (2020)"
+          
+        - title: "Epidemiological characteristics of COVID-19 cases and estimates of the reproductive numbers 1 month into the epidemic, Italy, 28 January to 31 March 2020"
+          url: "https://github.com/CEPH-Lab/ceph-lab.github.io/blob/main/10.2807/1560-7917.ES.2020.25.49.2000790"
+          authors: "Riccardo F., Ajelli M., Andrianou X. D., Bella A., Del Manso M., Fabiani M., Bellino S., Boros S., Mateo Urdiales A., Marziano V., Rota M. C., Filia A., D'Ancona F., Siddu A., Punzo O., Trentini F., Guzzetta G., Poletti P., Stefanelli P., Castrucci M. R., Ciervo A., Di Benedetto C., Tallon M., Piccioli A., Brusaferro S., Rezza G., Merler S., Pezzotti P., di Martino A., Facchini M., Giannitelli S., Mancini F., Puzelli S., Urciuoli R., Petrucci A., Labianca M., Mignuoli A. D., D'Argenzio A., Massimiliani E., Gallo T., Scognamiglio P., Sticchi C., Cereda D., Fiacchini D., Sforza F., Zuccaro M. G., Benetollo P. P., Tiberti D., Chironna M., Palmas M. A., Scondotto S., Balocchini E., Tosti A., Ruffier M., Da Re F., COVID-19 working group."
+          journal: "Eurosurveillance 25 (49), 2000790 (2020)"
+          
+        - title: "Disease burden and clinical severity of the first pandemic wave of COVID-19 in Wuhan, China"
+          url: "https://doi.org/10.1038/s41467-020-19238-2"
+          authors: "Yang J., Chen X., Deng X., Chen Z., Gong H., Yan H., Wu Q., Shi H., Lai S., Ajelli M., Viboud C., Yu H."
+          journal: "Nature Communications 11 (1), 1-10 (2020)"
+          
+        - title: "Modelling the impact of testing, contact tracing and household quarantine on second waves of COVID-19"
+          url: "https://doi.org/10.1038/s41562-020-0931-9"
+          authors: "Aleta A., Martín-Corral D., Pastore y Piontti A., Ajelli M., Litvinova M., Chinazzi M., Dean N. E., Halloran M. E., Longini Jr I. M., Merler S., Pentland A., Vespignani A., Moro E., Moreno Y."
+          journal: "Nature Human Behaviour 4 (9), 964-971 (2020)"
+          
+        - title: "Age-specific SARS-CoV-2 infection fatality ratio and associated risk factors, Italy, February to April 2020"
+          url: "https://pubmed.ncbi.nlm.nih.gov/32762797/"
+          authors: "Poletti P., Tirani M., Cereda D., Trentini F., Guzzetta G., Marziano V., Buoro S., Riboli S., Crottogini L., Piccarreta R., Piatti A., Grasselli G., Melegaro A., Gramegna M., Ajelli M., Merler S."
+          journal: "Eurosurveillance 25 (31), 2001383 (2020)"
+          
+        - title: "Evolving epidemiology and transmission dynamics of coronavirus disease 2019 outside Hubei province, China: a descriptive and modelling study"
+          url: "https://pubmed.ncbi.nlm.nih.gov/32247326/"
+          authors: "Zhang J., Litvinova M., Wang W., Wang Y., Deng X., Chen X., Li M., Zheng W., Yi L., Chen X., Wu Q., Liang Y., Wang X., Yang J., Sun K., Longini Jr I. M., Halloran M. E., Wu P., Cowling B. J., Merler S., Viboud C., Vespignani A., Ajelli M., Yu H."
+          journal: "The Lancet Infectious Diseases 20 (7), 793-802 (2020)"
+          
+        - title: "Changes in contact patterns shape the dynamics of the COVID-19 outbreak in China"
+          url: "https://pubmed.ncbi.nlm.nih.gov/32350060/"
+          authors: "Zhang J., Litvinova M., Liang Y., Wang Y., Wang W., Zhao S., Wu Q., Merler S., Viboud C., Vespignani A., Ajelli M., Yu H."
+          journal: "Science 368 (6498), 1481-1486 (2020)"
+          
+        - title: "The relationship between human mobility and viral transmissibility during the COVID-19 epidemics in Italy"
+          url: "https://doi.org/10.48550/arXiv.2006.03141"
+          authors: "Cintia P., Pappalardo L., Rinzivillo S., Fadda D., Boschi T., Giannotti F., Chiaromonte F., Bonato P., Fabbri F., Penone F., Savarese M., Calabrese F., Guzzetta G., Riccardo F., Marziano V., Poletti P., Trentini F., Bella A., Andrianou X., Del Manso M., Fabiani M., Bellino S., Boros S., Mateo Urdiales A., Vescio M. F., Brusaferro S., Rezza G., Pezzotti P., Ajelli M., Merler S., Vineis P., Pedreschi D."
+          journal: "Preprint available on arXiv (2020)"
+          
+        - title: "The effect of travel restrictions on the spread of the 2019 novel coronavirus (COVID-19) outbreak"
+          url: "https://pubmed.ncbi.nlm.nih.gov/32144116/"
+          authors: "Chinazzi M., Davis J. T., Ajelli M., Gioannini C., Litvinova M., Merler S., Pastore y Piontti A., Mu K., Rossi L., Sun K., Viboud C., Xiong X., Yu H., Halloran M. E., Longini Jr I. M., Vespignani A."
+          journal: "Science 368 (6489), 395-400 (2020)"
+          
+        - title: "Potential short-term outcome of an uncontrolled COVID-19 epidemic in Lombardy, Italy, February to March 2020"
+          url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7118340/"
+          authors: "Guzzetta G., Poletti P., Ajelli M., Trentini F., Marziano V., Cereda D., Tirani M., Diurno G., Bodina A., Barone A., Crottogini L., Gramegna M., Melegaro A., Merler S."
+          journal: "Eurosurveillance 25 (12), 2000293 (2020)"
+          
+        - title: "Detecting critical slowing down in high-dimensional epidemiological systems"
+          url: "https://doi.org/10.1371/journal.pcbi.1007679"
+          authors: "Brett T., Ajelli M., Liu Q.-H., Krauland M. G., Grefenstette J. J., van Panhuis W. G., Vespignani A., Drake J. M., Rohani P."
+          journal: "PLoS Computational Biology 16 (3), e1007679 (2020)"
+          
+        - title: "Global, regional, and national estimates of target population sizes for covid-19 vaccination: descriptive study"
+          url: "https://doi.org/10.1136/bmj.m4704"
+          authors: "Wang W., Wu Q., Yang J., Dong K., Chen X., Bai X., Chen X., Chen Z., Viboud C., Ajelli M., Yu H."
+          journal: "BMJ 371, m4704 (2020)"
+          
 - id: seal
   name: SEAL Lab
   scholar_url: "https://scholar.google.com/citations?user=582zt4cAAAAJ&hl=en"
