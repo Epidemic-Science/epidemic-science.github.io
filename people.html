@@ -91,36 +91,7 @@ permalink: /people/
     color: var(--hub-text-muted);
   }
 
-  /* Lab tags: labels, not links. Someone in two labs gets two tags. */
-  .lab-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  /* Lab tag: a label, not a link */
-  .lab-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
-    color: var(--hub-text);
-    background: color-mix(in srgb, var(--lab-color) 13%, #ffffff);
-    border-radius: 4px;
-    padding: 3px 8px;
-    white-space: nowrap;
-  }
-
-  .lab-tag::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--lab-color);
-  }
+  /* Lab tag styles are shared: see "Lab tags" in assets/main.scss */
 
   /* Alumni */
   .alumni-list {

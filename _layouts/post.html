@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- comment -%}
+  One news item. Front matter: title, lab (one id or a list), and optional
+  image, image_alt and link (e.g. the paper's DOI). See _posts/README.md.
+{%- endcomment -%}
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>News</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+<article class="news-post">
+  <p class="news-post-meta">
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+    {%- if page.lab %}{% include lab-tags.html lab=page.lab %}{% endif %}
+  </p>
+  <h2 class="news-post-title">{{ page.title }}</h2>
+
+  {%- if page.image and page.image != "" %}
+  <img class="news-post-image" src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}">
+  {%- endif %}
+
+  <div class="news-post-body">
+    {{ content }}
+  </div>
+
+  {%- if page.link and page.link != "" %}
+  <p><a href="{{ page.link }}" class="read-more-btn" target="_blank" rel="noopener">{{ page.link_text | default: "Read the paper" }}</a></p>
+  {%- endif %}
+
+  <p class="news-post-back"><a href="{{ '/news/' | relative_url }}">&larr; All news</a></p>
+</article>

@@ -1113,3 +1113,150 @@ ul.req-list li {
   color: var(--hub-text-muted);
   font-style: italic;
 }
+
+
+/* ------------------------------------------------------------------------------
+   Lab tags (_includes/lab-tags.html): People page, news items, home page news
+   ------------------------------------------------------------------------------ */
+/* Lab tags: labels, not links. Someone in two labs gets two tags. */
+.lab-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Lab tag: a label, not a link */
+.lab-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--hub-text);
+  background: color-mix(in srgb, var(--lab-color) 13%, #ffffff);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.lab-tag::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lab-color);
+}
+
+/* ------------------------------------------------------------------------------
+   News (news.html, _layouts/post.html; items live in _posts/)
+   ------------------------------------------------------------------------------ */
+.news-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--hub-text-muted);
+  margin: 0 0 8px 0;
+}
+
+.news-post {
+  max-width: 760px;
+}
+
+.news-post-title {
+  font-size: 2rem;
+  line-height: 1.25;
+  color: var(--hub-text);
+  margin: 0 0 24px 0;
+}
+
+.news-post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.news-post-body {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.news-post-back {
+  margin-top: 40px;
+  font-weight: 600;
+}
+
+.news-post-back a,
+.news-feed-note a {
+  color: var(--hub-primary);
+}
+
+.news-index {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.news-index li {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--hub-border);
+  margin: 0;
+}
+
+.news-index-thumb img {
+  width: 200px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.news-index h3 {
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0 0 6px 0;
+}
+
+.news-index h3 a {
+  color: var(--hub-text);
+  text-decoration: none;
+}
+
+.news-index h3 a:hover {
+  color: var(--hub-primary);
+  text-decoration: underline;
+}
+
+.news-index p {
+  margin: 0;
+  color: var(--hub-text-muted);
+}
+
+.news-feed-note {
+  font-size: 15px;
+  color: var(--hub-text-muted);
+}
+
+@media screen and (max-width: 768px) {
+  .news-index li {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .news-index-thumb img {
+    width: 100%;
+    height: auto;
+  }
+  .news-post-title {
+    font-size: 1.6rem;
+  }
+}

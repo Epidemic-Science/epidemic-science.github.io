@@ -2,66 +2,90 @@
 layout: default
 title: Home
 permalink: /
+# Hero photo: put the image in images/ and set its path here (landscape, ~1600px wide).
+# Leave it empty to show the Hub tree pattern instead.
+hero_image: ""
+hero_image_alt: ""
 ---
 <style>
   .page-content {
     padding-bottom: 0 !important;
   }
 
-  /* --- Hero banner: light, so the wave logo keeps its colours --- */
+  /* --- Hero: full-width photo (or the tree pattern) with the title on top --- */
   .hero {
     position: relative;
-    min-height: 78vh;
+    min-height: 72vh;
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: -30px;
     box-sizing: border-box;
-    background-color: #ffffff;
-    background-image: linear-gradient(180deg, #ffffff 0%, var(--hub-surface) 100%);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 60px 8% 110px 10%;
+    padding: 80px 10% 120px 10%;
+    background-color: var(--hub-banner-pattern);
+    background-image: url('{{ "/images/banner-pattern.svg" | relative_url }}');
+    background-size: 220px auto;
+    overflow: hidden;
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  /* Dark wash on the left so the title stays readable on any photo */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg,
+      rgba(42, 9, 9, 0.88) 0%, rgba(42, 9, 9, 0.6) 45%, rgba(42, 9, 9, 0.05) 100%);
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
   }
 
   .hero-text h1 {
     font-size: 3.8rem;
     margin-bottom: 0;
     letter-spacing: 0.5px;
-    color: var(--hub-text);
+    color: #ffffff;
     line-height: 1.12;
   }
 
-  /* Three-colour underline, one segment per lab */
-  .hero-text h1::after {
-    content: "";
-    display: block;
-    width: 270px;
-    height: 5px;
-    background: linear-gradient(90deg,
-      var(--hub-teal) 0 33.3%, var(--hub-navy) 33.3% 66.6%, var(--hub-orange) 66.6% 100%);
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
+  /*!* Three-colour underline, one segment per lab *!*/
+  /*.hero-text h1::after {*/
+  /*  content: "";*/
+  /*  display: block;*/
+  /*  width: 270px;*/
+  /*  height: 5px;*/
+  /*  background: linear-gradient(90deg,*/
+  /*    var(--hub-teal) 0 33.3%, var(--hub-navy) 33.3% 66.6%, var(--hub-orange) 66.6% 100%);*/
+  /*  margin-top: 25px;*/
+  /*  margin-bottom: 25px;*/
+  /*}*/
 
   .hero-text p {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 0;
-    color: var(--hub-text-muted);
+    color: rgba(255, 255, 255, 0.92);
     line-height: 1.5;
-  }
-
-  .hero-art img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   /* --- Bouncing scroll-down arrow --- */
   .scroll-down {
     position: absolute;
+    z-index: 2;
     bottom: 40px;
     left: 0;
     right: 0;
@@ -73,7 +97,7 @@ permalink: /
     width: 50px;
     text-decoration: none;
     animation: bounce 2s infinite;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: opacity 0.3s ease;
   }
 
@@ -86,8 +110,8 @@ permalink: /
     display: block;
     width: 15px;
     height: 15px;
-    border-bottom: 2px solid var(--hub-primary);
-    border-right: 2px solid var(--hub-primary);
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
     transform: rotate(45deg);
   }
 
@@ -97,7 +121,7 @@ permalink: /
     60% { transform: translateY(-5px); }
   }
 
-  /* --- Feature tiles --- */
+  /* --- Feature tiles: Mission + What we do (left), Latest news (right) --- */
   .feature-tiles {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -116,14 +140,7 @@ permalink: /
 
   .tile-mission { background-color: var(--hub-tile-1); grid-column: 1; grid-row: 1; }
   .tile-what    { background-color: var(--hub-tile-2); grid-column: 1; grid-row: 2; }
-  .tile-about   { background-color: var(--hub-tint); grid-column: 2; grid-row: 1 / span 2; }
-
-  /* Light tile so all three lab colours (incl. midnight blue) stay visible */
-  .tile.tile-about,
-  .tile.tile-about p,
-  .tile.tile-about ul {
-    color: var(--hub-text);
-  }
+  .tile-news    { background-color: var(--hub-tint); grid-column: 2; grid-row: 1 / span 2; }
 
   .tile-title {
     font-size: 30px;
@@ -133,10 +150,6 @@ permalink: /
     border: none;
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-
-  .tile-about .tile-title {
-    color: var(--hub-primary);
   }
 
   .tile p,
@@ -156,56 +169,164 @@ permalink: /
     margin-bottom: 12px;
   }
 
-  .tile-lab-list {
-    list-style: none;
-    padding-left: 0 !important;
-    margin-top: 25px !important;
-  }
-
-  .tile-lab-list li {
-    border-left: 5px solid var(--lab-color, var(--hub-highlight));
-    padding: 6px 0 6px 16px;
-    margin-bottom: 18px;
-  }
-
-  .tile-lab-list strong {
-    display: block;
-    font-size: 22px;
-  }
-
-  .tile-lab-list span {
-    font-size: 16px;
-    opacity: 0.85;
-  }
-
   .tile .btn-row {
     margin-top: 25px;
   }
 
+  .tile .btn-outline {
+    color: #ffffff !important;
+  }
+
+  /* Latest news list */
+  .tile.tile-news,
+  .tile.tile-news p {
+    color: var(--hub-text);
+  }
+
+  .tile-news .tile-title {
+    color: var(--hub-primary);
+  }
+
+  .news-list {
+    list-style: none;
+    padding: 0 !important;
+    margin: 10px 0 0 0 !important;
+  }
+
+  .news-list li {
+    border-bottom: 1px solid var(--hub-border);
+    padding: 18px 0;
+    margin: 0;
+  }
+
+  .news-list li:first-child {
+    padding-top: 6px;
+  }
+
+  .news-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--hub-text-muted);
+    margin-bottom: 4px;
+  }
+
+  .news-list a.news-title {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--hub-text);
+    text-decoration: none;
+  }
+
+  .news-list a.news-title:hover {
+    color: var(--hub-primary);
+    text-decoration: underline;
+  }
+
+  .news-all {
+    margin-top: 22px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+
+  .news-all a {
+    color: var(--hub-primary);
+  }
+
+  .news-empty {
+    font-size: 17px !important;
+    color: var(--hub-text-muted) !important;
+  }
+
+  /*!* --- Stats strip --- *!*/
+  /*.stats-strip {*/
+  /*  display: grid;*/
+  /*  grid-template-columns: repeat(4, minmax(0, 1fr));*/
+  /*  gap: 20px;*/
+  /*  list-style: none;*/
+  /*  margin: 60px 0 0 0;*/
+  /*  padding: 0;*/
+  /*}*/
+
+  /*.stats-strip li {*/
+  /*  border-top: 4px solid var(--hub-primary);*/
+  /*  background: var(--hub-surface);*/
+  /*  border-radius: 8px;*/
+  /*  padding: 22px 24px;*/
+  /*  margin: 0;*/
+  /*}*/
+
+  /*.stat-value {*/
+  /*  display: block;*/
+  /*  font-size: 42px;*/
+  /*  font-weight: 700;*/
+  /*  line-height: 1.1;*/
+  /*  color: var(--hub-primary);*/
+  /*}*/
+
+  /*.stat-label {*/
+  /*  display: block;*/
+  /*  font-size: 16px;*/
+  /*  color: var(--hub-text-muted);*/
+  /*  margin-top: 4px;*/
+  /*}*/
+
   /* --- Our Labs section --- */
   .labs-section {
-    padding: 70px 0 60px 0;
+    padding: 60px 0 60px 0;
+  }
+
+  /* --- Funders and partners (shown only when _data/partners.yml lists logos) --- */
+  .partners-section {
+    padding: 0 0 60px 0;
+  }
+
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px 48px;
+  }
+
+  .partner-logos img {
+    height: 48px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+  }
+
+  .partner-logos a:hover img {
+    filter: none;
+    opacity: 1;
   }
 
   @media screen and (max-width: 900px) {
     .feature-tiles {
       grid-template-columns: 1fr;
     }
-    .tile-mission, .tile-what, .tile-about {
+    .tile-mission, .tile-what, .tile-news {
       grid-column: 1;
       grid-row: auto;
+    }
+    .stats-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media screen and (max-width: 768px) {
     .hero {
-      grid-template-columns: 1fr;
-      gap: 10px;
-      padding: 30px 25px 90px 25px;
       min-height: 0;
+      padding: 70px 25px 100px 25px;
     }
-    .hero-art {
-      order: -1;
+    .hero::before {
+      background: rgba(42, 9, 9, 0.72);
     }
     .hero-text h1 {
       font-size: 2.6rem;
@@ -226,17 +347,20 @@ permalink: /
     .tile {
       padding: 40px 5%;
     }
+    .stat-value {
+      font-size: 34px;
+    }
   }
 </style>
 
 <!-- TODO: review the headline and tagline below. -->
 <div class="hero">
+  {%- if page.hero_image and page.hero_image != "" %}
+  <img class="hero-photo" src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt }}">
+  {%- endif %}
   <div class="hero-text">
     <h1>Epidemic Science Hub</h1>
     <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them.</p>
-  </div>
-  <div class="hero-art">
-    <img src="{{ site.logo | relative_url }}" alt="Epidemic Science Hub logo">
   </div>
   <a href="#mission" class="scroll-down" aria-label="Scroll to Mission"></a>
 </div>
@@ -263,24 +387,59 @@ permalink: /
     </ul>
     <div class="btn-row">
       <a href="{{ '/research/' | relative_url }}" class="btn btn-light">Explore Our Research</a>
+      <a href="{{ '/join-us/' | relative_url }}" class="btn btn-outline">Join Us</a>
     </div>
   </div>
 
-  <div class="tile tile-about">
-    <h3 class="tile-title">About the Hub</h3>
-    <p>The Hub is home to {{ site.data.labs | size }} laboratories that share people, data, and ideas:</p>
-    <ul class="tile-lab-list">
-      {%- for lab in site.data.labs %}
-      <li style="--lab-color: {{ lab.color }};"><strong>{{ lab.short_name }}</strong><span>Led by {{ lab.pi }}</span></li>
+  <div class="tile tile-news">
+    <h3 class="tile-title">Latest news</h3>
+    {%- if site.posts.size > 0 %}
+    <ul class="news-list">
+      {%- for post in site.posts limit: 5 %}
+      <li>
+        <div class="news-meta">
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+          {%- if post.lab %}{% include lab-tags.html lab=post.lab %}{% endif %}
+        </div>
+        <a class="news-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
       {%- endfor %}
     </ul>
-    <div class="btn-row">
-      <a href="{{ '/labs/' | relative_url }}" class="btn">Meet the Labs</a>
-      <a href="{{ '/join-us/' | relative_url }}" class="btn">Join Us</a>
-    </div>
+    <p class="news-all"><a href="{{ '/news/' | relative_url }}">All news &rarr;</a></p>
+    {%- else %}
+    <p class="news-empty">News from the Hub's labs will appear here.</p>
+    {%- endif %}
   </div>
 
 </div>
+
+{%- comment -%}
+  Counts for the stats strip, worked out from the data files on every build.
+  Papers listed under more than one lab are counted once.
+{%- endcomment -%}
+{%- assign seen_papers = "|" -%}
+{%- assign paper_count = 0 -%}
+{%- assign first_year = 9999 -%}
+{%- for lab in site.data.publications -%}
+  {%- for y in lab.years -%}
+    {%- if y.publications and y.publications.size > 0 and y.year < first_year -%}{%- assign first_year = y.year -%}{%- endif -%}
+    {%- for pub in y.publications -%}
+      {%- assign paper_key = pub.title | strip_html | downcase | strip -%}
+      {%- assign paper_tag = "|" | append: paper_key | append: "|" -%}
+      {%- unless seen_papers contains paper_tag -%}
+        {%- assign seen_papers = seen_papers | append: paper_key | append: "|" -%}
+        {%- assign paper_count = paper_count | plus: 1 -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endfor -%}
+{%- endfor -%}
+
+<!--<ul class="stats-strip">-->
+<!--  <li><span class="stat-value">{{ site.data.labs | size }}</span><span class="stat-label">research labs</span></li>-->
+<!--  <li><span class="stat-value">{{ site.data.people | size }}</span><span class="stat-label">people</span></li>-->
+<!--  <li><span class="stat-value">{{ paper_count }}</span><span class="stat-label">publications since {{ first_year }}</span></li>-->
+<!--  <li><span class="stat-value">{{ site.data.research | size }}</span><span class="stat-label">research themes</span></li>-->
+<!--</ul>-->
 
 <div class="labs-section">
   <h2 class="section-header">Our Labs</h2>
@@ -290,3 +449,19 @@ permalink: /
     {%- endfor %}
   </div>
 </div>
+
+{%- assign partners = site.data.partners | where_exp: "p", "p.logo" %}
+{%- if partners.size > 0 %}
+<div class="partners-section">
+  <h2 class="section-header">Funders and Partners</h2>
+  <div class="partner-logos">
+    {%- for p in partners %}
+    {%- if p.url and p.url != "" %}
+    <a href="{{ p.url }}" target="_blank" rel="noopener"><img src="{{ p.logo | relative_url }}" alt="{{ p.name }}"></a>
+    {%- else %}
+    <img src="{{ p.logo | relative_url }}" alt="{{ p.name }}">
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</div>
+{%- endif %}

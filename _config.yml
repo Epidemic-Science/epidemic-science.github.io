@@ -14,6 +14,18 @@ url: "https://epidemic-science.github.io"
 baseurl: ""
 
 theme: minima
+
+# News items are posts: one Markdown file per item in _posts/, named
+# YYYY-MM-DD-short-title.md (see _posts/README.md). These defaults give every
+# news item the "post" layout and a /news/YEAR/MONTH/title/ address.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: /news/:year/:month/:title/
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -29,6 +41,7 @@ header_pages:
   - people.html
   - research.html
   - publications.html
+  - news.html
   - join-us.html
   - contact.html
 
@@ -37,6 +50,7 @@ exclude:
   - README.md
   - LICENSE
   - images/README.md
+  - _posts/README.md
   - Gemfile
   - Gemfile.lock
   - vendor

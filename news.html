@@ -1,0 +1,42 @@
+---
+layout: default
+title: News
+permalink: /news/
+---
+{%- comment -%}
+  Lists every news item in _posts/, newest first. To add one, see _posts/README.md.
+{%- endcomment -%}
+<div class="subpage-banner">
+  <div class="banner-left">
+    <h1>News</h1>
+  </div>
+  <div class="banner-right"></div>
+</div>
+
+{%- if site.posts.size > 0 %}
+{%- assign by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{%- for group in by_year %}
+<h2 class="section-header">{{ group.name }}</h2>
+<ul class="news-index">
+  {%- for post in group.items %}
+  <li>
+    {%- if post.image and post.image != "" %}
+    <a class="news-index-thumb" href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></a>
+    {%- endif %}
+    <div class="news-index-text">
+      <p class="news-post-meta">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        {%- if post.lab %}{% include lab-tags.html lab=post.lab %}{% endif %}
+      </p>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endfor %}
+{%- else %}
+<p>No news yet.</p>
+{%- endif %}
+
+<p class="news-feed-note">Follow along with the <a href="{{ '/feed.xml' | relative_url }}">RSS feed</a>.</p>

@@ -1,0 +1,24 @@
+# ==============================================================================
+# FUNDERS AND PARTNERS — logos shown in a row at the bottom of the home page.
+# The section stays hidden until at least one entry below has a logo.
+#
+# Fields
+#   name   organisation name (used as the logo's alt text)
+#   logo   path to the logo in images/partners/ (PNG or SVG, transparent background)
+#   url    optional link
+#
+# Example (remove the # signs to use it):
+# - name: National Science Foundation
+#   logo: /images/partners/nsf.svg
+#   url: https://www.nsf.gov/
+# ==============================================================================
+
+- name: National Science Foundation
+  logo: /images/partners/nsf.svg
+  url: https://www.nsf.gov/
+
+- name: Centers for Disease Control and Prevention
+  logo: /images/partners/cdc.svg
+  url: https://www.cdc.gov/
+
+
