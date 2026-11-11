@@ -11,30 +11,34 @@
    ============================================================================== */
 
 :root {
-  /* --- Hub palette: one colour per lab (from the logo) --- */
+  /* --- Hub brand colour (from the logo) --- */
+  --hub-maroon: #6c0e0f;
+
+  /* --- Lab colours: use ONLY for things that belong to a lab
+     (lab tags, lab cards, footer dots, the three-colour hero line) --- */
   --hub-teal: #468b94;         /* CEPH Lab */
   --hub-navy: #11193D;         /* SEAL Lab */
   --hub-orange: #f58a06;       /* MCORE Lab */
 
-  /* --- Roles (change these to re-theme the whole site) ---
-     The pure teal and orange are too light for small text on white, so text
-     uses the deeper variants below (both pass WCAG AA contrast). */
-  --hub-primary: var(--hub-teal);   /* underlines, bars, decorative accents */
-  --hub-primary-soft: #3a7880;      /* teal for text, links, section headers */
-  --hub-primary-dark: #2f6970;      /* hover state */
-  --hub-highlight: var(--hub-orange); /* accent on dark backgrounds */
-  --hub-button: var(--hub-navy);    /* button background */
-  --hub-tile-1: #3a7880;            /* home "Mission" tile */
-  --hub-tile-2: var(--hub-navy);    /* home "What we do" tile */
-  --hub-dark: #1b1c40;              /* darkest tile */
-  --hub-banner: #6c0e0f;    /* subpage banner left */
+  /* --- Roles (change these to re-theme the whole site) --- */
+  --hub-primary: var(--hub-maroon);  /* underlines, bars, card accents */
+  --hub-primary-soft: var(--hub-maroon); /* text, links, section headers (12.6:1 on white) */
+  --hub-primary-dark: #4a0a0b;       /* hover state */
+  --hub-highlight: #f2c4b8;          /* accent on maroon/dark backgrounds */
+  --hub-button: var(--hub-maroon);   /* button background */
+  --hub-tile-1: var(--hub-maroon);   /* home "Mission" tile */
+  --hub-tile-2: #3a0d0e;             /* home "What we do" tile */
+  --hub-dark: #2a0909;               /* darkest surface (call-outs) */
+  --hub-banner: #3a0d0e;             /* subpage banner left (title panel) */
+  --hub-banner-pattern: var(--hub-maroon); /* subpage banner right, behind images/banner-pattern.svg */
+  --hub-tint: #f5eeee;               /* light maroon-tinted panel (home "About") */
 
-  /* --- Neutrals --- */
-  --hub-text: #1b1f3a;              /* matches the logo wordmark */
-  --hub-text-muted: #4f5566;
-  --hub-border: #e5e5e5;
-  --hub-surface: #f6f7fa;
-  --hub-card: #f1f5f6;
+  /* --- Neutrals (warm, to sit with the maroon) --- */
+  --hub-text: #221c1c;
+  --hub-text-muted: #5a5152;
+  --hub-border: #e8e2e2;
+  --hub-surface: #f8f6f5;
+  --hub-card: #f8f4f4;
 }
 
 
@@ -243,7 +247,7 @@ html {
    ------------------------------------------------------------------------------ */
 .site-footer {
   background-color: var(--hub-surface);
-  color: var(--hub-navy);
+  color: var(--hub-text);
   padding: 50px 0;
   border-top: none;
 }
@@ -353,16 +357,16 @@ html {
   margin-top: 15px;
 }
 
+/* Right half: a seamless tile of the Hub tree, tone-on-tone (like mobslab.org).
+   The tile (images/banner-pattern.svg) has the maroon background built in. */
 .banner-right {
   width: 50%;
   flex: 0 0 50%;
-  background-color: #ffffff;
-  background-image: url('../images/hub-logo.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto 80%;
-  /* To use a pattern or photo instead, replace the colour above with:
-     background-image: url('/images/your-pattern.png'); background-size: cover; */
+  background-color: var(--hub-banner-pattern);
+  background-image: url('../images/banner-pattern.svg');
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 150px auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -448,7 +452,7 @@ html {
 .btn:hover,
 .apply-btn:hover,
 .read-more-btn:hover {
-  background-color: var(--hub-primary-soft);
+  background-color: var(--hub-primary-dark);
   text-decoration: none;
 }
 
@@ -458,14 +462,28 @@ html {
   align-self: flex-start;
 }
 
+/* Buttons on a lab's own card use a deeper shade of that lab's colour.
+   70% lab colour + 30% black keeps white text readable for all three labs
+   (teal 6.9:1, navy 18.5:1, orange 4.7:1; WCAG AA needs 4.5:1).
+   Add class="lab-card" (and --lab-color) to any card that belongs to a lab. */
+.lab-card .read-more-btn,
+.lab-card .btn {
+  background-color: color-mix(in srgb, var(--lab-color, var(--hub-button)) 70%, #000000);
+}
+
+.lab-card .read-more-btn:hover,
+.lab-card .btn:hover {
+  background-color: color-mix(in srgb, var(--lab-color, var(--hub-button)) 52%, #000000);
+}
+
 .btn-light {
   background-color: #ffffff;
-  color: var(--hub-navy) !important;
+  color: var(--hub-maroon) !important;
 }
 
 .btn-light:hover {
   background-color: var(--hub-highlight);
-  color: var(--hub-navy) !important;
+  color: var(--hub-primary-dark) !important;
 }
 
 .btn-row {
@@ -507,7 +525,7 @@ html {
   background-color: color-mix(in srgb, var(--lab-color, var(--hub-primary)) 9%, #ffffff);
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-  border: 1px solid #eef0f3;
+  border: 1px solid var(--hub-border);
   border-left: 6px solid var(--lab-color, var(--hub-primary));
   transition: all 0.3s ease;
   display: flex;
@@ -517,6 +535,11 @@ html {
 
 .card-grid .hub-card {
   margin-bottom: 0;
+}
+
+/* Research theme cards: one Hub colour for every card; labs appear only as tags */
+.hub-card.theme-card {
+  background-color: color-mix(in srgb, var(--hub-primary) 4%, #ffffff);
 }
 
 .hub-card:hover {
@@ -576,7 +599,7 @@ html {
 
 .tag-list li {
   background-color: #ffffff;
-  color: var(--hub-navy);
+  color: var(--hub-text);
   border-left: 3px solid var(--tag-color, var(--lab-color, var(--hub-primary)));
   padding: 4px 10px;
   border-radius: 4px;
@@ -650,9 +673,6 @@ ul.req-list li {
   gap: 2px;
 }
 
-.fact-row li:nth-child(2) { border-top-color: var(--hub-navy); }
-.fact-row li:nth-child(3) { border-top-color: var(--hub-orange); }
-.fact-row li:nth-child(4) { border-top-color: var(--hub-navy); }
 
 .fact-value {
   font-size: 32px;
@@ -674,7 +694,7 @@ ul.req-list li {
 
 /* Hub call-out */
 .hub-callout {
-  background: var(--hub-navy);
+  background: var(--hub-dark);
   color: #ffffff;
   border-radius: 10px;
   padding: 28px 32px;
@@ -691,7 +711,7 @@ ul.req-list li {
   margin: 0;
   line-height: 1.7;
   font-size: 16px;
-  color: #e3e6f0;
+  color: #f1e4e3;
 }
 
 .hub-callout strong {
@@ -754,8 +774,8 @@ ul.req-list li {
 
 .track-badge {
   display: inline-block;
-  background: color-mix(in srgb, var(--hub-orange) 16%, #ffffff);
-  color: #8a4a00;
+  background: color-mix(in srgb, var(--hub-primary) 10%, #ffffff);
+  color: var(--hub-primary-dark);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -951,7 +971,7 @@ ul.req-list li {
 }
 
 .apply-band p {
-  color: #e8f3f4;
+  color: #f6e9e8;
   margin: 0;
 }
 

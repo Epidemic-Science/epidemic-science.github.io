@@ -43,7 +43,7 @@ tracks:
   - id: idm
     name: Infectious Disease Modeling Track
     short: IDM track
-    color: "#268B92"
+    color: "#6c0e0f"   # Hub maroon
     hub_pick: true
     description: >-
       Specialized training in applying advanced statistical, mathematical and
@@ -84,7 +84,7 @@ tracks:
   - id: standard
     name: Standard Track
     short: Standard track
-    color: "#262757"
+    color: "#4f4747"   # warm charcoal
     description: >-
       A broad foundation in biostatistical theory and methods, with electives
       that let students build depth in an application area.
