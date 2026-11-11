@@ -11,7 +11,7 @@ permalink: /publications/
   <div class="banner-right"></div>
 </div>
 
-<div class="publications-container">
+<div class="publications">
 
   <!-- Lab tabs -->
   <div class="lab-tabs" role="tablist" aria-label="Research labs">
@@ -37,51 +37,44 @@ permalink: /publications/
       aria-labelledby="tab-{{ lab.id }}"
       {% unless forloop.first %}hidden{% endunless %}>
 
-      <h2>{{ lab.name }} Publications</h2>
-
-      <!-- Year navigation -->
+      <!-- Year navigation (only years that have publications) -->
+      {% assign has_pubs = false %}
       <nav class="year-nav">
         {% for year in lab.years %}
-          <a class="btn" href="#{{ lab.id }}-{{ year.year}}">
-		    {{ year.year }}
-		  </a>
-		{% endfor %}
-		
-		<a class="btn" href="{{ lab.scholar_url }}"
-		   target="_blank" rel="noopener noreferrer">
-		  Earlier Work 
-		</a>
-	  </nav>
+          {% if year.publications.size > 0 %}
+            {% assign has_pubs = true %}
+            <a href="#{{ lab.id }}-{{ year.year }}">{{ year.year }}</a> |
+          {% endif %}
+        {% endfor %}
+        <a href="#{{ lab.id }}-earlier-work">Earlier Work</a>
+      </nav>
 
       <!-- Publications by year -->
       {% for year in lab.years %}
-        <div class="year-section" id="{{ lab.id }}-{{ year.year }}">
-          <h3>{{ year.year }}</h3>
+        {% if year.publications.size > 0 %}
+          <h3 class="year-section" id="{{ lab.id }}-{{ year.year }}">{{ year.year }}</h3>
 
-          {% if year.publications.size > 0 %}
-            {% for publication in year.publications %}
-              <div class="pub-entry">
-                <a class="pub-title"
-                   href="{{ publication.url }}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                  {{ publication.title }}
-                </a>
-
-                <p class="pub-authors">{{ publication.authors }}</p>
-                <p class="pub-journal">{{ publication.journal }}</p>
-              </div>
-            {% endfor %}
-          {% else %}
-            <p>No publications listed for this year.</p>
-          {% endif %}
-        </div>
+          {% for publication in year.publications %}
+            <div class="pub-entry">
+              <a class="pub-title"
+                 href="{{ publication.url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">{{ publication.title }}</a>
+              <p class="pub-authors">{{ publication.authors }}</p>
+              <p class="pub-journal">{{ publication.journal }}</p>
+            </div>
+          {% endfor %}
+        {% endif %}
       {% endfor %}
 
+      {% unless has_pubs %}
+        <p class="pub-empty">Publications for the {{ lab.name }} are coming soon.</p>
+      {% endunless %}
+
+      <h3 class="year-section" id="{{ lab.id }}-earlier-work">Earlier Work</h3>
       <p class="earlier-work">
-        <a href="{{ lab.scholar_url }}" target="_blank" rel="noopener noreferrer">
-          View Earlier Work on Google Scholar
-        </a>
+        To read earlier work, see
+        <a href="{{ lab.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
       </p>
 
     </section>

@@ -1,7 +1,7 @@
 # ==============================================================================
 # RESEARCH THEMES SHOWN ON THE RESEARCH PAGE
 # Seeded with the CEPH Lab's five research lines (text copied from
-# ceph-lab.github.io/research). TODO: add SEAL and MCORE themes, merge themes
+# ceph-lab.github.io/research).
 # the labs share, and tag each theme with every lab that works on it.
 #
 # Fields
@@ -17,17 +17,8 @@
     exposure risks across different socio-demographic groups. The objective is
     to understand the social behavior of individuals and its determinants to
     better characterize transmission pathways.
-  labs: [ceph]
+  labs: [ceph, seal]
   link: https://ceph-lab.github.io/research/human-social-behavior/
-
-- title: Mosquito Ecology and Behavior
-  summary: >-
-    The relative abundance and behavior of mosquito vector species are main
-    determinants of human risk for mosquito-borne diseases. The objective is to
-    investigate the drivers of seasonal and diel trends in mosquito population
-    dynamics and behavior across space and time.
-  labs: [ceph]
-  link: https://ceph-lab.github.io/research/mosquito-ecology-and-behavior/
 
 - title: Infectious Disease Dynamics
   summary: >-
@@ -53,3 +44,41 @@
     response for national and international public health partners.
   labs: [ceph]
   link: https://ceph-lab.github.io/research/public-health-planning/
+
+- title: Trial Simulation and Emulation
+  summary: >-
+    Trial simulation and emulation combine mechanistic and statistical
+    models with observational data to inform trial design and evaluate the
+    effectiveness of public health interventions.
+  labs: [ceph, seal, mcore]
+  link:
+
+- title: Mosquito Ecology and Behavior
+  summary: >-
+    The relative abundance and behavior of mosquito vector species are main
+    determinants of human risk for mosquito-borne diseases. The objective is to
+    investigate the drivers of seasonal and diel trends in mosquito population
+    dynamics and behavior across space and time.
+  labs: [ceph, mcore]
+  link: https://ceph-lab.github.io/research/mosquito-ecology-and-behavior/
+
+- title: Mosquito-Based Ecosystem Biomonitoring
+  summary: >-
+    Using mosquito surveillance data and ecological modeling to monitor
+    environmental conditions, degradation, and restoration.
+  labs: [mcore]
+  link:
+
+- title: High-Throughput Mosquito Identification
+  summary: >-
+    Combining wing geometric morphometrics and machine learning to automate
+    mosquito species identification and improve surveillance scalability.
+  labs: [mcore]
+  link:
+
+- title: Infectious Diseases in Immunocompromised Individuals
+  summary: >-
+    Investigating the disproportionate impact of infectious diseases on
+    immunocompromised populations.
+  labs: [seal]
+  link:

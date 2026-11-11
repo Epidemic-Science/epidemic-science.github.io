@@ -22,37 +22,39 @@
   pi: Marco Ajelli
   pi_email: majelli@iu.edu
   website: https://ceph-lab.github.io
-  color: "#458b93"   # teal
+  color: "#468b94"   # teal
   logo: ""
   summary: >-
     Develops mathematical, computational, and statistical models to advance the
     understanding of infectious disease epidemiology and provide actionable
     insights to inform public health policy.
-  themes:
-    - Epidemic modeling
-    - Forecasting
-    - Public health planning
+  themes: []
 
 - id: seal
-  short_name: SEAL Lab
+  short_name: SEALab
   full_name: Social and Epidemic Analytics Lab
   pi: Maria Litvinova
-  pi_email: ""
+  pi_email: malitv@iu.edu
   website: ""
   color: "#11193D"   # midnight blue
   logo: ""
   summary: >-
-    TODO: one or two sentences describing the SEAL Lab's mission and research.
+    Studies how social, behavioral, biological, and environmental factors
+    shape infectious disease transmission, using sociodemographic and
+    epidemiologic data and statistical models to inform forecasting,
+    preparedness, and public health interventions.
   themes: []
 
 - id: mcore
   short_name: MCORE Lab
   full_name: Mosquito Control and Outbreak Response
   pi: André Wilke
-  pi_email: ""
+  pi_email: andwilke@iu.edu
   website: ""
   color: "#f58a06"   # orange
   logo: ""
   summary: >-
-    TODO: one or two sentences describing the MCORE Lab's mission and research.
+    Investigates the ecological and evolutionary mechanisms of mosquito adaptation to
+    urban habitats and how anthropogenic landscapes shape vector diversity and pathogen
+    transmission.
   themes: []

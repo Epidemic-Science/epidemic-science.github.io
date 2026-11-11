@@ -3,6 +3,49 @@ layout: default
 title: Contact
 permalink: /contact/
 ---
+<style>
+  .contact-top {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) 2fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .contact-map img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: block;
+  }
+
+  .contact-map-note {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #555;
+    font-style: italic;
+  }
+
+  .contact-directions {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .contact-directions a {
+    color: var(--hub-primary-soft);
+  }
+
+  @media screen and (max-width: 768px) {
+    .contact-top {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>
+
 <div class="subpage-banner">
   <div class="banner-left">
     <h1>Contact</h1>
@@ -10,18 +53,70 @@ permalink: /contact/
   <div class="banner-right"></div>
 </div>
 
-<div style="margin-top: 30px; font-size: 16px; line-height: 1.6;">
-  <h3 style="margin-top: 0; color: var(--hub-primary-soft);">Epidemic Science Hub</h3>
+<!-- Address + map, side by side -->
+<div class="contact-top">
+  <div class="contact-address">
 
+    <p>
+      <strong>SPH Woodlawn Annex</strong><br>
+      School of Public Health<br>
+      Indiana University Bloomington<br>
+      309 N Woodlawn Ave<br>
+      Bloomington, IN 47408
+    </p>
+
+    <p><em>For questions about a specific lab's research or open positions, please contact that lab directly.</em></p>
+  </div>
+
+  <div class="contact-map">
+    <img src="{{ '/images/hub-map.png' | relative_url }}"
+         alt="Campus map showing the SPH Annex at 309 N Woodlawn Ave, Bloomington">
+    <p class="contact-map-note">
+      Note: The <span style="color: var(--hub-primary-soft); font-weight: bold; font-style: normal;">teal</span> pin
+        shows the location of the SPH Woodlawn Annex.
+    </p>
+  </div>
+</div>
+
+<h2 class="section-header">Getting to the Hub</h2>
+
+<div class="contact-directions">
   <p>
-    <strong>SPH Woodlawn Annex</strong><br>
-    School of Public Health<br>
-    Indiana University Bloomington<br>
-    309 N Woodlawn Ave<br>
-    Bloomington, IN 47408
+    <strong>Finding Our Building</strong><br>
+    Please note that while we are part of the School of Public Health (main building located at <em>1025 E 7th St</em>),
+    the Hub's labs are located in the <strong>SPH Annex</strong>. The Annex is situated just across the street at
+    <strong>309 N Woodlawn Ave</strong>, near the intersection of 7th Street and Woodlawn Avenue.
   </p>
 
-  <p><em>For questions about a specific lab's research or open positions, please contact that lab directly.</em></p>
+  <p><strong>Public Transit &amp; Biking</strong></p>
+  <ul>
+    <li>
+      <strong>Bus:</strong> The Annex is easily accessible via <strong>Bloomington Transit</strong> and the IU Campus Bus system.
+      Several routes drop off near the Indiana Memorial Union (IMU). You can check the current
+      <a href="https://bloomingtontransit.com/" target="_blank" rel="noopener">Bloomington Transit schedules</a>
+      or the IU Mobile app for routes serving the 7th &amp; Woodlawn area.
+    </li>
+    <li>
+      <strong>Bicycle:</strong> If you are cycling to campus, there are bike racks conveniently located directly behind the Annex.
+    </li>
+  </ul>
+
+  <p><strong>Parking Information</strong></p>
+  <ul>
+    <li>
+      <strong>Visitor Parking:</strong> The most convenient visitor parking is available at the Indiana Memorial Union (IMU) Pay Lot,
+      located just a short walk south of the Annex on Woodlawn Avenue.
+    </li>
+    <li>
+      <strong>Campus Permits:</strong> If you hold an IU parking permit, please consult the interactive
+      <a href="https://map.concept3d.com/?id=951" target="_blank" rel="noopener">IU Campus Map</a>
+      for the nearest applicable EM or CH permit lots.
+    </li>
+    <li>
+      <strong>Street Parking:</strong> Please note that metered street parking is generally located off-campus closer to downtown
+      Bloomington, which will require a longer walk to the Annex.
+    </li>
+  </ul>
 </div>
 
 <h2 class="section-header">Lab Contacts</h2>

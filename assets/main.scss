@@ -12,7 +12,7 @@
 
 :root {
   /* --- Hub palette: one colour per lab (from the logo) --- */
-  --hub-teal: #458b93;         /* CEPH Lab */
+  --hub-teal: #468b94;         /* CEPH Lab */
   --hub-navy: #11193D;         /* SEAL Lab */
   --hub-orange: #f58a06;       /* MCORE Lab */
 
@@ -27,7 +27,7 @@
   --hub-tile-1: #3a7880;            /* home "Mission" tile */
   --hub-tile-2: var(--hub-navy);    /* home "What we do" tile */
   --hub-dark: #1b1c40;              /* darkest tile */
-  --hub-banner: #C43728;    /* subpage banner left */
+  --hub-banner: #6c0e0f;    /* subpage banner left */
 
   /* --- Neutrals --- */
   --hub-text: #1b1f3a;              /* matches the logo wordmark */
@@ -971,73 +971,125 @@ ul.req-list li {
   margin-bottom: 40px;
 }
 
-/* Publications page */
-.publications-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
+/* ==============================================================================
+   Publications page — matches the ceph-lab.github.io/publications look:
+   light text tabs per lab, plain year links, underlined year headings
+   ============================================================================== */
 
-/* Lab tabs */
+/* Lab tabs: text tabs with a lab-coloured underline when active */
 .lab-tabs {
   display: flex;
-  gap: 12px;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  gap: 0 36px;
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 30px;
 }
 
 .lab-tab {
-  flex: 1;
-  min-width: 120px;
-  padding: 14px 24px;
-  border: 2px solid transparent;
-  border-radius: 6px;
+  --tab-color: var(--hub-primary-soft);
+  background: none;
+  border: none;
+  border-bottom: 4px solid transparent;
+  margin-bottom: -1px;            /* sit on the grey rule */
+  padding: 10px 2px 12px;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  color: #777;
   cursor: pointer;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 700;
-  transition: all 0.2s ease;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-/* CEPH — Teal */
-.lab-tab[id="tab-ceph"] {
-  background-color: var(--hub-teal);
-}
+.lab-tab[id="tab-ceph"]  { --tab-color: var(--hub-teal); }
+.lab-tab[id="tab-seal"]  { --tab-color: var(--hub-navy); }
+.lab-tab[id="tab-mcore"] { --tab-color: var(--hub-orange); }
 
-/* SEALab — Navy */
-.lab-tab[id="tab-seal"] {
-  background-color: var(--hub-navy);
-}
-
-/* MCORE — Orange */
-.lab-tab[id="tab-mcore"] {
-  background-color: var(--hub-orange);
-}
-
-/* Hover effect */
 .lab-tab:hover {
-  filter: brightness(0.85);
-  transform: translateY(-2px);
+  color: var(--tab-color);
 }
 
-/* Selected tab */
 .lab-tab.active {
-  border-color: var(--hub-text);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  color: var(--tab-color);
+  border-bottom-color: var(--tab-color);
 }
 
-/* Lab panels */
+.lab-tab:focus-visible {
+  outline: 2px solid var(--tab-color);
+  outline-offset: 4px;
+}
+
 .lab-panel[hidden] {
   display: none;
 }
 
-.lab-panel h2 {
-  margin-bottom: 1.5rem;
+/* Year navigation */
+.year-nav {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 40px;
 }
 
-.year-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-botton: 30px;
+.year-nav a {
+  color: var(--hub-primary-soft);
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.year-nav a:first-child {
+  margin-left: 0;
+}
+
+.year-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Year headings */
+.lab-panel .year-section {
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-bottom: 2px solid var(--hub-primary-soft);
+  padding-bottom: 5px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* Entries */
+.pub-entry {
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.pub-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--hub-primary-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted #ccc;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.pub-title:hover {
+  border-bottom: 1px solid var(--hub-primary-soft);
+}
+
+.pub-authors {
+  margin: 0 0 2px 0;
+  color: #333;
+}
+
+.pub-journal {
+  margin: 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+.earlier-work a {
+  color: var(--hub-primary-soft);
+}
+
+.pub-empty {
+  color: var(--hub-text-muted);
+  font-style: italic;
 }

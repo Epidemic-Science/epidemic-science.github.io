@@ -61,7 +61,7 @@
   group: phd
   role: PhD Epidemiology (Year 2)
   lab: mcore
-  image: ""
+  image: /images/people/garrison-carruth.png
 
 - name: Cheng Cheng
   group: phd
@@ -116,7 +116,7 @@
 - name: Isabelle Simons
   group: masters
   role: MS Biostatistics (Year 1)
-  lab: mcore
+  lab: mcore, seal
   image: /images/people/isabelle-simons.png
 
 - name: Dulani Deeshani Gangodagama Arachchige
@@ -159,31 +159,32 @@
 - name: Ryan Landa
   group: undergrad
   role: Undergraduate Student
-  lab: seal, mcore
+  lab: seal
   image: ""
 
 - name: Shay Sargent
   group: undergrad
   role: Undergraduate Student
-  lab: seal, mcore
+  lab: mcore
   image: /images/people/shay-sargent.png
 
 - name: Maria Fernanda Santolalla Cruz
   group: undergrad
   role: Undergraduate Student
-  lab: seal, mcore
+  lab: seal
   image: /images/people/fernanda-santolalla-cruz.png
 
 - name: Love Mali
   group: undergrad
   role: Undergraduate Student
-  lab: seal
-  image: ""
+  lab: seal, mcore
+  image: /images/people/love-mali.png
+
 
 - name: Aman Mulchandani
   group: undergrad
   role: Undergraduate Student
-  lab: seal, mcore
+  lab: mcore
   image: ""
 
 - name: Abigail Sullivan
@@ -195,8 +196,8 @@
 - name: Rachel Wan
   group: undergrad
   role: Undergraduate Student
-  lab: seal, mcore
-  image: ""
+  lab: mcore
+  image: /images/people/rachel-wan.png
 
 # --- Alumni -------------------------------------------------------------------
 # Shown as a name list with a lab tag.
