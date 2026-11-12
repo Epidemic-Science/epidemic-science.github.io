@@ -34,7 +34,7 @@
     Nowcasting and forecasting of epidemic trajectories and mosquito
     populations help public health and mosquito control authorities anticipate
     surges in disease burden and trigger early warnings.
-  labs: [ceph]
+  labs: [ceph, seal]
   link: https://ceph-lab.github.io/research/situational-awareness/
 
 - title: Public Health Planning
@@ -42,7 +42,7 @@
     Scenario analysis and model-based evaluations of pharmaceutical and
     non-pharmaceutical interventions support epidemic preparedness and
     response for national and international public health partners.
-  labs: [ceph]
+  labs: [ceph, seal]
   link: https://ceph-lab.github.io/research/public-health-planning/
 
 - title: Mosquito Ecology and Behavior
