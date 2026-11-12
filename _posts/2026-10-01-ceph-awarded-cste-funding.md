@@ -1,6 +1,6 @@
 ---
 title: "CEPH Lab awarded CSTE funding for FluSCOPE"
-lab: ceph
+lab: [ceph, seal]
 ---
 
 The CEPH Lab has been awarded funding from the Council of State and Territorial Epidemiologists
@@ -8,5 +8,5 @@ The CEPH Lab has been awarded funding from the Council of State and Territorial 
 Projections for Influenza to Inform Public Health Decision-Making*.
 
 The project, FluSCOPE (Influenza Forecasting and Scenario Modeling for Public Health Decision
-Support), is led by Marco Ajelli and will produce influenza forecasts and scenario projections
-to support public health decision-making.
+Support), is led by Marco Ajelli (PI) with Maria Litvinova (Co-PI), and will produce influenza
+forecasts and scenario projections to support public health decision-making.
