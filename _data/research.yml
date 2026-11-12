@@ -51,7 +51,7 @@
     determinants of human risk for mosquito-borne diseases. The objective is to
     investigate the drivers of seasonal and diel trends in mosquito population
     dynamics and behavior across space and time.
-  labs: [ceph, mcore]
+  labs: [ceph, seal, mcore]
   link: https://ceph-lab.github.io/research/mosquito-ecology-and-behavior/
 
 - title: Trial Simulation and Emulation
