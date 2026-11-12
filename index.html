@@ -282,31 +282,6 @@ hero_image_alt: ""
     padding: 60px 0 60px 0;
   }
 
-  /* --- Funders and partners (shown only when _data/partners.yml lists logos) --- */
-  .partners-section {
-    padding: 0 0 60px 0;
-  }
-
-  .partner-logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 28px 48px;
-  }
-
-  .partner-logos img {
-    height: 48px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.75;
-    transition: filter 0.2s ease, opacity 0.2s ease;
-  }
-
-  .partner-logos a:hover img {
-    filter: none;
-    opacity: 1;
-  }
-
   @media screen and (max-width: 900px) {
     .feature-tiles {
       grid-template-columns: 1fr;
@@ -360,7 +335,7 @@ hero_image_alt: ""
   {%- endif %}
   <div class="hero-text">
     <h1>Epidemic Science Hub</h1>
-    <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them.</p>
+    <p>Three research laboratories working together to understand how infectious diseases spread and how to stop them</p>
   </div>
   <a href="#mission" class="scroll-down" aria-label="Scroll to Mission"></a>
 </div>
@@ -370,24 +345,22 @@ hero_image_alt: ""
   <div class="tile tile-mission">
     <div id="mission"></div>
     <h3 class="tile-title">Mission</h3>
-    <!-- TODO: replace with the Hub's agreed mission statement. -->
     <p>The Epidemic Science Hub brings together researchers at the Indiana University School of Public Health -
       Bloomington to advance the science of infectious disease epidemiology and translate it into actionable
-      insights for public health.</p>
+      insights for public health</p>
   </div>
 
   <div class="tile tile-what">
     <h3 class="tile-title">What we do</h3>
-    <!-- TODO: edit this list to reflect the Hub's shared activities. -->
     <ul>
-      <li>Build mathematical, computational, and statistical models of infectious disease transmission</li>
+      <li>Develop mathematical, computational, and statistical models of infectious disease transmission</li>
       <li>Study the human, social, and ecological drivers of epidemics, including vectors such as mosquitoes</li>
       <li>Forecast disease activity and evaluate interventions to support public health decision-making</li>
-      <li>Train the next generation of epidemic scientists</li>
+      <li>Train the next generation of epidemic scientists and public health professionals</li>
     </ul>
     <div class="btn-row">
       <a href="{{ '/research/' | relative_url }}" class="btn btn-light">Explore Our Research</a>
-      <a href="{{ '/join-us/' | relative_url }}" class="btn btn-outline">Join Us</a>
+      <a href="{{ '/join-us/' | relative_url }}" class="btn btn-light">Join Us</a>
     </div>
   </div>
 
@@ -401,45 +374,17 @@ hero_image_alt: ""
           <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
           {%- if post.lab %}{% include lab-tags.html lab=post.lab %}{% endif %}
         </div>
-        <a class="news-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <a class="news-title" href="{{ post.url | relative_url }}">{% include news-title.html post=post %}</a>
       </li>
       {%- endfor %}
     </ul>
-    <p class="news-all"><a href="{{ '/news/' | relative_url }}">All news &rarr;</a></p>
+<!--    <p class="news-all"><a href="{{ '/news/' | relative_url }}">All news &rarr;</a></p>-->
     {%- else %}
     <p class="news-empty">News from the Hub's labs will appear here.</p>
     {%- endif %}
   </div>
 
 </div>
-
-{%- comment -%}
-  Counts for the stats strip, worked out from the data files on every build.
-  Papers listed under more than one lab are counted once.
-{%- endcomment -%}
-{%- assign seen_papers = "|" -%}
-{%- assign paper_count = 0 -%}
-{%- assign first_year = 9999 -%}
-{%- for lab in site.data.publications -%}
-  {%- for y in lab.years -%}
-    {%- if y.publications and y.publications.size > 0 and y.year < first_year -%}{%- assign first_year = y.year -%}{%- endif -%}
-    {%- for pub in y.publications -%}
-      {%- assign paper_key = pub.title | strip_html | downcase | strip -%}
-      {%- assign paper_tag = "|" | append: paper_key | append: "|" -%}
-      {%- unless seen_papers contains paper_tag -%}
-        {%- assign seen_papers = seen_papers | append: paper_key | append: "|" -%}
-        {%- assign paper_count = paper_count | plus: 1 -%}
-      {%- endunless -%}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endfor -%}
-
-<!--<ul class="stats-strip">-->
-<!--  <li><span class="stat-value">{{ site.data.labs | size }}</span><span class="stat-label">research labs</span></li>-->
-<!--  <li><span class="stat-value">{{ site.data.people | size }}</span><span class="stat-label">people</span></li>-->
-<!--  <li><span class="stat-value">{{ paper_count }}</span><span class="stat-label">publications since {{ first_year }}</span></li>-->
-<!--  <li><span class="stat-value">{{ site.data.research | size }}</span><span class="stat-label">research themes</span></li>-->
-<!--</ul>-->
 
 <div class="labs-section">
   <h2 class="section-header">Our Labs</h2>
@@ -449,19 +394,3 @@ hero_image_alt: ""
     {%- endfor %}
   </div>
 </div>
-
-{%- assign partners = site.data.partners | where_exp: "p", "p.logo" %}
-{%- if partners.size > 0 %}
-<div class="partners-section">
-  <h2 class="section-header">Funders and Partners</h2>
-  <div class="partner-logos">
-    {%- for p in partners %}
-    {%- if p.url and p.url != "" %}
-    <a href="{{ p.url }}" target="_blank" rel="noopener"><img src="{{ p.logo | relative_url }}" alt="{{ p.name }}"></a>
-    {%- else %}
-    <img src="{{ p.logo | relative_url }}" alt="{{ p.name }}">
-    {%- endif %}
-    {%- endfor %}
-  </div>
-</div>
-{%- endif %}

@@ -82,12 +82,6 @@
   lab: ceph
   image: /images/people/utkarsh-bhosekar.png
 
-- name: Paulo Ventura
-  group: staff
-  role: Consultant
-  lab: ceph
-  image: /images/people/paulo-ventura.png
-
 # --- Master's Students --------------------------------------------------------
 - name: Jessica Guerrini
   group: masters
@@ -203,15 +197,16 @@
 # Shown as a name list with a lab tag.
 - { name: Mia Bellan, lab: ceph, alumni: true }
 - { name: Allisandra G. Kummer, lab: ceph, alumni: true }
-- { name: Snigdha Agrawal, lab: ceph, alumni: true }
+- { name: Paulo C. Ventura, lab: ceph, alumni: true }
+- { name: Snigdha Agrawal, lab: [ceph, seal, mcore], alumni: true }
 - { name: Shelly Sinclair, lab: seal, alumni: true }
-- { name: Luling Zou, lab: ceph, alumni: true }
-- { name: Megan Hill, lab: ceph, alumni: true }
+- { name: Luling Zou, lab: [ceph, seal, mcore], alumni: true }
+- { name: Megan Hill, lab: [ceph, seal, mcore], alumni: true }
 - { name: Anna Koebcke, lab: ceph, alumni: true }
 - { name: Claire Slotegraaf, lab: ceph, alumni: true }
 - { name: Jagadeesh Chitturi, lab: ceph, alumni: true }
 - { name: Juanjuan Zhang, lab: ceph, alumni: true }
-- { name: Ethan SeRine, lab: ceph, alumni: true }
+- { name: Ethan SeRine, lab: [ceph, seal], alumni: true }
 - { name: Adquate Mhlanga, lab: ceph, alumni: true }
 - { name: Victorya Valentine, lab: ceph, alumni: true }
 - { name: Shelby Stone, lab: ceph, alumni: true }

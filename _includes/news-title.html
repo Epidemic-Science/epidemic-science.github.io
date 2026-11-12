@@ -1,0 +1,16 @@
+{%- comment -%}
+  News headline, built from a post's front matter so every paper/preprint
+  item reads the same way:
+    kind: paper     + venue: PNAS     ->  Published in PNAS: <title>
+    kind: preprint  + venue: medRxiv  ->  Preprint available at medRxiv: <title>
+  Anything else (no kind/venue) shows the title as written.
+  Usage: {% include news-title.html post=post %}
+{%- endcomment -%}
+{%- assign np = include.post -%}
+{%- if np.kind == "paper" and np.venue and np.venue != "" -%}
+Published in <em>{{ np.venue }}</em>: {{ np.title }}
+{%- elsif np.kind == "preprint" and np.venue and np.venue != "" -%}
+Preprint available at <em>{{ np.venue }}</em>: {{ np.title }}
+{%- else -%}
+{{ np.title }}
+{%- endif -%}

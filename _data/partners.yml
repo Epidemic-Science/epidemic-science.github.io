@@ -1,5 +1,5 @@
 # ==============================================================================
-# FUNDERS AND PARTNERS — logos shown in a row at the bottom of the home page.
+# FUNDERS AND PARTNERS — logos shown in a row at the bottom of the Research page.
 # The section stays hidden until at least one entry below has a logo.
 #
 # Fields
@@ -21,4 +21,10 @@
   logo: /images/partners/cdc.svg
   url: https://www.cdc.gov/
 
+- name: Council of State and Territorial Epidemiologists
+  logo: /images/partners/cste.svg
+  url: https://www.cste.org/
 
+- name: Indiana University Bloomington
+  logo: /images/partners/iu.svg
+  url: https://undergradresearch.indiana.edu/programs/vip/vip-teams/nowcasting.html

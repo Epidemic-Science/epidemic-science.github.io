@@ -3,6 +3,13 @@ layout: default
 title: Publications
 permalink: /publications/
 ---
+{%- comment -%}
+  All Hub publications in one list, grouped by year (newest first).
+  Data: _data/publications.yml (one block per lab). A paper listed under more
+  than one lab is shown once, tagged with every lab that lists it.
+  Earlier Work links to each faculty member's Google Scholar profile
+  (name from _data/labs.yml `pi`, link from publications.yml `scholar_url`).
+{%- endcomment -%}
 
 <div class="subpage-banner">
   <div class="banner-left">
@@ -11,96 +18,76 @@ permalink: /publications/
   <div class="banner-right"></div>
 </div>
 
+{%- comment -%} Every year that has at least one publication, newest first {%- endcomment -%}
+{%- assign year_list = "" -%}
+{%- for lab in site.data.publications -%}
+  {%- for yr in lab.years -%}
+    {%- if yr.publications and yr.publications.size > 0 -%}
+      {%- assign year_list = year_list | append: yr.year | append: "," -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign all_years = year_list | split: "," | uniq | sort | reverse -%}
+
 <div class="publications">
 
-  <!-- Lab tabs -->
-  <div class="lab-tabs" role="tablist" aria-label="Research labs">
-    {% for lab in site.data.publications %}
-      <button
-        class="lab-tab {% if forloop.first %}active{% endif %}"
-        role="tab"
-        id="tab-{{ lab.id }}"
-        aria-controls="panel-{{ lab.id }}"
-        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-        onclick="showLab('{{ lab.id }}')">
-        {{ lab.name }}
-      </button>
-    {% endfor %}
+  <nav class="year-nav" aria-label="Jump to year">
+    {%- for y in all_years -%}
+      {%- if y != "" -%}<a href="#year-{{ y }}">{{ y }}</a> | {% endif -%}
+    {%- endfor -%}
+    <a href="#earlier-work">Earlier Work</a>
+  </nav>
+
+  {%- for y in all_years -%}
+    {%- if y == "" -%}{%- continue -%}{%- endif %}
+  <h2 class="year-section" id="year-{{ y }}">{{ y }}</h2>
+    {%- assign seen = "|" -%}
+    {%- for lab in site.data.publications -%}
+      {%- for yr in lab.years -%}
+        {%- assign yr_str = yr.year | append: "" -%}
+        {%- if yr_str != y -%}{%- continue -%}{%- endif -%}
+        {%- for publication in yr.publications -%}
+          {%- assign key = publication.title | strip | downcase -%}
+          {%- assign marker = "|" | append: key | append: "|" -%}
+          {%- if seen contains marker -%}{%- continue -%}{%- endif -%}
+          {%- assign seen = seen | append: key | append: "|" -%}
+
+          {%- comment -%} Which labs list this paper (for the tags) {%- endcomment -%}
+          {%- assign pub_labs = "" -%}
+          {%- for lab2 in site.data.publications -%}
+            {%- for yr2 in lab2.years -%}
+              {%- assign yr2_str = yr2.year | append: "" -%}
+              {%- if yr2_str != y -%}{%- continue -%}{%- endif -%}
+              {%- for p2 in yr2.publications -%}
+                {%- assign key2 = p2.title | strip | downcase -%}
+                {%- if key2 == key -%}{%- assign pub_labs = pub_labs | append: lab2.id | append: "," -%}{%- endif -%}
+              {%- endfor -%}
+            {%- endfor -%}
+          {%- endfor %}
+  <div class="pub-entry">
+    <a class="pub-title" href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a>
+    <p class="pub-authors">{{ publication.authors }}</p>
+    <p class="pub-journal">{{ publication.journal }}</p>
+    {%- comment -%} Lab tags: delete the next line to hide them {%- endcomment -%}
+    <p class="pub-labs">{% include lab-tags.html lab=pub_labs %}</p>
   </div>
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endfor %}
 
-  <!-- Lab publication panels -->
-  {% for lab in site.data.publications %}
-    <section
-      class="lab-panel"
-      id="panel-{{ lab.id }}"
-      role="tabpanel"
-      aria-labelledby="tab-{{ lab.id }}"
-      {% unless forloop.first %}hidden{% endunless %}>
-
-      <!-- Year navigation (only years that have publications) -->
-      {% assign has_pubs = false %}
-      <nav class="year-nav">
-        {% for year in lab.years %}
-          {% if year.publications.size > 0 %}
-            {% assign has_pubs = true %}
-            <a href="#{{ lab.id }}-{{ year.year }}">{{ year.year }}</a> |
-          {% endif %}
-        {% endfor %}
-        <a href="#{{ lab.id }}-earlier-work">Earlier Work</a>
-      </nav>
-
-      <!-- Publications by year -->
-      {% for year in lab.years %}
-        {% if year.publications.size > 0 %}
-          <h3 class="year-section" id="{{ lab.id }}-{{ year.year }}">{{ year.year }}</h3>
-
-          {% for publication in year.publications %}
-            <div class="pub-entry">
-              <a class="pub-title"
-                 href="{{ publication.url }}"
-                 target="_blank"
-                 rel="noopener noreferrer">{{ publication.title }}</a>
-              <p class="pub-authors">{{ publication.authors }}</p>
-              <p class="pub-journal">{{ publication.journal }}</p>
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-
-      {% unless has_pubs %}
-        <p class="pub-empty">Publications for the {{ lab.name }} are coming soon.</p>
-      {% endunless %}
-
-      <h3 class="year-section" id="{{ lab.id }}-earlier-work">Earlier Work</h3>
-      <p class="earlier-work">
-        To read earlier work, see
-        <a href="{{ lab.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
-      </p>
-
-    </section>
-  {% endfor %}
+  <h2 class="year-section" id="earlier-work">Earlier Work</h2>
+  <p class="earlier-work">To read earlier work, see the Google Scholar profiles of our faculty:</p>
+  <ul class="earlier-work-list">
+    {%- for lab in site.data.publications -%}
+      {%- assign lab_info = site.data.labs | where: "id", lab.id | first -%}
+      {%- if lab.scholar_url and lab.scholar_url != "" %}
+    <li style="--lab-color: {{ lab_info.color | default: '#6c0e0f' }};">
+      <a href="{{ lab.scholar_url }}" target="_blank" rel="noopener noreferrer">{{ lab_info.pi | default: lab.name }}</a>
+      <span class="earlier-work-lab">{{ lab_info.short_name | default: lab.name }}</span>
+    </li>
+      {%- endif -%}
+    {%- endfor %}
+  </ul>
 
 </div>
-
-<script>
-  function showLab(labId) {
-    // Hide all publication panels
-    document.querySelectorAll('.lab-panel').forEach(panel => {
-      panel.hidden = true;
-    });
-
-    // Deactivate all tabs
-    document.querySelectorAll('.lab-tab').forEach(tab => {
-      tab.classList.remove('active');
-      tab.setAttribute('aria-selected', 'false');
-    });
-
-    // Show selected lab
-    document.getElementById('panel-' + labId).hidden = false;
-
-    // Activate selected tab
-    const selectedTab = document.getElementById('tab-' + labId);
-    selectedTab.classList.add('active');
-    selectedTab.setAttribute('aria-selected', 'true');
-  }
-</script>

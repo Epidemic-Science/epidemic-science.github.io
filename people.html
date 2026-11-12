@@ -45,7 +45,7 @@ permalink: /people/
   }
 
   /* Photos keep their own 5:4 shape (landscape rectangle, like the originals).
-     The tile shows a soft teal while the photo loads, then the photo fades in.
+     The tile shows a soft tint while the photo loads, then the photo fades in.
      The shape is set on the image itself so every browser sizes it the same. */
   .person-photo {
     display: block;
@@ -99,21 +99,49 @@ permalink: /people/
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px 24px;
+    /* Each column is as wide as its longest name + tags, so a name and
+       its tags sit on one line; if space runs out the name wraps instead */
+    grid-template-columns: repeat(3, minmax(0, max-content));
+    justify-content: space-between;
+    gap: 12px 32px;
     font-size: 16px;
   }
 
+  /* Name and tags stay on one row: a long name wraps within its own space,
+     the tags never drop below it */
   .alumni-list li {
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 8px;
   }
 
+  .alumni-list .alumni-name {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .alumni-list .lab-tags {
+    flex: none;
+    flex-wrap: nowrap;
+    gap: 4px;
+  }
+
+  /* Compact tags so three fit beside a name */
+  .alumni-list .lab-tag {
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+    padding: 2px 6px;
+    gap: 4px;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .alumni-list { grid-template-columns: repeat(2, minmax(0, max-content)); justify-content: start; column-gap: 48px; }
+  }
+
   @media screen and (max-width: 780px) {
-    .alumni-list { grid-template-columns: 1fr; }
+    .alumni-list { grid-template-columns: 1fr; justify-content: start; }
   }
 </style>
 
@@ -176,7 +204,7 @@ permalink: /people/
   <ul class="alumni-list">
     {%- for person in alumni %}
     <li>
-      <span>{{ person.name }}</span>
+      <span class="alumni-name">{{ person.name }}</span>
       {%- include lab-tags.html lab=person.lab %}
     </li>
     {%- endfor %}

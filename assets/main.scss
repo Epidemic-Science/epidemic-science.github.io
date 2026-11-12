@@ -111,6 +111,14 @@ html {
   margin-right: 12px;
 }
 
+/* Single wordmark image (logo + name), set with `logo_wordmark` in _config.yml */
+.site-title img.site-wordmark {
+  height: 60px;
+  max-height: none;
+  width: auto;
+  margin-right: 0;
+}
+
 .site-title-text {
   font-size: 24px;
   font-weight: 700;
@@ -218,6 +226,11 @@ html {
   .site-title-text {
     font-size: 17px;
   }
+  .site-title img.site-wordmark {
+    height: 60px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
 
   /* Swap the hamburger for an X while the menu is open */
   .site-header .site-nav #nav-trigger:checked ~ label[for="nav-trigger"] .menu-icon svg {
@@ -290,6 +303,13 @@ html {
   border-radius: 50%;
   margin-right: 6px;
   background-color: var(--lab-color, var(--hub-primary));
+}
+
+.footer-labs img.footer-wordmark {
+  height: 64px;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 6px;
 }
 
 .footer-labs .footer-hub-name {
@@ -474,6 +494,16 @@ html {
 .lab-card .read-more-btn:hover,
 .lab-card .btn:hover {
   background-color: color-mix(in srgb, var(--lab-color, var(--hub-button)) 52%, #000000);
+}
+
+/* Text links on a lab's card (e.g. email and website on Contact) use a deeper
+   shade of the lab colour. 62% keeps them readable on the card's tinted
+   background (teal 7.3:1, navy 15.7:1, orange 5.3:1). */
+/* .page-content prefix: needed to beat `.page-content a:not([class])` below */
+.lab-card .hub-card-text a,
+.page-content .lab-card .hub-card-text a {
+  color: color-mix(in srgb, var(--lab-color, var(--hub-primary)) 62%, #000000);
+  font-weight: 600;
 }
 
 .btn-light {
@@ -993,54 +1023,8 @@ ul.req-list li {
 
 /* ==============================================================================
    Publications page — matches the ceph-lab.github.io/publications look:
-   light text tabs per lab, plain year links, underlined year headings
+   one list for the whole Hub, plain year links, underlined year headings
    ============================================================================== */
-
-/* Lab tabs: text tabs with a lab-coloured underline when active */
-.lab-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 36px;
-  border-bottom: 1px solid #e3e3e3;
-  margin-bottom: 30px;
-}
-
-.lab-tab {
-  --tab-color: var(--hub-primary-soft);
-  background: none;
-  border: none;
-  border-bottom: 4px solid transparent;
-  margin-bottom: -1px;            /* sit on the grey rule */
-  padding: 10px 2px 12px;
-  font: inherit;
-  font-size: 20px;
-  font-weight: 600;
-  color: #777;
-  cursor: pointer;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.lab-tab[id="tab-ceph"]  { --tab-color: var(--hub-teal); }
-.lab-tab[id="tab-seal"]  { --tab-color: var(--hub-navy); }
-.lab-tab[id="tab-mcore"] { --tab-color: var(--hub-orange); }
-
-.lab-tab:hover {
-  color: var(--tab-color);
-}
-
-.lab-tab.active {
-  color: var(--tab-color);
-  border-bottom-color: var(--tab-color);
-}
-
-.lab-tab:focus-visible {
-  outline: 2px solid var(--tab-color);
-  outline-offset: 4px;
-}
-
-.lab-panel[hidden] {
-  display: none;
-}
 
 /* Year navigation */
 .year-nav {
@@ -1065,7 +1049,7 @@ ul.req-list li {
 }
 
 /* Year headings */
-.lab-panel .year-section {
+.publications .year-section {
   font-size: 1.5rem;
   font-weight: 400;
   border-bottom: 2px solid var(--hub-primary-soft);
@@ -1105,8 +1089,40 @@ ul.req-list li {
   font-size: 0.95em;
 }
 
-.earlier-work a {
+.pub-labs {
+  margin: 6px 0 0 0;
+}
+
+.pub-labs .lab-tags {
+  margin: 0;
+}
+
+.earlier-work {
+  margin-bottom: 12px;
+}
+
+/* One line per faculty member: Google Scholar link + lab name */
+.earlier-work-list {
+  list-style: none;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.earlier-work-list li {
+  margin-bottom: 10px;
+  padding-left: 14px;
+  border-left: 4px solid var(--lab-color, var(--hub-primary));
+}
+
+.earlier-work-list a {
   color: var(--hub-primary-soft);
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.earlier-work-lab {
+  color: var(--hub-text-muted);
+  margin-left: 6px;
 }
 
 .pub-empty {

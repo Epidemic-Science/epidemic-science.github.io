@@ -30,10 +30,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Logo (see images/README.md). Shown in the header, home page, page banners
-# and footer. The browser-tab icon (images/favicon.svg) redraws its mosquito,
-# virus and people as one square icon.
+# Logo (see images/README.md): the tree on its own. Used as a fallback in the
+# header and footer when no wordmark is set below.
 logo: /images/hub-logo.svg
+
+# Wordmark: the logo with "Epidemic Science Hub" written beside it, as ONE image
+# (SVG or a PNG about 1200px wide, transparent background). When set, the header
+# and footer show this image instead of the tree + site name text.
+logo_wordmark: /images/logo_wordmark.png
 
 # Pages shown in the top navigation, in this order.
 header_pages:
@@ -41,7 +45,6 @@ header_pages:
   - people.html
   - research.html
   - publications.html
-  - news.html
   - join-us.html
   - contact.html
 
@@ -51,6 +54,7 @@ exclude:
   - LICENSE
   - images/README.md
   - _posts/README.md
+  - scripts/
   - Gemfile
   - Gemfile.lock
   - vendor

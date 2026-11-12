@@ -14,11 +14,83 @@ permalink: /research/
   <div class="banner-right"></div>
 </div>
 
-<div class="intro-text">
-  <!-- TODO: review this introduction once the Hub's shared themes are agreed. -->
-  <p>Researchers across the Hub develop mathematical, computational, and statistical approaches to understand
-    how human behavior, ecology, and pathogen dynamics drive epidemic spread, and use that understanding to
-    support public health planning.</p>
+<style>
+  .research-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .research-intro .intro-text {
+    margin-bottom: 0;
+  }
+
+  .research-wordcloud {
+    margin: 0;
+  }
+
+  .research-wordcloud img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .research-wordcloud figcaption {
+    font-size: 14px;
+    color: var(--hub-text-muted);
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  /* Funders and partners (from _data/partners.yml) */
+  .partners-section {
+    padding: 10px 0 20px 0;
+  }
+
+  .partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 28px 56px;
+  }
+
+  .partner-logos img {
+    height: 56px;
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: filter 0.2s ease, opacity 0.2s ease;
+  }
+
+  .partner-logos a:hover img {
+    filter: none;
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 900px) {
+    .research-intro {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>
+
+<div class="research-intro">
+  <div class="intro-text">
+    <!-- TODO: review this introduction once the Hub's shared themes are agreed. -->
+    <p>Researchers across the Hub develop mathematical, computational, and statistical approaches to understand
+      how human behavior, ecology, and pathogen dynamics drive epidemic spread, and to support public health planning.</p>
+  </div>
+
+  <!-- Made with publication_wordcloud.R from the titles in _data/publications.yml.
+       Re-run the script and replace images/research-wordcloud.png to update it. -->
+  <figure class="research-wordcloud">
+    <img src="{{ '/images/research-wordcloud.png' | relative_url }}"
+         alt="Word cloud of the most frequent words in Hub publication titles">
+<!--    <figcaption>Most frequent words in the titles of our publications</figcaption>-->
+  </figure>
 </div>
 
 <div class="card-grid">
@@ -44,3 +116,19 @@ permalink: /research/
   </div>
   {%- endfor %}
 </div>
+
+{%- assign partners = site.data.partners | where_exp: "p", "p.logo" %}
+{%- if partners.size > 0 %}
+<div class="partners-section">
+  <h2 class="section-header">Funders</h2>
+  <div class="partner-logos">
+    {%- for p in partners %}
+    {%- if p.url and p.url != "" %}
+    <a href="{{ p.url }}" target="_blank" rel="noopener"><img src="{{ p.logo | relative_url }}" alt="{{ p.name }}"></a>
+    {%- else %}
+    <img src="{{ p.logo | relative_url }}" alt="{{ p.name }}">
+    {%- endif %}
+    {%- endfor %}
+  </div>
+</div>
+{%- endif %}

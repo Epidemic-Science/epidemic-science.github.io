@@ -28,7 +28,7 @@ permalink: /news/
         <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
         {%- if post.lab %}{% include lab-tags.html lab=post.lab %}{% endif %}
       </p>
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <h3><a href="{{ post.url | relative_url }}">{% include news-title.html post=post %}</a></h3>
       <p>{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
     </div>
   </li>

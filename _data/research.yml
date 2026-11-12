@@ -45,14 +45,6 @@
   labs: [ceph]
   link: https://ceph-lab.github.io/research/public-health-planning/
 
-- title: Trial Simulation and Emulation
-  summary: >-
-    Trial simulation and emulation combine mechanistic and statistical
-    models with observational data to inform trial design and evaluate the
-    effectiveness of public health interventions.
-  labs: [ceph, seal, mcore]
-  link:
-
 - title: Mosquito Ecology and Behavior
   summary: >-
     The relative abundance and behavior of mosquito vector species are main
@@ -61,6 +53,14 @@
     dynamics and behavior across space and time.
   labs: [ceph, mcore]
   link: https://ceph-lab.github.io/research/mosquito-ecology-and-behavior/
+
+- title: Trial Simulation and Emulation
+  summary: >-
+    Trial simulation and emulation combine mechanistic and statistical
+    models with observational data to inform trial design and evaluate the
+    effectiveness of public health interventions.
+  labs: [ceph, seal, mcore]
+  link:
 
 - title: Mosquito-Based Ecosystem Biomonitoring
   summary: >-

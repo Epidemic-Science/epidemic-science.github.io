@@ -1,5 +1,7 @@
 ---
-title: "Review: mosquito-borne disease among people experiencing homelessness in the US"
+title: "Mosquito-Borne Disease among Individuals Experiencing Homelessness in the United States: A Literature Review"
+kind: paper
+venue: Journal of Pest Science
 lab: [mcore, seal, ceph]
 link: https://doi.org/10.1007/s10340-026-02042-0
 # TODO: set the real publication date (the date in the file name).

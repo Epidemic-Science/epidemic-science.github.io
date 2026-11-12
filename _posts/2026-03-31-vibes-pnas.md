@@ -1,5 +1,7 @@
 ---
-title: "VIBES, a multiscale model linking within-host and between-host dynamics, published in PNAS"
+title: "VIBES: A Multi-Scale Modeling Approach Integrating Within-Host and Between-Hosts Dynamics in Epidemics"
+kind: paper
+venue: PNAS
 lab: [ceph, seal]
 link: https://doi.org/10.1073/pnas.2523055123
 # TODO: set the real publication date (the date in the file name).
