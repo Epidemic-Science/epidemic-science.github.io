@@ -1,5 +1,5 @@
 ---
-title: "Maria Litvinova joins as an Academic Editor at PLOS Digital Health"
+title: "Maria Litvinova joins PLOS Digital Health as an Academic Editor"
 lab: seal
 link: https://journals.plos.org/digitalhealth/static/editorial-board
 link_text: Visit PLOS Digital Health
