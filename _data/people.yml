@@ -197,6 +197,7 @@
 # Shown as a name list with a lab tag.
 - { name: Mia Bellan, lab: ceph, alumni: true }
 - { name: Allisandra G. Kummer, lab: ceph, alumni: true }
+- { name: Vinicio Rodrigues de Lima, lab: mcore, alumni: true }
 - { name: Paulo C. Ventura, lab: ceph, alumni: true }
 - { name: Snigdha Agrawal, lab: [ceph, seal, mcore], alumni: true }
 - { name: Shelly Sinclair, lab: seal, alumni: true }
@@ -205,6 +206,7 @@
 - { name: Anna Koebcke, lab: ceph, alumni: true }
 - { name: Claire Slotegraaf, lab: ceph, alumni: true }
 - { name: Jagadeesh Chitturi, lab: ceph, alumni: true }
+- { name: Nicole Scavo, lab: mcore, alumni: true}
 - { name: Juanjuan Zhang, lab: ceph, alumni: true }
 - { name: Ethan SeRine, lab: [ceph, seal], alumni: true }
 - { name: Adquate Mhlanga, lab: ceph, alumni: true }
